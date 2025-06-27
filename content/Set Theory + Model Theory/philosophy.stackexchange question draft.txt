@@ -1,0 +1,17 @@
+Title: Does the gap-theorist approach towards the strengthened liar suffice?
+
+I have been researching many-valued logics (paracomplete and paraconsistent) and hierarchies of languages
+
+Let T (⌈ϕ⌉) means ”ϕ is true”
+F (⌈ϕ⌉) = T (⌈¬ϕ⌉) means ”ϕ is false”
+U (⌈ϕ⌉) means ”ϕ is undefined”
+¬T (⌈ϕ⌉) = F (⌈ϕ⌉) or U (⌈ϕ⌉) (i.e., untrue)
+¬F (⌈ϕ⌉) = T (⌈ϕ⌉) or U (⌈ϕ⌉) (i.e., unfalse)
+¬U (⌈ϕ⌉) = T (⌈ϕ⌉) or F (⌈ϕ⌉) (i.e., defined)
+The Strengthened Liar/Revenge of The Liar:
+Consider the statement Q = ”This sentence is false or undefined”
+Q ≡ F (⌈Q⌉) ∨ U (⌈Q⌉)
+T (⌈Q⌉) = T (⌈F (⌈Q⌉) ∨ U (⌈Q⌉)⌉)
+Q is true is if it is false or undefined
+
+Tags: logic, truth, philosophy of logic, philosophy of mathematics, philosophy of language
