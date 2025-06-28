@@ -1,0 +1,15 @@
+Title: Can Self-Verifying Theories define their own truth predicate?
+
+Self-verifying theories are theories can prove their own consistency. This is because of the following:
+
+A class of formulas can be defined where we consider the mapping of all $\Pi^0_1$-sentences $\phi$ onto a sentence $\psi$ that replaces addition and multiplication with the subtraction and division symbols, respectively, and has the additional property that $\phi \equiv \psi$. The class of all such sentences is denoted as $\Pi^-_1$. Self-verifying theories are based in a language $\tau$ = {-, $\div$,s(x),0} (i.e., the language of arithmetic with + and $\times$ replaced).
+
+Because there are no addition, +, and multiplication symbols, $\times$, the procedure of Gödel encoding can only be expressed in a restricted form, namely, self-verifying theories cannot express diagonalization:
+
+$\forall F(x) \exists \phi (\phi \iff F(g(\phi)))$ for some $\phi$ in a class of $\mathscr{L}$-sentences and where g($\phi$) denotes the Gödel encoding of the sentence $\phi$
+
+and so self-referential statements cannot be defined in the language of self-verifying theories This implies statements such as "this statement is not provable" (from which Gödel's incompleteness theorems is derived) or the liar sentence, this sentence is false" (from which Tarski's undefinability theorem is derived).
+
+How does this operate in a Tarskian hierarchy of languages where $\mathscr{L}_{n+1}$ defines the truth predicate $T_n$ of the language $\mathscr{L}_{n}$. Does the hierarchy terminate? Philosophical implications?
+
+Tags: logic, set theory, philosophy
