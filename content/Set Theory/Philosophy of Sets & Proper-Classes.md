@@ -9,7 +9,8 @@ $V_{\lambda}:=\bigcup\limits_{\alpha < \lambda}  V_{\alpha}$ for all $\lambda$ i
 $V := \bigcup\limits_{\alpha \in O} V_{\alpha}$
 (**Note:** The definition of $V$ is in the context of class theory as it is a proper-class)
 
-<img src="/attachments/VNU.png" alt="Von Neumann Universe" width="300">
+<img src="/static/attachments/VNU.png" alt="Von Neumann Universe" width="300">
+
 [Von Neumann universe]([Von Neumann universe - Wikipedia](https://en.wikipedia.org/wiki/Von_Neumann_universe))
 
 The universe of sets $V$ is built up from the 'bottom-up', starting from $V_{0}$.
