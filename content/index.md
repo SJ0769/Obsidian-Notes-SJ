@@ -41,6 +41,7 @@ title: SJ's notes on model theory, set theory, and logic
 - [[Model Theory/The Occurrence Number (& Dependance number)]]
 - [[Model Theory/The Well-Ordering Number]]
 - [[Model Theory/Types of Theories]]
+- [[Model Theory/Ultraproducts & Ultrafilters]]
 
 ## 📁 Set Theory
 - [[Set Theory/Axiomatic Set Theories]]
