@@ -47,7 +47,6 @@ title: SJ's notes on model theory, set theory, and logic
 - [[Set Theory/Axiomatic Set Theories]]
 - [[Set Theory/Forcing]]
 - [[Set Theory/Fundamentals of Set Theory]]
-- [[Set Theory/Interpretability Hierarchy]]
 - [[Set Theory/Multiverse vs Universe View]]
 - [[Set Theory/Non-Well Founded Set Theories]]
 - [[Set Theory/Philosophy of Sets & Proper-Classes]]
