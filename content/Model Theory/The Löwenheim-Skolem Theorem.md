@@ -1,4 +1,5 @@
- If a first-order theory $T$ in a countable language (i.e., $|\tau|\leq \aleph_{0},$ for $\tau$ is the vocabulary) has an infinite model ($|N|\geq \aleph_{0}$) and no finite models ($|N| < \aleph_{0}$), then for every infinite cardinal $\kappa, T$ has a model $\mathcal{M} \models T$ such that $|M| = \kappa$. That is, $T$ has a model of every infinite cardinality.
+## Result
+If a first-order theory $T$ in a countable language (i.e., $|\tau|\leq \aleph_{0},$ for $\tau$ is the vocabulary) has an infinite model ($|N|\geq \aleph_{0}$) and no finite models ($|N| < \aleph_{0}$), then for every infinite cardinal $\kappa, T$ has a model $\mathcal{M} \models T$ such that $|M| = \kappa$. That is, $T$ has a model of every infinite cardinality.
 
 **Note:** For a structure $\mathcal{M},$ then the domain of $\mathcal{M}$, dom($\mathcal{M}$), is denoted as $M.$
 
@@ -7,33 +8,40 @@ The above is an implication of the Löwenheim-Skolem theorem which asserts that 
 - If $\kappa < |M|,$ then $N$ is an elementary substructure of $M$ (Downwards Löwenheim-Skolem Theorem)
 - If $\kappa \geq |M|,$ then $N$ is an elementary extension of $M$ (Upwards Löwenheim-Skolem Theorem)
 
-![](/static/attachments/LS-T.png)
-
+![](/attachments/LS-T.png)
 [Löwenheim–Skolem theorem]([Löwenheim–Skolem theorem - Wikipedia](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem))
 
 **Downwards  Löwenheim-Skolem Theorem (Proof):**
-If $\mathcal{N}$ is an $\mathcal{L}$-structure such that $\kappa\geq|\mathcal{L}|$ and $\kappa\leq |N|$, then there exists an elementary substructure $\mathcal{M\preceq N}$ such that $|M|=\kappa$.
+If $\mathcal{M}$ is an $\mathcal{L}$-structure such that $\kappa\geq|\mathcal{L}|$ and $\kappa\leq |M|$, then there exists an elementary substructure $\mathcal{N\preceq M}$ such that $|N|=\kappa$.
 
-Let $N_{0}$ be an arbitrary subset of the domain $N$ of cardinality $\kappa$.
+Let $\mathcal{M}$ be a model of some set of $\mathcal{L}$-sentences $T$ ,we start by considering an arbitrary subset $M_{0} \subseteq M$ such that $|M|=\kappa$.
+For any $\mathcal{L}$-formula $\varphi$ and tuple $a_{1},\dots,a_{n}\in M$ w/ $\mathcal{M}\models \exists x \varphi(a_{1},\dots,a_{n})$
 
-For any $\mathcal{L}$-formula $\varphi$ and tuple $a_{1},\dots,a_{n}\in N$ w/ $\mathcal{N}\models \exists x \varphi(a_{1},\dots,a_{n})$
+We must add a witness to $M_{0}$ in order to apply the Tarski-Vaught test.
+We extend $M_{0}$ to $M_{1}$ by adding witnesses to $M_{0}$. We can iterate this process so that we add witness to $M_{i}$ (for $i\in \mathbb{N}$) to obtain $M_{i+1}$.
 
-We must add a witness to $N_{0}$ in order to apply the Tarski-Vaught test.
-
-This can be extended from $N_{0}$ to $N_{1}$, and so we can iterate, adding witnesses to existential formulas which hold for tuples from $N_{1}$.
-
-$M:= \cup N_{i}$
-.
-.
-.
+We then define a universe $N:= \bigcup\limits_{i\in \mathbb{N}} M_{i}$
+We must then verify that $N\subseteq M$ and apply the Tarski-Vaught test.
 
 
 **Upwards  Löwenheim-Skolem Theorem (Proof):**
+If $\mathcal{M}$ is an infinite $\mathcal{L}$-structure and $\kappa\geq$max$\{|\mathcal{L}|, |M|\}$, then there exists an elementary extension $\mathcal{N\succeq M}$ such that $|N|= \kappa$
 
+We start with considering the $\mathcal{L}$-theory $T$.
+We expand the language $\mathcal{L}$ by adding infinitely many constant symbols $c_{i}\in C$ such that $|C|=\kappa$. Let this language be denoted by $\mathcal{L^*}$
 
-We use the Compactness Theorem...
+Let $S =\{c_1\not=c_{2}|c_{1} \text{ and } c_{2} \text{ are distinct elements of } C\}$.
 
-**Clarification**
+We then consider the set of sentences $T\cup S$ in the expanded language $\mathcal{L^*}$.
+
+Assume that $T$ has an infinite model $\mathcal{M}$. Then every finite subset of $T\cup S$ is satisfiable in the structure $\mathcal{M}$ (this is because since the domain $M$ is infinite, it has enough elements to satisfy the finite numbers of axioms from $S$).
+
+Then by the Compactness Theorem, $T\cup S$ is satisfiable, and by the downward Löwenheim-Skolem Theorem it is satisfiable in some structure $\mathcal{N}$ of cardinality $\leq \kappa$.
+
+Note that $|\mathcal{L^*}|=\kappa$ as $|\mathcal{L}|+\kappa=\kappa$ since $\aleph_{0}\leq|\mathcal{L}|\leq|\mathcal{L^*}|$. Hence, any model of $S$ has cardinality $\geq \kappa$, and so $\mathcal{N}$ has cardinality $\kappa$ (this is because the axiom $c_{i}\not=c_{j}$ in $S$ 'forces' us to interpret the w/ distinct objects as they are distinct constants). Then restrict $\mathcal{N}$ to the original language $\mathcal{L}$.
+
+-----------------------
+## Further Clarification
 The minimum cardinality of an elementary sub-structure (and further more a model of $T$) than can be shown to exist using the Löwenheim-Skolem Theorem is given by:
 	max$\{\aleph_{0}, |\tau|\}$ or $|\tau|+\aleph_{0}$
 This derived from the result that if $\mathcal{M}$ is any infinite model of a first-order theory $T$ over a language of cardinality $\kappa$, (i.e., $|\mathcal{L}=\kappa|$) and $\mathcal{A} \subseteq_{S} \mathcal{M}$ is a substructure. Then there exists $\mathcal{N\preceq M}$ such that $|N| \leq |A| + \kappa$.
@@ -68,3 +76,5 @@ The statement "if a first-order theory $T$ has a model an infinite model then it
 [[Logics, Structures & Models]]
 [[Categoricity]]
 [[Classification Theory]]
+[Proof of Upward Löwenheim-Skolem Theorem]([logic - Proof of Upward Lowenheim-Skolem Theorem - Mathematics Stack Exchange](https://math.stackexchange.com/questions/2684914/proof-of-upward-lowenheim-skolem-theorem))
+[Math 557]([Math 557 – The Löwenheim-Skolem Theorems](https://www.youtube.com/watch?v=RX3gMdvxLfE))

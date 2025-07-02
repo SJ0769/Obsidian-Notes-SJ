@@ -1,11 +1,11 @@
 ## The Soundness Theorem
 **Soundness:** $T \vdash \phi \rightarrow T \models \phi$
-That is, all proven statements of T are semantically true ($M \models \phi$ whenever $M \models T$, for $\phi$ is a theorem of T)
+That is, all proven statements of T are semantically true ($M \models \phi$ whenever $M \models T$, for $\phi$ is a theorem of $T$)
 
 This is equivalent to satisfiability $\rightarrow$ consistency
 
 
-**Relative Soundness**: A theory is T is sound if all of its syntactic consequences of T (i.e., theorems of T) are true in the 'intended model'
+**Relative Soundness**: A theory is $T$ is sound if all of its syntactic consequences of $T$ (i.e., theorems of $T$) are true in the 'intended model'
 
 E.g., The intended model of arithmetic is the structure N = $\langle \mathbb{N}, \times, +, s(x), 0 \rangle$. So Peano Arithmetic is sound relative to the structure N as all theorems of PA are true in the structure N.
 

@@ -1,4 +1,4 @@
-
+## Consistency Results
 We say that a theory $S$ is consistent relative to another theory $T$ if $Con(T) \to Con(s)$
 $\to$Where $Con(T)$ denotes that $T$ does not prove a contradiction (i.e., $T \vdash (\varphi \wedge \neg \varphi)$ for some $\varphi$ in the language of $T$)
 
@@ -8,6 +8,16 @@ We say that a theory $T$ is stronger than some theory $S$, denoted $T \geq S$ ,i
 
 
 **Note:** Consistency results are meta theorems
+
+## Interpretability Hierarchy
+Let $T_{1}$ and $T_{2}$ denote recursively enumerable sets of axioms. We say that $T_{1}$ is interpretable in $T_{2}$, denoted $T_{1}\leq T_{2}$, if there is a translation $\tau$ from the language of $T_{1}$ to the language of $T_{2}$ such that for each sentence $\varphi$ of $T_{1}$, $T_{1}\vdash \varphi \implies T_{2}\vdash\varphi$.
+
+$T_{1}< T_{2}$ if $T_{1}\leq T_{2}$ and $T_{2} \not\leq T_{1}$ ($T_{2}$ can interpret $T_{1}$, but $T_{1}$ cannot interpret $T_{2}$)
+
+$T_{1}\equiv T_{2}$, denotes that $T_{1}$ and $T_{2}$ are mutually interpretable, that is, $T_{1}\leq T_{2}$ and $T_{2}\leq T_{1}$ (i.e., they interpret each other). The equivalence class of all theories mutually interpretable with $T$ is called the interpretability degree of $T$.
+
+
+Connection to Relative Consistency...
 
 ## Proof-Theoretic Ordinals
 An alternative way to determine the consistency strength of a theory.
@@ -22,5 +32,5 @@ Theories with the same proof-theoretic ordinals are equiconsistent.
 
 ## References
 [[The Hierarchy of Large Cardinals]]
-[[Interpretability Hierarchy]]
+[[Model Theory/Ultraproducts & Ultrafilters]]
 [Ordinal Analysis]([Ordinal analysis - Wikipedia](https://en.wikipedia.org/wiki/Ordinal_analysis))

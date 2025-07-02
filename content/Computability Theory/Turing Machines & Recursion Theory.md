@@ -18,24 +18,32 @@ The arithmetic hierarchy classifies formulae of Peano Arithmetic by their comple
 - Limit stages are $\Sigma_{\omega}=\Pi_{\omega}=\Delta_{\omega}$ (= $\Sigma_{0}^1 = \Delta_{0}^1=\Pi_{0}^1$)
 - Note that for all $n< \omega$, $\Delta_{n+1} = \Sigma_{n} \cap \Pi_{n}$
 - $\Sigma_{0}=\Delta_{0}=\Pi_{0}$, if a formula $\phi$ is logically equivalent to some $\psi$ with bounded quantifiers (i.e., $\exists n<t$), then $\phi\in \Delta_{0}$
-
-<img src="/static/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
+<img src="/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
 
 [Arithmetical hierarchy]([Arithmetical hierarchy - Wikipedia](https://en.wikipedia.org/wiki/Arithmetical_hierarchy))
 
-
 ## Computability Theory
 **Recursive:**
-A language is called recursive (or equivalently, decidable) if there is some algorithm (or program) which when given a string of the language as an input, return true, and if given a string not in the language, returns false. Thus, given an input, it will always halt.
-	Formally,
+A language $\mathcal{L}$ is called recursive (or equivalently, decidable) if there is some algorithm (or program) is able to 'decide' if a sequence (or string) of symbol in $\mathcal{L}$ is a $\mathcal{L}$-formula. 'Decide' meaning the algorithm will return true or false (either way this algorithm will 'halt').
+	In terms of computable functions:
 	A language $A\subseteq \Sigma^*$ is called recursively enumerable if, $A=\emptyset$ or if there exist a total computable function $f:\mathbb{N}\to \Sigma^*$ with $A=\{f(0),f(1),\dots\}:= f(\mathbb{N})$. Then $f$ enumerate $A$.
+
+We say that a theory $T$ is recursive if there is an algorithm that when given an $\mathcal{L}$-sentence $\phi$ as an input, decides whether $\phi\in T$.
+
 
 **Recursively-enumerable:**
 A language is called recursively-enumerable (or equivalently, semi-decidable) if there is some program which when given a string in the language as an input, returns true, and if given a string not in the language, returns false **or** loops forever.
+	Trivially, it can be shown that every language that is recursive is also recursively-enumerable.
 
-Trivially, it can be shown that every language that is recursive is also recursively-enumerable
+We say that a theory $T$ is recursively-enumerable if there is an algorithm that will halt if $T\vdash\phi$ and not halt for $T\not\vdash\phi$
 
 
+**Proposition:** If $\mathcal{L}$ is a recursive language and $T$ is a recursive $\mathcal{L}$-theory, then $\{\phi|T\vdash \phi\}$ is recursively-enumerable.
+
+We say that a theory $T$ is decidable if there is an algorithm that when given an $\mathcal{L}$-sentence $\phi$ as an input decides whether $T\models\phi$ 
+	**Lemma:** Let $T$ be a recursive complete satisfiable theory in a recursive language $\mathcal{L}$. Then $T$ is decidable
+
+-------------------------
 **The Halting Problem:** The Halting Problem is a decision problem showing the fundamental limitation of computation. Consider plugging in the following question into a Turing machine, "will an arbitrary computer program either halt or loop for any given input", it turns out a Turing machine will not halt given this decision problem. This means that the Halting Problem is undecidable (i.e., there is no algorithm which that solves the halting problem)
 
 **Oracle Machine:** An oracle machine is a kind of abstract machine which operates as 'black box', meaning it takes in an input (decision problem) and instantly solves, returning an output. An 'oracle' refers to an entity which can solve the decision problem (note this is not necessarily an algorithm).
@@ -117,3 +125,4 @@ The function $||:\mathcal{O}\to$ ordinals is defined by transfinite recursion on
 [Turing Degrees](https://en.wikipedia.org/wiki/Turing_degree)
 [Kleene's O](https://en.wikipedia.org/wiki/Kleene%27s_O)
 [Many-One Reduction]([Many-one reduction - Wikipedia](https://en.wikipedia.org/wiki/Many-one_reduction))
+[Model Theory D.Marker](Set%20Theory%20+%20Model%20Theory/Model%20Theory%20D.Marker.pdf)
