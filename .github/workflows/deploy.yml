@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - v4
- 
-env:
-  THEME_NAME: anuppuccin
 
 permissions:
   contents: read

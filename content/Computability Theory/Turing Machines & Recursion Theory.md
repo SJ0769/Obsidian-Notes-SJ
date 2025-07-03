@@ -3,14 +3,14 @@ A Turing machine is a mathematical model of computation...
 
 Formally, a Turing machine can be defined as a 7-tuple
 	$M = \langle Q, \Gamma, b, \Sigma, \delta, q_{0}, F \rangle$
-	Where
-	- $\Gamma$ is a finite, nonempty set of alphabet symbols (on Turing tape)
-	- $b\in \Gamma$ is the 'blank' symbol, which is the only symbol which is allowed to occur infinitely often at any step during the computation
-	- $\Sigma \subseteq \Gamma$\{$b$} is the set of input symbols, the set of symbols which can appear in the initial tape contents
-	- $Q$ is a finite set of states
-	- $q_{0}$ is the initial state
-	- $F \subseteq Q$ is the set of final states or accepting states
-	- $\delta: (Q$\ $F) \times \Gamma \rightharpoonup Q \times \Gamma \times${$L, R$} is a partial function...
+Where
+- $\Gamma$ is a finite, nonempty set of alphabet symbols (on Turing tape)
+- $b\in \Gamma$ is the 'blank' symbol, which is the only symbol which is allowed to occur infinitely often at any step during the computation
+- $\Sigma \subseteq \Gamma$\{$b$} is the set of input symbols, the set of symbols which can appear in the initial tape contents
+- $Q$ is a finite set of states
+- $q_{0}$ is the initial state
+- $F \subseteq Q$ is the set of final states or accepting states
+- $\delta: (Q$\ $F) \times \Gamma \rightharpoonup Q \times \Gamma \times${$L, R$} is a partial function...
 
 ## Arithmetic Hierarchy
 **Arithmetic Hierarchy:**
