@@ -18,7 +18,8 @@ The arithmetic hierarchy classifies formulae of Peano Arithmetic by their comple
 - Limit stages are $\Sigma_{\omega}=\Pi_{\omega}=\Delta_{\omega}$ (= $\Sigma_{0}^1 = \Delta_{0}^1=\Pi_{0}^1$)
 - Note that for all $n< \omega$, $\Delta_{n+1} = \Sigma_{n} \cap \Pi_{n}$
 - $\Sigma_{0}=\Delta_{0}=\Pi_{0}$, if a formula $\phi$ is logically equivalent to some $\psi$ with bounded quantifiers (i.e., $\exists n<t$), then $\phi\in \Delta_{0}$
-<img src="/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
+
+<img src="/static/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
 
 [Arithmetical hierarchy]([Arithmetical hierarchy - Wikipedia](https://en.wikipedia.org/wiki/Arithmetical_hierarchy))
 
