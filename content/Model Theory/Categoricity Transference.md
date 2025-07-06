@@ -38,9 +38,9 @@ A property $P$ is downwards closed if there is a $\kappa_{0}$ such that if $P(\m
 
 **Hanf Number for Properties:**
 The Hanf number for a property $P$ for an AEC w/ $\kappa_{\mathcal{K}}=\kappa$ is $\mu$ if there is a model $\mathcal{M\in K}$ w/ cardinality $> \mu$ that has property $P$, then there is a model $\mathcal{N\in K}$ in all cardinalities greater than $\mu$.
-	$\to$ Hanf's argument can be applied via replacing $\kappa_{\mathcal{K}}$ w/ $|\tau|$...
+	$\to$ Hanf's argument can be applied via replacing $\kappa_{\mathcal{K}}$ w/ $|\tau|$, i.e., $H(|\tau|)$ instead of $H(\kappa_{\mathcal{K}})$
 
-We may then consider the property of categoricity, that is, every model of cardinality $|M|$ is isomorphic to $\mathcal{M}$, and so consider a Hanf number for categoricity.
+We may then consider the property of categoricity, that is, every model of cardinality $|M|$ is isomorphic to $\mathcal{M}$, and so consider a Hanf number for categoricity (see below).
 
 
 **Hanf Number Construction:**
@@ -54,9 +54,47 @@ iv) For a vocabulary $\tau, H(\tau)$ means $H(|\tau|)$. W/ a fixed $\mathcal{K}$
 - $\eta (\kappa, 2^\kappa)\leq H(\kappa)=\beth_{(2^\kappa)^+}$
 - If $\mathcal{K}$ is an AEC and there is some $\mathcal{M\in K}$ such that $|M|\geq H_{1}=H(\kappa_{\mathcal{K}})$, then $\mathcal{K}$ has arbitrarily large models (i.e., There is a $\mathcal{N\in K}$ such that for all $\lambda>H_{1}=H(\kappa_{\mathcal{K}})$, then $|N|=\lambda$)
 
-When $\kappa_{\mathcal{K}}= \text{max}(LS(\mathcal{K}), |\tau(\mathcal{K})|)$, then $H_{1}=H(\kappa_{\mathcal{K}})$ is often called the Hanf number of $\mathcal{K}$.
-	**Note:** This is a bit misleading as a single AEC $\mathcal{K}$ cannot have a Hanf number, (a Hanf number is a maximum of all sentences and for all vocabularies of a given cardinality, as well as a fixed Löwenheim number for AEC's) .Rather the Hanf number for all AEC w/ the same $\kappa_{\mathcal{K}}$.
+When $\kappa_{\mathcal{K}}= \text{max}\{LS(\mathcal{K}), |\tau(\mathcal{K})|\}$, then $H_{1}=H(\kappa_{\mathcal{K}})$ is often called the Hanf number of $\mathcal{K}$. This is further equal to $\beth_{(2^{LS(\mathcal{K})})^+}$ assuming $|\tau_{\mathcal{K}}|\leq LS(\mathcal{K})$ (or $\beth_{(2^{|\tau_{\mathcal{K}}|})^+}$ for $LS(\mathcal{K})\leq|\tau_{\mathcal{K}}|$)
+	**Note:** This is a bit misleading as a single AEC $\mathcal{K}$ cannot have a Hanf number, (a Hanf number is a maximum of all sentences and for all vocabularies of a given cardinality, as well as a fixed Löwenheim number for AEC's). Rather the Hanf number for all AEC w/ the same $\kappa_{\mathcal{K}}$.
 For any model $\mathcal{M}$ w/ $|M|\geq \eta(\tau)$ where $|\tau|=LS(\mathcal{K})$, there are models of all cardinalities in the class that omit all types omitted in $\mathcal{M}$.
+
+**Notes:**
+- If the AEC is not fixed, then the Hanf number is a function of the (cardinality of the) vocabulary, $H_{1}=H(|\tau_{\mathcal{K}}|)$.
+- $\tau(\mathcal{K})=\tau_{\mathcal{K}}$, use is different in the specific context
+- $H(\kappa)=\beth_{(2^\kappa)^+}$ is an upper bound for the Hanf number (given it exists). Thus, it is possible for the Hanf number to smaller than $\beth_{(2^\kappa)^+}$, but not larger.
+	$\to$ i.e., Considering first-order logic ($\mathscr{L}_{\omega, \omega}$) w/ in a countable language, $LS(\mathcal{K})=\aleph_{0}$ and so the upper bound is $H_{1}=\beth_{(2^{\aleph_{0}})^+}$, even though by Morley's categoricity theorem it is $\aleph_{0}$. By Shelah's generalization, the Hanf number for first-order logic in an uncountable language of size $\kappa$, is $\kappa$.
+The reason for the use of Beth numbers is because it has been proven by Barwise that the Hanf number of any abstract logic corresponds to some Beth $\beth_{n}$, and the Hanf number for infinitary logics is the Beth of the successor.
+
+Hanf numbers as described here: [The Hanf Number](Model%20Theory/The%20Hanf%20Number.md), is the Hanf number for the property of the existence of models.
+
+----------------------
+
+**Theorem 15.11:** Suppose $LS(\mathcal{K})<\lambda$ and that $\mathcal{K}$ has arbitrarily large models, the amalgamation property, and joint embedding property. Suppose $\mathcal{K}$ is $\lambda^+$-categorical, then
+	i) $\mathcal{K}$ is categorical in all cardinals $H_{2}\leq \mu\leq \lambda^+$
+	ii) If $\mathcal{K}$ is $(\chi, \infty)$-tame for some $\chi<\lambda^+$, then $\mathcal{K}$ is $\mu$-categorical for all $\mu\geq \lambda^+$
+
+
+**Conclusion 15.13:** There is a cardinal $\mu$ depending on $\kappa$ such that if $\mathcal{K}$ is an AEC $\kappa_{\mathcal{K}}=\kappa$, and $\mathcal{K}$ is categorical in some successor cardinal $\lambda^+>\mu$, then $\mathcal{K}$ is categorical in all cardinal greater than $\mu$.
+
+**Proof:** There are only set-many AEC $\mathcal{K}$ w/ $\kappa_{\mathcal{K}}$. Let $\mu_{\mathcal{K}}=\text{ sup}\{\lambda^+|\mathcal{K} \text{ is } \lambda^+ \text{-categorical}\}$ given that such a supremum exists. Then let $\mu$ be the maximum of $H_{2} (=H_{2}(\kappa))$ and $\text{sup}\{\mu_{\mathcal{K}}|\kappa_{\mathcal{K}}=\kappa\}$. If $\kappa_{\mathcal{K}}=\kappa$ and $\mathcal{K}$ is categorical in some successor cardinal greater than $\mu$, then $\mathcal{K}$ is categorical in arbitrarily large successor cardinals and in all cardinals greater than $H_{2}$ via theorem 15.11.
+
+
+A larger Hanf number $H_{2}$ can be defined as follows:
+	$H_{2}=H(H_{1})=H(H(\kappa_{\mathcal{K}}))=\beth_{(2^{H_{1}})^+}=\beth_{(2^{H(\kappa_{\mathcal{K}})})^+}$ if $\mathcal{K}$ is fixed.
+Naturally this $\implies$ that we build a sequence of successively larger Hanf numbers where $H_{1}=H(\kappa_{\mathcal{K}})$ and $H_{n+1}=H(H_{n})$
+
+The Hanf number $H_{1}$ is the Hanf number for arbitrarily large models (this 'depends' on the size of the vocabulary $|\tau_{\mathcal{K}}|$ and the Löwenheim Number $LS(\mathcal{K})$). While the Hanf number $H_{2}$ is used for tameness and locality assumptions, this can be used to show categoricity transference.
+	i.e., For an AEC $\mathcal{K}$ that satisfies the amalgamation property (AP) and joint embedding property (JEP) and is categorical in $\lambda$ & $\lambda^+$, it can be shown that for some $\lambda\geq H_{2}$ then it is categorical in all $\mu\in[H_{2}, \lambda^+]$. Assuming $\mathcal{K}$ is $(\lambda, \infty)$-tame for some $\chi<H_{1}$ allows one to extend this conclusion to all categoricity in all $\mu\geq H_{2}$.
+
+We apply the Hanf function again to yield $H_{2}$, the Hanf number for categoricity transference because below $H_{1}$, models of arbitrary cardinalities is not guaranteed.
+
+
+**Downwards Categoricity Transference:**
+Similar to how categoricity can be 'transferred' upwards from $\lambda$ to a successor cardinal $\lambda^+$ which can yield categoricity for an AEC $\mathcal{K}$ in arbitrarily large cardinals., categoricity can also be transferred downwards.
+
+For an AEC $\mathcal{K}$ w/ the amalgamation property...
+
+
 ## References
 [[Categoricity]]
 [[Abstract Elementary Classes]]
