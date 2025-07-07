@@ -1,10 +1,3 @@
-We define a new notion of Hanf number for properties
-	$\implies$ We can also do the same for Löwenheim numbers
-
-Consider the Hanf number for the property of categoricity...
-If a theory $T$ is categorical in a cardinal $\kappa$, then $T$ is categorical in all $\lambda>\kappa$
-
-
 **Categoricity in Infinitary Logic**
 If $T$ is categorical in $\lambda$ for $\lambda>h(T)$ then it is categorical in arbitrarily larger cardinals (larger than the Hanf number).
 
@@ -12,7 +5,7 @@ If $T$ is categorical in $\lambda$ for $\lambda>h(T)$ then it is categorical in 
 E.g., $T$ may be $\lambda$-categorical for any infinite cardinal $\lambda$, but not categorical in any other cardinal. This may also occur for $\lambda<h'(\mathscr{L})=\kappa$ for $h'(\mathscr{L})$ denotes the Hanf number for the property of categoricity.
 
 ----------------------------------------------
-## Categoricity Transference
+## Background Information
 **Shelah's presentation theorem:** If $\mathcal{K}$ is an AEC in a vocabulary $\tau$ w/ $|\tau|\leq LS(\mathcal{K})$, then there is a vocabulary $\sigma \supseteq \tau$ w/ cardinality $|LS(\mathcal{K})|$, a first-order ($\mathscr{L}_{\omega, \omega}$) theory $T$ of vocabulary $\sigma$, and a set $\Gamma$ of at most $2^{LS(\mathcal{K})}$ partial types such that:
 	$\mathcal{K}=\{\mathcal{M} \upharpoonright \tau| \mathcal{M}\models T \text{ and } \mathcal{M} \text{ omits } \Gamma\}$
 
@@ -68,17 +61,7 @@ The reason for the use of Beth numbers is because it has been proven by Barwise 
 Hanf numbers as described here: [The Hanf Number](Model%20Theory/The%20Hanf%20Number.md), is the Hanf number for the property of the existence of models.
 
 ----------------------
-
-**Theorem 15.11:** Suppose $LS(\mathcal{K})<\lambda$ and that $\mathcal{K}$ has arbitrarily large models, the amalgamation property, and joint embedding property. Suppose $\mathcal{K}$ is $\lambda^+$-categorical, then
-	i) $\mathcal{K}$ is categorical in all cardinals $H_{2}\leq \mu\leq \lambda^+$
-	ii) If $\mathcal{K}$ is $(\chi, \infty)$-tame for some $\chi<\lambda^+$, then $\mathcal{K}$ is $\mu$-categorical for all $\mu\geq \lambda^+$
-
-
-**Conclusion 15.13:** There is a cardinal $\mu$ depending on $\kappa$ such that if $\mathcal{K}$ is an AEC $\kappa_{\mathcal{K}}=\kappa$, and $\mathcal{K}$ is categorical in some successor cardinal $\lambda^+>\mu$, then $\mathcal{K}$ is categorical in all cardinal greater than $\mu$.
-
-**Proof:** There are only set-many AEC $\mathcal{K}$ w/ $\kappa_{\mathcal{K}}$. Let $\mu_{\mathcal{K}}=\text{ sup}\{\lambda^+|\mathcal{K} \text{ is } \lambda^+ \text{-categorical}\}$ given that such a supremum exists. Then let $\mu$ be the maximum of $H_{2} (=H_{2}(\kappa))$ and $\text{sup}\{\mu_{\mathcal{K}}|\kappa_{\mathcal{K}}=\kappa\}$. If $\kappa_{\mathcal{K}}=\kappa$ and $\mathcal{K}$ is categorical in some successor cardinal greater than $\mu$, then $\mathcal{K}$ is categorical in arbitrarily large successor cardinals and in all cardinals greater than $H_{2}$ via theorem 15.11.
-
-
+## Categoricity Transference
 A larger Hanf number $H_{2}$ can be defined as follows:
 	$H_{2}=H(H_{1})=H(H(\kappa_{\mathcal{K}}))=\beth_{(2^{H_{1}})^+}=\beth_{(2^{H(\kappa_{\mathcal{K}})})^+}$ if $\mathcal{K}$ is fixed.
 Naturally this $\implies$ that we build a sequence of successively larger Hanf numbers where $H_{1}=H(\kappa_{\mathcal{K}})$ and $H_{n+1}=H(H_{n})$
@@ -92,9 +75,28 @@ We apply the Hanf function again to yield $H_{2}$, the Hanf number for categoric
 **Downwards Categoricity Transference:**
 Similar to how categoricity can be 'transferred' upwards from $\lambda$ to a successor cardinal $\lambda^+$ which can yield categoricity for an AEC $\mathcal{K}$ in arbitrarily large cardinals., categoricity can also be transferred downwards.
 
-For an AEC $\mathcal{K}$ w/ the amalgamation property...
+**Theorem 14.14:** Suppose $\mathcal{K}$ is categorical in some $\lambda^+$ w/ $\lambda\geq H_{2}$ and either
+	i) $\mathcal{K}$ is $\lambda$-categorical; or
+	ii) $\mathcal{K}$ admits $\lambda$-saturated unions
+then,
+	i) $\mathcal{K}$ is categorical in every $\theta$ w/ $H_{2}\leq \theta\leq \lambda^+$;
+	ii) If $\mathcal{K}$ is also $(H_{2}, \infty)$-weakly tame $\mathcal{K}$ is categorical in every $\theta$ w/ $H_{2}\leq \theta$.
 
 
+**Theorem 15.11:** Suppose $LS(\mathcal{K})<\lambda$ and that $\mathcal{K}$ has arbitrarily large models, the amalgamation property, and joint embedding property. Suppose $\mathcal{K}$ is $\lambda^+$-categorical, then
+	i) $\mathcal{K}$ is categorical in all cardinals $H_{2}\leq \mu\leq \lambda^+$
+	ii) If $\mathcal{K}$ is $(\chi, \infty)$-tame for some $\chi<\lambda^+$, then $\mathcal{K}$ is $\mu$-categorical for all $\mu\geq \lambda^+$
+Where $\chi=H_{1}=\beth_{(2^\kappa)^+}$
+
+
+**Conclusion 15.13:** There is a cardinal $\mu$ depending on $\kappa$ such that if $\mathcal{K}$ is an AEC $\kappa_{\mathcal{K}}=\kappa$, and $\mathcal{K}$ is categorical in some successor cardinal $\lambda^+>\mu$, then $\mathcal{K}$ is categorical in all cardinal greater than $\mu$.
+
+**Proof:** There are only set-many AEC $\mathcal{K}$ w/ $\kappa_{\mathcal{K}}$. Let $\mu_{\mathcal{K}}=\text{ sup}\{\lambda^+|\mathcal{K} \text{ is } \lambda^+ \text{-categorical}\}$ given that such a supremum exists. Then let $\mu$ be the maximum of $H_{2} (=H_{2}(\kappa))$ and $\text{sup}\{\mu_{\mathcal{K}}|\kappa_{\mathcal{K}}=\kappa\}$. If $\kappa_{\mathcal{K}}=\kappa$ and $\mathcal{K}$ is categorical in some successor cardinal greater than $\mu$, then $\mathcal{K}$ is categorical in arbitrarily large successor cardinals and in all cardinals greater than $H_{2}$ via theorem 15.11.
+
+
+**Notes:** 
+- The smallest possible lower bound for an arbitrary infinitary sentence to be categorical is $\beth_{\omega_{1}}.$ For any $\alpha< \aleph_{1}$ there is a sentence $\psi_{\alpha}$ of $\mathscr{L}_{\omega_{1}, \omega}$ w/ no models in cardinals greater than $\beth_{\alpha}$ and w/ many models in each cardinal below $\beth_{\alpha}$. If $\psi$ asserts that the language contains only equality, then $\psi_{\alpha}\vee \psi$ is $\lambda$-categorical for $\lambda\in(\beth_{\alpha}, \infty)$ (this property fails the amalgamation and joint embedding properties).
+- Since $H_{1}< H_{2}$. If $H_{1}=\infty$ (i.e., there isn't a point where arbitrarily large models are guaranteed), then $H_{2}=\infty$ (i.e., there isn't a point where categoricity isn't transferred arbitrarily upwards) and vice versa as $H_{2}=H(H_{1})=\beth_{(2^{H_{1}})^+}=\infty$.
 ## References
 [[Categoricity]]
 [[Abstract Elementary Classes]]

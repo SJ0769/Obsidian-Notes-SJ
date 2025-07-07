@@ -39,5 +39,4 @@ $\to$ The idea is that we still have a 'degree' of free will (an illusion of cho
 Gödel's incompleteness theorem showed that there is a discrepancy between mathematical truth and logical provability as there exists unprovable truths (depending on the system). Meaning there are mathematical truths which cannot be derived using logic.
 
 $\to$ Can our reality be purely 'logical'? (in a logical framework, not necessarily classical logic)
-	Related: Can anything be made as a premise (questions are assigned the 'undefined' truth state)
-
+	Related: Can anything be made as a premise (questions are assigned the 'undefined' truth state)? Yes anything can be talked about in 'logical' syntax given that a logic is a system which yields only 'valid' results via a set of internal inference rules, especially trivialist systems (i.e., first-order logic would not be able infinitary statements).
