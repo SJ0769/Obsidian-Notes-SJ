@@ -2,6 +2,11 @@
 	- $\rightarrow$ truth' effectively cannot be captured, the notion of 'truth' becomes relative and based upon a 'shaky bottom.' Thus, there is no such thing as an objective truth, but rather just interpretations.
 	- An objective truth can be considered as the totality of all interpretations, which is something that cannot be obtained within this reality, any such 'totality' must exist outside of our reality. Thus, any view contained within our reality is subjective (we may have more 'informed' views which are based off of a larger database of information, although ultimately the information it is based off of is a relative notion).
 		$\rightarrow$ We could interpret this through 'horizontal' structure (rather than a 'vertical' structure like a hierarchy) like possible worlds which each contain a fragment of objective truth (relative truth, other 'dimensions' for frameworks?)
+
+	- There is a sense in truth can be (somewhat) unrelativized, specifically unrelativized truth about relativized objects.
+		i.e., consider the claim "$\emptyset$ is a set" w/in the context of $ZF$. This is an categorical/unrelativized truth about the object $\emptyset_{ZF}$ ($\emptyset$ in the context of $ZF$).
+	Though such an unrelativized truth would be viewed as unrelativized by some (meta)-system which cannot capture its own truth (and thus, is also relative).
+	
 - Nested/meta Paradoxes (we can index this by meta-levels, paradox of level 2 ranges over the paradox of level 1)
 	- $\rightarrow$ i.e., claiming the statement "truth is relative" as if it is an objective truth is paradoxical.
 	if this statement is an absolute truth, then not all truths are relative, contradicting the initial statement. If the statement is relative, then it may not be the case that all truth are relative (there may be absolute truths).
@@ -36,7 +41,8 @@ A being operating on trivialist logic would be omnipotent, (this is also a valid
 $\to$ The idea is that we still have a 'degree' of free will (an illusion of choice?) in that we can choose between many choices, all of which have been determined.
 
 **Logicism:** The view that mathematics is entirely reducible to logic.
-Gödel's incompleteness theorem showed that there is a discrepancy between mathematical truth and logical provability as there exists unprovable truths (depending on the system). Meaning there are mathematical truths which cannot be derived using logic.
+Gödel's incompleteness theorem showed that there is a discrepancy between mathematical truth and logical provability as there exists unprovable truths (depending on the system). Meaning there are mathematical truths which cannot be derived using logic. This is why it is often stated that "logic is the intersection between philosophy and mathematics."
 
 $\to$ Can our reality be purely 'logical'? (in a logical framework, not necessarily classical logic)
 	Related: Can anything be made as a premise (questions are assigned the 'undefined' truth state)? Yes anything can be talked about in 'logical' syntax given that a logic is a system which yields only 'valid' results via a set of internal inference rules, especially trivialist systems (i.e., first-order logic would not be able infinitary statements).
+

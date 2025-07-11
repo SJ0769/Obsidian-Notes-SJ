@@ -44,11 +44,21 @@ Sum function
 	i.e., special cases
 	$Sum(0, b) \to 0+b=b$
 	$Sum(\uparrow a', b)\to \uparrow a'+b = \uparrow(a'+b)=\uparrow Sum(a',b)$
+There is a curried form of the function defined as $Sum: Nat \to (Nat\to Nat)$
+
+
+**Equality Types**
+The identity function takes two elements $a, b$ of the type $'Nat'$ and returns type $a=b$
+Thus, there is a type for every possible equality proposition. Although not all of these types are valid.
+	i.e., the type 1=2
+	This type contains no members and thus is unprovable (see below)
+
+## Curry-Howard Correspondence
+The Curry-Howard Correspondence (or alternatively, Curry-Howard isomorphism) is a relation between mathematical proofs and computer programs
 
 Types can be seen as logical propositions and members of these types are proofs of these propositions.
 	i.e., $a:A\iff$proposition
 	If a type has at least one element, then there is a proof of the logical proposition (there will be multiple ways to prove a proposition if the type contains more than one element). If a type has no elements then the proposition has no proof.
-
 
 |             Type             |       Logic        |
 | :--------------------------: | :----------------: |
@@ -65,11 +75,6 @@ E.g., of a proof in set theory
 	$\underset{n:Nat}{\Pi}\underset{n:Nat}{\Sigma}\text{ prime}(p) \times p\geq n$
 	i.e., find its corresponding type and find an element of it
 
-**Equality Types**
-The identity function takes two elements $a, b$ of the type $'Nat'$ and returns type $a=b$
-Thus, there is a type for every possible equality proposition. Although not all of these types are valid.
-	i.e., the type 1=2
-	This type contains no members and thus is unprovable
 
 ## Semantics
 The semantics of simple type theory $(STT)$ is based on 'standard' models.
@@ -80,6 +85,15 @@ The language of $STT$ is given by $\mathcal{L=}(\mathcal{C, \tau})$, a standard 
 	iii) For $\alpha, \beta \in \mathcal{T}, D_{\alpha\to \beta}$ is the set of all total function from $D_{\alpha}$ to $D_{\beta}$
 	iv) $I$ maps each $c\in\mathcal{C}$ to each $D_{\tau(c)}$
 	v) $e$ maps each $\alpha\in\mathcal{T}$ to a member of $D_{\alpha}$
+
+
+There is an embedding of higher-order logic into $STT$. Thus, $STT$ is a form of higher-order predicate logic.
+
+**Theorem:** Let $T$ be any $n^{th}$-order theory for $n\geq 1$. Then there is a theory $T'$ of $STT$ and a translation $\xi$ from the sentences of $T$ to the sentences of $T'$ such that for all sentences $\phi$ of $T$ , then $T\models\phi\iff T\models\xi(\phi)$ (i.e., a 'faithful' interpretation of $T$ in $T'$).
+
+Because of this, $STT$ admits categorical theories and unique models up to isomorphism, and $STT$ is equivalent to $\omega^{th}$-order logic.
+
+There is no sound and complete proof system for $STT$ (note that this does not imply $STT$ is inconsistent).
 
 ## References
 [[Higher-Order Logics]]

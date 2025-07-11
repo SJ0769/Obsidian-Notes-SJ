@@ -3,25 +3,34 @@ A Turing machine is a mathematical model of computation...
 
 Formally, a Turing machine can be defined as a 7-tuple
 	$M = \langle Q, \Gamma, b, \Sigma, \delta, q_{0}, F \rangle$
-Where
-- $\Gamma$ is a finite, nonempty set of alphabet symbols (on Turing tape)
-- $b\in \Gamma$ is the 'blank' symbol, which is the only symbol which is allowed to occur infinitely often at any step during the computation
-- $\Sigma \subseteq \Gamma$\{$b$} is the set of input symbols, the set of symbols which can appear in the initial tape contents
-- $Q$ is a finite set of states
-- $q_{0}$ is the initial state
-- $F \subseteq Q$ is the set of final states or accepting states
-- $\delta: (Q$\ $F) \times \Gamma \rightharpoonup Q \times \Gamma \times${$L, R$} is a partial function...
+	Where
+	- $\Gamma$ is a finite, nonempty set of alphabet symbols (on Turing tape)
+	- $b\in \Gamma$ is the 'blank' symbol, which is the only symbol which is allowed to occur infinitely often at any step during the computation
+	- $\Sigma \subseteq \Gamma$\{$b$} is the set of input symbols, the set of symbols which can appear in the initial tape contents
+	- $Q$ is a finite set of states
+	- $q_{0}$ is the initial state
+	- $F \subseteq Q$ is the set of final states or accepting states
+	- $\delta: (Q$\ $F) \times \Gamma \rightharpoonup Q \times \Gamma \times${$L, R$} is a partial function...
 
 ## Arithmetic Hierarchy
 **Arithmetic Hierarchy:**
 The arithmetic hierarchy classifies formulae of Peano Arithmetic by their complexity
 - Limit stages are $\Sigma_{\omega}=\Pi_{\omega}=\Delta_{\omega}$ (= $\Sigma_{0}^1 = \Delta_{0}^1=\Pi_{0}^1$)
 - Note that for all $n< \omega$, $\Delta_{n+1} = \Sigma_{n} \cap \Pi_{n}$
-- $\Sigma_{0}=\Delta_{0}=\Pi_{0}$, if a formula $\phi$ is logically equivalent to some $\psi$ with bounded quantifiers (i.e., $\exists n<t$), then $\phi\in \Delta_{0}$
+- $\Sigma_{0}=\Delta_{0}=\Pi_{0}$, if a formula $\phi$ is logically equivalent to some $\psi$ with bounded quantifiers (i.e., $\exists n<t$), then $\phi\in \Delta_{0}$.
+- $\Delta_{1}$ is the set of all recursive sets.
+- $\Sigma_{1}$ is the set of all recursively-enumerable sets, and $\Pi_{1}$ is the set of all co-recursively-enumerable sets
 
 <img src="/static/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
 
 [Arithmetical hierarchy]([Arithmetical hierarchy - Wikipedia](https://en.wikipedia.org/wiki/Arithmetical_hierarchy))
+
+- If a formula $\phi$ is logically equivalent to another formula of the form $\exists m_{1}\exists m_{2}\dots \exists m_{k} \psi$ where $\psi$ is a $\Pi_{n}^0$-formula, then $\phi$ is said to be $\Sigma_{n+1}^0$-formula (i.e., $\phi\in \Sigma_{n+1}^0$)
+- If a formula $\phi$ is logically equivalent to another formula of the form $\forall m_{1}\forall m_{2}\dots \forall m_{k}\psi$ where $\psi$ is a $\Sigma_{n}^0$-formula, then $\phi$ is said to be a $\Pi_{n+1}^0$-formula (i.e., $\phi\in\Pi_{n+1}^0$)
+
+From the above, a formula $\phi$ is a $\Delta_{n+1}^0$-formula if it is both $\Sigma_{n}^0$ and $\Pi_{n}^0$
+
+
 
 ## Computability Theory
 **Recursive:**
@@ -66,10 +75,10 @@ $X^{(n+1)}=X^{(n)'}$
 $X^{(\omega)}=\{p_{i}^\kappa| i \in \mathbb{N} \text{ and } \kappa\in X^{(i)}\}$, i.e., the effective joint of the sequence of sets $X^{(n)}$ for $n \in \mathbb{N}$
 
 - The Turing jump operator is defined for all recursive ordinals $\alpha< \omega_{1}^{CK}$, and extends beyond decidability.
-- The Turing jump $0'$ of the empty set is Turing equivalent to the Halting Problem
-- For each $n$, the set $0^{(n)}$ is m-computable at the level $\Sigma_{n}^0$
+- The Turing jump $\emptyset'$ of the empty set is Turing equivalent to the Halting Problem
+- For each $n$, the set $\emptyset^{(n)}$ is m-complete at the level $\Sigma_{n}^0$ by Posts' theorem (see below)
 
-**Many-One Reduction**
+**Many-One Reduction:**
 A many-one reduction is a reduction which converts instances of a decision problem (i.e., an instance in $L_{1}$) to another decision problem (an instance in $L_{2}$) using a computable function. The reduced instance is in the language $L_{2}$ if and only if the initial instance is in its language $L_{1}$.
 
 Many-one reductions are a special case of Turing reductions (and a stronger form of it).
@@ -85,9 +94,14 @@ $\to$ For subsets of natural numbers $A, B \subseteq \mathbb{N}$, then $A\leq_{m
 - The equivalence class of $\equiv_{1}$ are called $1$-degrees
 - If both $A\leq_{m}B$ and $B\leq_{m}A$, then $A$ is many-one equivalent (or $m$-equivalent) to $B$, denoted as $A\equiv_{m}B$.
 
-**Many-One Completeness**
+**Many-One Completeness:**
 A set $B$ is many-one complete (or $m$-complete) if and only if $B$ is recursively enumerable and every recursively enumerable set $A$ is $m$-reducible to $B$ ($A$ and $B$ are both of degree of $m$).
 $\to$ The equivalence classes of $\equiv_{m}$ are called $m$-degrees and forms a partially ordered set $D_{m}$ (w/ the order induced by $\leq_{m}$).
+
+**Posts Theorem:**
+The intuition behind Post's theorem is that it describes a connection between the arithmetical hierarchy and Turing degrees. Formally, it is asserted as follows:
+	A set $A\subseteq \mathbb{N}$ is in the class $\Sigma_{n+1}^0$ if and only if $A$ is recursively-enumerable by a Turing machine w/ an oracle for $\emptyset^{(n)}$ (the $n^{th}$-Turing jump of the empty set).
+
 ## Ordinal Notation
 **Ordinal Notation:**
 An ordinal notation is a partial function which maps the set of all finite sequences of symbols (which are members of an alphabet) to a countable set of ordinals.
@@ -107,6 +121,8 @@ The following holds for $(\mathcal{O}, <_{\mathcal{O}})$
 
 **Computable Functions**
 
+
+
 **Constructive Ordinals**
 The function $||:\mathcal{O}\to$ ordinals is defined by transfinite recursion on $<_{\mathcal{O}}$
 	$|1|=0$
@@ -118,6 +134,7 @@ The function $||:\mathcal{O}\to$ ordinals is defined by transfinite recursion on
 - There exists a $\Pi_{1}^1$-subset of $\mathcal{O}$, linearly ordered by $<_{\mathcal{O}}$, and order type $\omega_{1}^{CK}$
 - Every ordinal constructive in a set $X$ is recursive in $X$, and every ordinal recursive in $X<$ some ordinal constructive in $X$
 - Kleene's $\mathcal{O}$ is a complete $\Pi_{1}^1$-set (i.e., $\mathcal{O}$ is $\Pi_{1}^1$ and every $\Pi_{1}^1$-set is Turing-reducible to $\mathcal{O}$).
+
 
 ## References
 [[Higher Recursion Theory.pdf]]

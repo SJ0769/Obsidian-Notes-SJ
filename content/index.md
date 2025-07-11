@@ -21,7 +21,6 @@ title: SJ's notes on model theory, set theory, and logic
 ## 📁 Miscellaneous
 - [[Miscellaneous/Philosophy]]
 - [[Miscellaneous/Self-Verifying theories]]
-- [[Miscellaneous/Trees]]
 - [[Miscellaneous/Trivialism]]
 
 ## 📁 Model Theory
@@ -52,6 +51,7 @@ title: SJ's notes on model theory, set theory, and logic
 - [[Set Theory/Philosophy of Sets & Proper-Classes]]
 - [[Set Theory/Relative Consistency Results]]
 - [[Set Theory/The Hierarchy of Large Cardinals]]
+- [[Set Theory/Trees]]
 
 ## 📁 Type Theory
 - [[Type Theory/Lambda-Calculus]]
