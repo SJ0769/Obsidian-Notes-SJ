@@ -6,7 +6,7 @@ Meta-recursion theory is the case in $\alpha$-recursion theory where $\alpha = \
 The Hyperjump operator can be defined as follows:
 	Consider a set $X \subseteq \mathbb{N}$, the set of natural numbers that are ordinal numbers relative to $X$ is denoted $\mathcal{O}^X$ (note the supremum of all ordinal that can be represented in $\mathcal{O}^X$ is denoted $\omega_{1}^X$). Then the hyperjump of $X$ is the function $f: X \to \mathcal{O}^X$.
 
-The hyperjump of $X$ is $\mathcal{O}^X$. This means that $\mathcal{O}^X$ is $\Pi_{1}^1$ in $X$, and every set $\Pi_{1}^1$ in $X$ is many-one reducible to $\mathcal{O}^X$
+The hyperjump of $X$ is $\mathcal{O}^X$. This means that $\mathcal{O}^X$ is $\Pi_{1}^1$ in $X$, and every set $\Pi_{1}^1$ in $X$ is many-one reducible to $\mathcal{O}^X$.
 
 - If $X$ is hyperarithmetic hierarchy, then $X$ is $\Delta_{1}^1$
 - The predicate, "$X\in HYP$" is $\Pi_{1}^1$
@@ -37,16 +37,43 @@ The natural enumeration of a $\Pi_{1}^1$ set in $\omega_{1}^{CK}$ steps yields a
 
 
 **Meta-computable function:** Let $\Phi \subseteq \omega_{1}^{CK}\times \omega_{1}^{CK}$ be a partial function. $\Phi$ is meta-computable if there exists a finite set $E$ of equations...
+
+## Analytical Hierarchy
+The analytical hierarchy is an extension of the arithmetic hierarchy which includes formulas of second-order arithmetic and which quantify over sets of natural numbers $S\subseteq \mathbb{N}$ and equivalently, over functions $f:\mathbb{N}\to \mathbb{N}$. We have stages $\Pi_{\alpha}^1$ and $\Sigma_{\alpha}^1$ for $\alpha<\omega_{1}^{CK}$, as well as the stages from the hyperarithmetical hierarchy.
+
+**Note:** $\Sigma_{0}^1=\Pi_{0}^1=\Delta_{0}^1$
+
+Limit stages: $\Pi_{\omega_{1}^{CK}}^1$ and $\Sigma_{\omega_{1}^{CK}}^1$
+
+As in the arithmetic hierarchy, for each $\alpha$:
+	-$\Pi_{\alpha}^1 \subset\Sigma_{\alpha+1}^1$
+	-$\Pi_{\alpha}^1 \subset\Pi_{\alpha+1}^1$
+	-$\Sigma_{\alpha}^1 \subset \Sigma_{\alpha+1}^1$
+	-$\Sigma_{\alpha}^1 \subset \Pi_{\alpha+1}^1$
+And so, $\Delta_{\alpha}^1 \subset\Pi_{\alpha}^1$ and $\Delta_{\alpha}^1 \subset \Sigma_{\alpha}^1$.
+
+- A formula $\phi$ in the language of second-order arithmetic is said to be $\Sigma_{\alpha+1}^1$ if it is logically equivalent to a formula of the form $\exists X_{1}\dots \exists X_{k}\psi$ where $\psi$ is a $\Pi_{\alpha}^1$formula.
+- A formula $\phi$ in the language of second-order arithmetic is said to be $\Pi_{\alpha+1}^1$ if it is logically equivalent to a formula of the form $\forall X_{1}\dots \forall X_{k}\psi$ where $\psi$ is a $\Sigma_{\alpha}^1$formula.
+- $\Delta_{\alpha+1}^1=\Sigma_{\alpha+1}^1\cup\Pi_{\alpha+1}^1$, and so a formula $\phi$ is $\Delta_{\alpha+1}^1$ if it is logically equivalent to both a $\Sigma_{\alpha+1}^1$-formula and a $\Pi_{\alpha+1}^1$-formula.
+**Recall:** '$X$' denotes a second-order variable.
+
+
+E.g., For a relation $\prec$ on $\mathbb{N}^2$, the statement "$\prec$ is a well-order on $\mathbb{N}$" is $\Pi_{1}^1$.
+
+
+We can further extend the analytical hierarchy to stages $\Sigma_{\alpha}^i$ and $\Pi_{\alpha}^i$ for $\alpha$ is recursive ordinal, and $i>1$ (for $i+1^{th}$ arithmetic).
+i.e., a hierarchy of third-order arithmetic formulas would have stages $\Sigma_{\alpha}^2$ and $\Pi_{\alpha}^2$.
+There have been papers talking about $\Delta_{1}^2$ well-orderings of the reals.
 ## Alpha-Recursion Theory
-$\alpha$-recursion theory is an extension of recursion theory to subsets of admissible ordinals $\alpha$
+$\alpha$-recursion theory is an extension of recursion theory to subsets of admissible ordinals $\alpha$.
 
 **Admissible Ordinals:**
 - An ordinal $\alpha$ is admissible if $L_{\alpha}\models KP$ (Kripke-Platek set theory).
-- All admissible ordinals are limit ordinals and are countable, the first admissible ordinal is the Church-Kleene ordinal $\omega_{1}^{CK}$ (the supremum of all recursive ordinals)
+- All admissible ordinals are limit ordinals and are countable, the first admissible ordinal is the Church-Kleene ordinal $\omega_{1}^{CK}$ (the supremum of all recursive ordinals).
 
-A set $A \subseteq \alpha$ is said to be $\alpha$-recursively enumerable if it is $\Sigma_{1}$ definable over $L_{\alpha}$ (this may include parameter from $L_{\alpha}$ in the definition)
+A set $A \subseteq \alpha$ is said to be $\alpha$-recursively enumerable if it is $\Sigma_{1}$ definable over $L_{\alpha}$ (this may include parameter from $L_{\alpha}$ in the definition).
 
-$A$ is $\alpha$-recursive if both $A$ and $\alpha$ \ $A$ are $\alpha$-recursively-enumerable (or alternatively, $\Delta_{1}$ definable over $L_{\alpha}$)
+$A$ is $\alpha$-recursive if both $A$ and $\alpha$ \ $A$ are $\alpha$-recursively-enumerable (or alternatively, $\Delta_{1}$ definable over $L_{\alpha}$).
 
 - $\alpha$-recursive sets are members of $L_{\alpha+1}$
 - Members of $L_{\alpha}$ are called $\alpha$-finite
@@ -56,5 +83,7 @@ $\alpha$-recursion theory also has its own analogue of $\alpha$-jumps and $\alph
 
 Partial functions
 
+## References
 [[Turing Machines & Recursion Theory]]
 [[Higher Recursion Theory.pdf]]
+[Math.stackexchange post]([set theory - Is there any generalization of the hyperarithmetical hierarchy using the analytical hierarchy to formulas belonging to third-order logic and above? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/245121/is-there-any-generalization-of-the-hyperarithmetical-hierarchy-using-the-analyti))
