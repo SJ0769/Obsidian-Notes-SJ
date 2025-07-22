@@ -116,17 +116,15 @@ The Löwenheim-Skolem Theorem states that a first-order theory (in a countable l
 ## The Revision Theory of Truth (RTT)
 Introduces the notion of 'stability', in this view paradoxical statements are not contradictory but rather unstable in that they oscillate between truth values.
 
-Consider the liar sentence L = "This sentence is false"
+Consider the liar sentence $L$ = "This sentence is false"
 
-L dynamically oscillates between the truth values 'true' and 'false'
-
-
-A sentence stabilizes if it is assigned a definite truth value at a given level
-A sentence is unstable if it is not assigned a definite truth value at any stage
+$L$ dynamically oscillates between the truth values 'true' and 'false':
+- A sentence stabilizes if it is assigned a definite truth value at a given level
+- A sentence is unstable if it is not assigned a definite truth value at any stage
 
 
 Still suffers from analogues of the liar's paradox. Consider the following statement:
-"This sentence is not stably true"
+"This sentence is not stably true."
 ## References
 [[Tarski's Theory of Truth]]
 [[Kripke's Theory of Truth]]

@@ -1,5 +1,10 @@
 ## Results
-$I(T,\kappa)$ denotes the number of isomorphism type of cardinality $\kappa$ of a theory $T$, this is also called the 'spectrum' of $T$
+$I(T,\kappa)$ denotes the number of isomorphism type of cardinality $\kappa$ of a theory $T$, this is also called the 'spectrum' of $T$. This is known as the spectrum of a theory.
+
+The spectrum of a sentence $\varphi$ of some logic $\mathscr{L}$, is the class of cardinals $\kappa$ such that $\kappa$ is the cardinality of a model of $\varphi$. That is
+	$Sp(\varphi)=\{\kappa| \mathfrak{A} \models \varphi \wedge |\mathfrak{A}|=\kappa\}$
+An alternative definition of [The Löwenheim Number](Model%20Theory/The%20Löwenheim%20Number.md) (using the spectrum of a sentence).
+	$\ell(\mathscr{L})=\text{Sup}\{\text{min(c)}|\text{c is a spectrum of } \mathscr{L}\}$.
 
 - $I(T, \kappa)=1 \implies$ $T$ has one unique model up to isomorphism, that is, $T$ is $\kappa$-categorical (all models of $T$ of cardinality $\kappa$ are isomorphic).
 - By Morley's Categoricity Theorem, if $I(T, \kappa)=1$ for $\kappa$ is an uncountable cardinal and $T$ is a theory in a countable language, then $I(T, \lambda)=1$ for all $\lambda>\aleph_{0}$.

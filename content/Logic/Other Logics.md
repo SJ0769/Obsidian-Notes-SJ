@@ -40,7 +40,7 @@ The classes $\Delta_{n}$ (for $n < \omega$) of the Levy hierarchy of formulas ca
 
 The decision problem (see [[Turing Machines & Recursion Theory]]) of the logic $\Delta_{n}$ is the complete $\Pi_{n}$ set of natural numbers.
 
-**Note:** Sort logic is a finitary logic (i.e., only allows finitely-long formulae) and thus has an occurrence number of $\aleph_{0}$. $\mathscr{L}$ is set-sized (i.e., $|\mathscr{L}[\tau]|< \lambda$ for $\lambda$ is some cardinal) due to having only two forms of quantification, first-order quantification and sort quantification. Thus, sort logic also has a Hanf and Löwenheim number ([[The Hanf Number]], [[The Löwenheim number]]).
+**Note:** Sort logic is a finitary logic (i.e., only allows finitely-long formulae) and thus has an occurrence number of $\aleph_{0}$. $\mathscr{L}$ is set-sized (i.e., $|\mathscr{L}[\tau]|< \lambda$ for $\lambda$ is some cardinal) due to having only two forms of quantification, first-order quantification and sort quantification. Thus, sort logic also has a Hanf and Löwenheim number ([[The Hanf Number]], [[Model Theory/The Löwenheim Number]]).
 
 -  Sort logic is the 'strongest' logic relative to set theory (ZFC) as it can characterize model classes for any $\Delta_{n}-$formula of the levy hierarchy.
 	**Note:** that characterizing (the size) a model $\not=$ characterizing a model class), i.e., capture and being able to differentiate between sizes of infinity.

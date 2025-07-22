@@ -6,7 +6,7 @@ Formally, a Turing machine can be defined as a 7-tuple
 	Where
 	- $\Gamma$ is a finite, nonempty set of alphabet symbols (on Turing tape)
 	- $b\in \Gamma$ is the 'blank' symbol, which is the only symbol which is allowed to occur infinitely often at any step during the computation
-	- $\Sigma \subseteq \Gamma$\{$b$} is the set of input symbols, the set of symbols which can appear in the initial tape contents
+	- $\Sigma \subseteq \Gamma$\ $\{b\}$ is the set of input symbols, the set of symbols which can appear in the initial tape contents
 	- $Q$ is a finite set of states
 	- $q_{0}$ is the initial state
 	- $F \subseteq Q$ is the set of final states or accepting states
@@ -28,10 +28,21 @@ The arithmetic hierarchy classifies formulae of Peano Arithmetic by their comple
 - If a formula $\phi$ is logically equivalent to another formula of the form $\exists m_{1}\exists m_{2}\dots \exists m_{k} \psi$ where $\psi$ is a $\Pi_{n}^0$-formula, then $\phi$ is said to be $\Sigma_{n+1}^0$-formula (i.e., $\phi\in \Sigma_{n+1}^0$)
 - If a formula $\phi$ is logically equivalent to another formula of the form $\forall m_{1}\forall m_{2}\dots \forall m_{k}\psi$ where $\psi$ is a $\Sigma_{n}^0$-formula, then $\phi$ is said to be a $\Pi_{n+1}^0$-formula (i.e., $\phi\in\Pi_{n+1}^0$)
 
-From the above, a formula $\phi$ is a $\Delta_{n+1}^0$-formula if it is both $\Sigma_{n}^0$ and $\Pi_{n}^0$
+That is, a $\Pi_{n}^0$-formula is equivalent to a formula that begins w/ a 'block' of universal quantifiers $\forall$ (i.e., $\forall m_{1}\dots \forall m_{k}$) and alternates $n-1$ times between series of $\exists$ and $\forall$ quantifiers. A $\Sigma_{n}^0$ is equivalent to a formula that begins w/ a block of existential quantifiers $\exists$ and alternates $n-1$ times between a series of $\exists$ and $\forall$ quantifiers.
 
+From the above, a formula $\phi$ is a $\Delta_{n+1}^0$-formula if it is both $\Sigma_{n}^0$ and $\Pi_{n}^0$.
 
+or each $n\in \mathbb{N}$:
+	-$\Pi_{n}^0 \subset\Sigma_{n+1}^0$
+	-$\Pi_{n}^0 \subset\Pi_{n+1}^0$
+	-$\Sigma_{n}^0 \subset \Sigma_{n+1}^0$
+	-$\Sigma_{n}^0 \subset \Pi_{n+1}^0$
+And so, $\Delta_{n}^0 \subset\Pi_{n}^0$ and $\Delta_{n}^0 \subset \Sigma_{n}^0$.
 
+**Note:** Because redundant quantifiers can be added once a formula is assigned the classification $\Sigma_{n}^0$ or $\Pi_{n}^0$ (or $\Delta_{n+1}^0$ if it is both), it will also be assigned the classification $\Sigma_{m}^0$ or $\Pi_{m}^0$ (or $\Delta_{m+1}^0$) for all $m>n$.
+
+**Notation:** For e.g., $\Sigma_{n}^0$, the $n$ denotes the number of alternations between series of $\exists$ and $\forall$ quantifiers and the '$0$' denotes the type of the objects being quantified over. Type $0$ objects are natural numbers, and objects of type $1$ are function intaking natural numbers and outputting natural numbers. A type $i+1$ object are functions that map the set of objects of type $i$ to the natural numbers. This is related to higher-order objects, an arithmetic hierarchy for second-order arithmetic called the analytical hierarchy can be considered for object of type $1$ (see [Extensions of Recursion Theory](Computability%20Theory/Extensions%20of%20Recursion%20Theory.md)).
+	$\Sigma_{n}^0$ is the same as $\Sigma_{n}\dots$,etc. it is only in extensions of the arithmetic hierarchy (i.e., the analytical hierarchy) that we use the notation $\Sigma_{n}^0$.
 ## Computability Theory
 **Recursive:**
 A language $\mathcal{L}$ is called recursive (or equivalently, decidable) if there is some algorithm (or program) is able to 'decide' if a sequence (or string) of symbol in $\mathcal{L}$ is a $\mathcal{L}$-formula. 'Decide' meaning the algorithm will return true or false (either way this algorithm will 'halt').
@@ -137,10 +148,12 @@ The function $||:\mathcal{O}\to$ ordinals is defined by transfinite recursion on
 
 
 ## References
+[Extensions of Recursion Theory](Computability%20Theory/Extensions%20of%20Recursion%20Theory.md)
 [[Higher Recursion Theory.pdf]]
 [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine)
 [Halting Problem](https://en.wikipedia.org/wiki/Halting_problem)
 [Turing Degrees](https://en.wikipedia.org/wiki/Turing_degree)
 [Kleene's O](https://en.wikipedia.org/wiki/Kleene%27s_O)
 [Many-One Reduction]([Many-one reduction - Wikipedia](https://en.wikipedia.org/wiki/Many-one_reduction))
+[Analytical Hierarchy]([Analytical hierarchy - Wikipedia](https://en.wikipedia.org/wiki/Analytical_hierarchy))
 [Model Theory D.Marker](Set%20Theory%20+%20Model%20Theory/Model%20Theory%20D.Marker.pdf)

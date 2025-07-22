@@ -53,7 +53,8 @@ E.g., Consider the infinitary logic $\mathscr{L}_{\infty, \omega}$, $\mathscr{L}
 $\to \mathscr{L}_{\infty, \omega}$ not being strong is due to the class $WO$ not forming a projective class ($PC$) in $\mathscr{L}_{\infty, \omega}$.
 ($w(\mathscr{L}_{\infty,\omega})=\infty$ and yet $\mathscr{L}_{\infty, \omega}$ not being strong can be interpreted that a vestige of compactness is still preserved for this logic)
 
-Proof:
+**Proof:** (Do proof)
+
 
 E.g., A logic which is strong is Second-Order Logic, $\mathscr{L^2}$. This is because the notion of well-ordering can be expressed as a single sentence in $\mathscr{L^2}$, that is, it contains a definition of well-ordering and so characterizes all of $WO$
 $\to$ and by implication of $\mathscr{L^2}$ being strong, $w(\mathscr{L^2})=\infty$
@@ -82,8 +83,9 @@ $\to$ The Hanf number depends on the well-ordering number
 
 Compactness properties yield small Hanf numbers, while large well-ordering numbers cause compactness properties to 'fade away' (i.e., less fragments of compactness), which, as a result, yields large Hanf numbers.
 
-
+## References
 [[The Hanf Number]]
+[[The Compactness Theorem]]
 [[Model Theoretic Logics.pdf]]
 [[gupea_2077_25506_1.pdf]]
 

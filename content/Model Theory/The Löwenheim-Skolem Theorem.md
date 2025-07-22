@@ -9,7 +9,6 @@ The above is an implication of the Löwenheim-Skolem theorem which asserts that 
 - If $\kappa \geq |M|,$ then $N$ is an elementary extension of $M$ (Upwards Löwenheim-Skolem Theorem)
 
 ![](/static/attachments/LS-T.png)
-
 [Löwenheim–Skolem theorem]([Löwenheim–Skolem theorem - Wikipedia](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem))
 
 **Downwards  Löwenheim-Skolem Theorem (Proof):**
@@ -70,8 +69,9 @@ $\to$ This is because if the logic $\mathscr{L}$ is of an uncountable signature,
 E.g., if $|\tau|=\kappa>\aleph_{0}$, then for a first-order theory $T$ w/ vocabulary $\tau$ may not have have models of cardinality $\lambda$ for $\aleph_{0}\leq \lambda<\kappa$ (assuming it does not have finite models).
 
 The statement "if a first-order theory $T$ has a model an infinite model then it has models of every infinite cardinality" is only true if $h(\mathscr{L})=\aleph_{0}$ which is only true for a countable vocabulary $\tau$.
+
 ## References
-[[The Löwenheim number]]
+[[Model Theory/The Löwenheim Number]]
 [[The Hanf Number]]
 [[The Compactness Theorem]]
 [[Logics, Structures & Models]]

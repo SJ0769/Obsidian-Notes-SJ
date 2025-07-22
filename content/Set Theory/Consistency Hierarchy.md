@@ -1,14 +1,22 @@
 ## Consistency Results
 We say that a theory $S$ is consistent relative to another theory $T$ if $Con(T) \to Con(s)$
-$\to$Where $Con(T)$ denotes that $T$ does not prove a contradiction (i.e., $T \vdash (\varphi \wedge \neg \varphi)$ for some $\varphi$ in the language of $T$)
-
-Consistency Strength
-
-We say that a theory $T$ is stronger than some theory $S$, denoted $T \geq S$ ,if $T \vdash Con(S)$
+$\to$Where $Con(T)$ denotes that $T$ does not prove a contradiction (i.e., $T \vdash (\varphi \wedge \neg \varphi)$ for some $\varphi$ in the language of $T$).
 
 
-**Note:** Consistency results are meta theorems
+**Consistency Strength:**
+We say that a theory $T$ is at least as strong as some theory $S$, denoted $T \geq S$, if $T \vdash Con(S)$. We say that a theory $T$ is strictly stronger then a theory $S$, denoted $T>S$, if $T \geq S$ and $S\not\geq T$. That is, $T\vdash Con(S)$ but $S\not\vdash Con(T)$.
+Two theories $T$ and $S$ have the same consistency strength, denoted $T\equiv S$ (equivalence relation), if $T\leq S$ and $S\leq T$. That is, $T\vdash Con(S)$ and $S\vdash Con(T)$.
 
+
+**Relative Consistency Results:**
+For $S$ and $T$ are axiomatic theories, the following statement:
+	$Con(T)\to Con(S)$
+asserts "If $T$ is consistent, then $S$ is consistent." This also means "$S$ is consistent relative to $T$"
+
+Such statements can be formulated in relatively weak meta-theories such as $PRA$ (Primitive-Recursive Arithmetic). $PRA$ is not proving the consistency of $T$ or $S$, but rather proving the relative consistency result "if $T$ is consistent then so is $S$"
+
+
+**Note:** Consistency results are meta theorems.
 ## Interpretability Hierarchy
 Let $T_{1}$ and $T_{2}$ denote recursively enumerable sets of axioms. We say that $T_{1}$ is interpretable in $T_{2}$, denoted $T_{1}\leq T_{2}$, if there is a translation $\tau$ from the language of $T_{1}$ to the language of $T_{2}$ such that for each sentence $\varphi$ of $T_{1}$, $T_{1}\vdash \varphi \implies T_{2}\vdash\varphi$.
 
@@ -30,6 +38,26 @@ Theories with the same proof-theoretic ordinals are equiconsistent.
 
 **Note:** By necessity, the ordinal notations must be recursive, and so the supremum of proof-theoretic ordinals is the Church-Kleene ordinal $\omega_{1}^{CK}$. If a theory has a proof-theoretic ordinal equal or greater than $\omega_{1}^{CK}$, then it is inconsistent.
 
+## Transfinite Recursions of Consistency
+(Turing paper)
+
+Defined recursively as follows:
+- $T_{0}^{Con}:=T$
+- $T_{\alpha+1}^{Con}:=T_{\alpha}^{Con}+Con(T_{\alpha}^{Con})$
+- $T_{\lambda}^{Con}:=\bigcup\limits_{\alpha<\lambda} T_{\alpha}^{Con}$ for $\lambda$ is a limit ordinal
+
+This procedure has limit stage $T_{\omega_{1}^{CK}}^{Con}$
+
+
+The $\Sigma_{1}$-reflection principle (or the uniform reflection principle):
+
+A stronger form of consistency such that $T+RFN_{\Sigma_{1}}(T)$ proves the consistency of $T_{n}^{Con}$ for $n<w$. Thus,  $T+RFN_{\Sigma_{1}}(T)$ is equivalent to $T_{\omega}^{Con}$. From this, we can define similarly:
+
+- $T_{0}^{RFN}:=T$
+- $T_{\alpha+1}^{RFN}:=T_{\alpha}^{RFN}+RFN(T_{\alpha}^{RFN})$
+- $T_{\lambda}^{RFN}:=\bigcup\limits_{{\alpha<\lambda}}T_{\alpha}^{RFN}$
+
+This procedure can continue via considering stronger reflection principles.
 ## References
 [[The Hierarchy of Large Cardinals]]
 [[Model Theory/Ultraproducts & Ultrafilters]]

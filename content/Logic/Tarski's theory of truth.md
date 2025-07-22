@@ -114,6 +114,9 @@ $\mathscr{L}_{n+1} =$ $n^{th}$-order Logic
 .
 This hierarchy is similar to a recursive Tarskian hierarchy
 
+**Note:** We cannot have a Tarski hierarchy where $n+1^{th}$-order logic is the object language and the $n^{th}$-order logic is the metalanguage, as then $n^{th}$-order logic would be able to define its own truth predicate and capture its own semantics (recall that $n+1^{th}$-order logic defines the semantics of $n^{th}$-order logic), resulting in semantic collapse.
+
+
 
 The metalanguage "presupposes" the object language in that in order to talk about the object language you must first assume the metalanguage which describes the syntax (WFF, inference rules) and the semantics of the object language. The metalanguage may also "inform" the choice of axioms of the object language, by the metalanguage determining what can be formulated (as an axiom), and what it 'should' look like (i.e., philosophically, your choice of axioms should reflect what the metalanguage consider as valid and consistent). Due to the limitations imposed [[Gödel's Incompleteness Theorems]], the metalanguage also justifies the choice of axioms (validity and meaning of the axioms) as the object language cannot.
 

@@ -22,7 +22,7 @@ Since there are a proper-class of sentences in $\mathscr{L}_{\infty, \omega}$ (t
 
 **Notation:** For any AEC $\mathcal{K}$, let $\kappa_{\mathcal{K}}=$sup$\{|\tau_{\mathcal{K}}|, LS({\mathcal{K}})\}$, where $\tau_{\mathcal{K}}$ denotes the vocabulary (or 'similarity type') of the AEC $\mathcal{K}$, and $LS(\mathcal{K})$ denotes the Löwenheim number of $\mathcal{K}$.
 
-For any cardinal $\kappa$, there is only set-many AEC $\mathcal{K}$ with $\kappa_{\mathcal{K}}=\kappa$ since the AEC is determined via its restriction to model below the Löwenheim number.
+For any cardinal $\kappa$, there is only set-many AEC $\mathcal{K}$ with $\kappa_{\mathcal{K}}=\kappa$ since the AEC is determined via its restriction to model below the Löwenheim number (given a fixed vocabulary $\tau$).
 
 A property $P$ is downwards closed if there is a $\kappa_{0}$ such that if $P(\mathcal{K}, \lambda)$ holds with $\lambda>k_{0}$, then $P(\mathcal{K}, \mu)$ holds if $k_{0}< \mu\leq \lambda$.
 

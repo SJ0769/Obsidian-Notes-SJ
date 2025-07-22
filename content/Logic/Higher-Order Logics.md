@@ -1,21 +1,38 @@
 ## Background + Syntax
-Second-order logic allows for the quantifiers $\exists, \forall$ to range over subsets of sets, a model of second-order logic (SOL) would have domain $\langle M, \mathcal{P}(M) \rangle$.
+Second-order logic allows for the quantifiers $\exists, \forall$ to range over subsets of sets (or rather subsets of elements), and so a model of second-order logic (SOL) would have domain $\langle M, \mathcal{P}(M) \rangle$.
 
-$n^{th}$-order logic generalizes this to $n$-iterations of the powerset over the initial domain (quantifiers have range over $n$-nested subsets).
+$n^{th}$-order logic generalizes this to $n$-iterations of the powerset over the initial domain (quantifiers have range over $n$-nested subsets) and so a domain looks like $\langle M, \mathcal{P}(M), \mathcal{P}(\mathcal{P}(M)),\dots \rangle$ (a model will have this as the domain + extra syntax such as predicates symbols $X, Y, Z$ and predicates which predicate over predicates $X^2, Y^2, Z^2,\dots$etc.)
 
-'Higher-order logic' can also refer to $\omega^{th}$-order logic.
+----------------------
+
+**Note:** 'Higher-order logic' can also refer to $\omega^{th}$-order logic.
 
 $n^{th}$-order logic for $n > 1$ lack the compactness (and by extension 
-[[The Löwenheim-Skolem Theorem]]) and completeness theorem.
+[[The Löwenheim-Skolem Theorem]]) as well as the completeness theorem since they are further extensions of first-order logic.
+
+----------------------------------
 
 The higher-order syntax is cumulative in that $n+1^{\text{th}}$-order syntax is $n^{\text{th}}$-syntax with additional $n+1^{\text{th}}$ variables.
 	i.e., $3^{\text{rd}}$-syntax is $2^{\text{nd}}$-order syntax with the addition of $3^{\text{rd}}$-order variables and allowing for quantifiers to range over such variables.
 	$\to$ $2^{\text{nd}}$-order variables are predicates and functions, so $3^{\text{rd}}$-order variables are predicate of predicates or functions of functions.
 	E.g., $3^{\text{rd}}$-order logic over the structure $\mathcal{N}_{1}=\langle \mathbb{N}, +, \cdot \rangle$ is the same as the $2^{\text{nd}}$-order logic over the structure $\mathcal{N}_{2}=\langle \mathcal{P}(\mathbb{N}), \mathbb{N}, E, +, \cdot\rangle$, where $E \subseteq \mathbb{N}\times\mathcal{P}(\mathbb{N})$ is the relation $nEr\iff n\in r$. This is the same as first-order logic over the structure $\mathcal{N}_{3}=\langle\mathcal{P}(\mathcal{P}(\mathbb{N})), \mathcal{P}(\mathbb{N}), \mathbb{N}, E', E, +, \cdot\rangle$, where $E' \subseteq \mathcal{P}(\mathbb{N})\times\mathcal{P}(\mathcal{P}(\mathbb{N}))$ is the relation $rE'X \iff r\in X$. Moreover, $2^{\text{nd}}$-order logic over $\mathcal{N}_{1}$ is the same as the first-order logic over $\mathcal{N}_{2}$.
 
+**Why is quantifying over predicates equivalent to quantifying over subsets of sets?**
+When quantifying over predicates of arity $n$, we are essentially quantifying over relation over 
+$n$-tuples of elements from the domain (i.e., quantifying over $R$ for $R\subseteq M^n$, for $M$ is our domain.
+While something like first-order logic is only quantifying over elements $\alpha\in M$.
+
+-------------------------------------------------------
+### Monadic Second-Order Logic
+Monadic second-order logic (MSOL) is a fragment of SOL where quantification is restricted over unary (or otherwise called 'monadic') predicates. This $\implies$ that MSOL can only quantify over sets of elements, rather than predicates and subsets of set as we are only quantifying over relations $R\subseteq M$.
+
+From this intuition we can extend this to more expressive fragments of SOL, i.e., binary second-order logic, via restricting quantification over predicates of arity $2$ (quantifying over $R \subseteq M^2$).
+
+-------------------------------------
 ## Full Semantics
 Quantifiers range over all sets and functions of an appropriate sort. As mentioned above, a model of second-order logic w/ full semantics require that we quantify over the full powerset.
 $\to$ If there are $\kappa$ objects, then that doesn't necessarily mean that there are $2^\kappa$ properties.
+
 
 See [[Tarski's Theory of Truth]], higher-order logic can be interpreted as a meta-hierarchy with
 ${n+1}^{th}$-order logic being the metalanguage of $n^{th}$-order logic. Technically, this construction is cumulative, with $n^{th}$-order logic is the metalanguage (i.e., can interpret and formalize the semantics) of all $m$-order logic for $n>m$.
@@ -71,6 +88,10 @@ Therefore, SOL will not suffice for many as an adequate foundation of mathematic
 Consider where the object theory is Quine's New Foundation ($NF$) and the metatheory is $ZFC$.
 	$\to$ The notion of a 'set' will have to be a metatheoretic one, otherwise there is merely a syntactic translation between the theories.
 It is impossible for the set $U:=\{x|x=x\}$ in $NF$ to be a set in $ZFC$ w/ the same members since $U\in U$ in $NF$, which is contrary to the foundation of $ZFC$, there is a 'conflict' between the object ($NF$) theory and metatheory ($ZFC$) about the notion of 'set'. This causes the metatheory to view the object theory as inconsistent ($NF$ is not consistent relative to $ZFC$).
+
+## Extensions
+We may also consider extension of HOL (equivalent to $\omega^{th}$-order logic) such as $\omega+1^{th}$-order logic, $\omega+2^{th}$-order logic, as mentioned in [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md), this process is recursive, so the upward limit is ${\omega_{1}^{CK}}^{th}$-order logic. Further extensions will require a syntax which is not recursive (this will result in difficulties in the semantics such as not being able to tell what level or 'order' a truth predicate belongs to, and perhaps even complete semantic collapse). This is also the case for transfinite type theory.
+
 ## References
 [[The Compactness Theorem]]
 [[Soundness & Completeness]]
@@ -78,3 +99,4 @@ It is impossible for the set $U:=\{x|x=x\}$ in $NF$ to be a set in $ZFC$ w/ the 
 [Second-order and Higher-order Logic]([Second-order and Higher-order Logic (Stanford Encyclopedia of Philosophy)](https://plato.stanford.edu/entries/logic-higher-order/))
 [[Type Theory]]
 [[Transfinite Type Theory]]
+[Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)

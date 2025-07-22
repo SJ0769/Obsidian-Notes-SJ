@@ -6,7 +6,7 @@ i.e., Consider $\mathscr{L}_{\kappa, \lambda}$ for $\kappa, \lambda > \aleph_{0}
 
 First-order logic is $\mathscr{L}_{\omega, \omega}$ 
 
-Infinitary logic are missing [[The Compactness Theorem]] and by extension the [[The Löwenheim-Skolem Theorem]].  Although some may have fragments of compactness (i.e., $\kappa-$compactness) and of the the Löwenheim-Skolem Theorem (see [[The Hanf Number]] and [[The Löwenheim number]])
+Infinitary logic are missing [[The Compactness Theorem]] and by extension the [[The Löwenheim-Skolem Theorem]].  Although some may have fragments of compactness (i.e., $\kappa-$compactness) and of the the Löwenheim-Skolem Theorem (see [[The Hanf Number]] and [[Model Theory/The Löwenheim Number]])
 
 Some infinitary logics are also not complete ([[Soundness & Completeness]]).
 

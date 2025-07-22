@@ -41,6 +41,6 @@ A stronger form of Hanf number, $H_{\kappa}(\mathscr{L})$ can be defined which a
 
 ## References
 [[The Löwenheim-Skolem Theorem]]
-[[The Löwenheim number]]
+[[Model Theory/The Löwenheim Number]]
 [[Model Theoretic Logics.pdf]]
 [[Categoricity]]

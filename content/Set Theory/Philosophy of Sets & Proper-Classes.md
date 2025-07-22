@@ -8,7 +8,6 @@ $V_{{\alpha + 1}} := \mathcal{P}(V_{\alpha})$
 $V_{\lambda}:=\bigcup\limits_{\alpha < \lambda}  V_{\alpha}$ for all $\lambda$ is a limit ordinal
 $V := \bigcup\limits_{\alpha \in O} V_{\alpha}$
 (**Note:** The definition of $V$ is in the context of class theory as it is a proper-class)
-
 <img src="/static/attachments/VNU.png" alt="Von Neumann Universe" width="300">
 
 [Von Neumann universe]([Von Neumann universe - Wikipedia](https://en.wikipedia.org/wiki/Von_Neumann_universe))
@@ -95,7 +94,6 @@ These paradoxes informed what an axiomatic theory of sets should behave like (i.
 
 (These notions may change for stuff like Peano Arithmetic, where a model is standard if it is isomorphic to another standard model).
 
-
 The internal view of a model $\mathcal{M}$ (i.e., what $\mathcal{M}$ thinks of itself) may differ from what the universe of sets $V$ thinks of $\mathcal{M}$ (external view). Within set theory ($\tau = \{\in\}$), the $\in$-relation may differ between the internal and external view. The model's interpretation of the membership relation is denoted as $\in^{\mathcal{M}}$ or as $E$.
 
 i.e., add constant symbol $c_{0}, c_{1}, c_{2},\dots, c_{n},\dots$ to the language of set theory (so, $\tau = \{ \in, c_{0}, c_{1}, c_{2}, \dots, c_{n},\dots\}$). Let $T$ be the theory obtained via adding sentences $c_{1}\in c_{0}, c_{2}\in c_{1},\dots,c_{n+1}\in c_{n},\dots$ to the $ZF$ axioms. If $ZF$ is consistent, then every finite subset of $T$ is consistent and so, by the compactness theorem, $T$ is consistent. Thus, any model of $T$ is a non-well-founded model of $ZF$
@@ -103,6 +101,8 @@ i.e., add constant symbol $c_{0}, c_{1}, c_{2},\dots, c_{n},\dots$ to the langua
 **Note:** The axiom of foundation holding in a models does not $\implies$ that there is no infinite descending $\in$-sequence of elements of the model, it instead means that such an infinite sequence can not be an element of the model (although you still have $c_{0} \ni^{\mathcal{M}}c_{1} \ni^{\mathcal{M}}\dots c_{n}^{\mathcal{M}} \ni c_{n+1}^{\mathcal{M}}\ni^{\mathcal{M}}\dots,$etc. w/in the model) as it would then not satisfy the foundation axiom. Thus, the model "thinks" it is well-founded, but viewed externally (by $V$) it is ill-founded.
  $\to$ **Clarification:** W/in the model (internally), there is no infinitely descending $\in$-sequence of elements, but as seen externally there is.
 $\to$ The $\in$-relation of the model is not the real set-membership relation (at least assuming $V$ models $ZF$ and extensions of it, as most commonly believed), but rather the models interpretation of it.
+
+What we take as '$\in$' (the real $V$) is $\in^V$. Whether the $\in$-relation is actually well-founded depends on the philosophical background of the set-theorist (w/ the meta-theory being an ill-founded set theory such as $NF$ then the $\in$-relation may be as ill-founded but interpreted as well-founded w/in a model of $ZFC$, often a well-founded meta-theory is used).
 
 In general, this may be extended to any symbol in the vocabulary/language, where a structures interpretation of it differs from what it 'actually' is (according to $V$, which is taken to be the ultimate truth about sets via the iterative conception).
 ## Philosophy
@@ -129,6 +129,27 @@ Higher-order reflection principles are not provable w/in ZFC, and affirms the ex
 
 To express second-order properties of $V$ we need to move beyond $ZFC$ to von Neumann-Gödel-Bernays class theory $(NBG)$ w/ variables ranging over sets and variables and ranging over the collection of classes. The $\in$-relation applies between sets and classes, the comprehension scheme for formulas w/ only 'set-quantifiers' (but w/ both set and class variables). Thus, in $NBG$ we can quantify over classes but we cannot apply the comprehension schema to formulas containing such quantifiers.
 	$\to$ Global choice is also included as an axiom, which says that there is a class function $F$ such that $F(x)$  is an element of $x$ for every nonempty set $x (\implies$ all proper-classes have the same size).
+
+
+**Inner Model Hypothesis (IMH):** If a first-order sentence holds in an inner model of some outer model of $V$, then it also holds in some definable inner model of $V$.
+	$\to$ IMH refers to outer models of $V$ which are not available from the Zermelo picture of $V$. This issue can be solved by not referring to the whole $V$, but rather to just some countable transitive model of $ZFC$.
+	$\to$ Another solution is $V$-logic which enables one to express first-order properties of arbitrary outer models (almost) internally w/in $V$ in the same sense as first-order properties of set-forcing extensions of $V$ can be internalized using the forcing relation $\Vdash$.
+**Note:** First-order properties of arbitrary outer models are 'almost' internally w/in $V$ as the new truth in outer models will not (in general) be first-order definable over $V$, but rather a small lengthening of $V$ (not a thickening) called $HYP(V)$ which is the least admissible set contain $V$ as a member.
+
+As lengthenings are available in the Zermelian conception (i.e., height potentialism), this enables the expression of principles such as IMH w/out some loss of content.
+$\to V$-logic allows us to make sense of IMH as if it were referring to the whole $V$.
+
+
+**Notation:**
+- $Con(ZFC+\varphi)=$ "$ZFC + \varphi$ is consistent"
+- $Icon(ZFC+\varphi)=$ "There is an inner model of $ZFC+\varphi$"
+Consistency result: $Con(ZFC+LC)\to Con_{9}ZFC+\varphi$
+Internal consistency result: $Icon(ZFC+LC)\to Icon(ZFC+\varphi)$
+
+**Note:** A statement can be consistent w/out being internally consistent relative to some large cardinals.
+
+The case of IMH is analogous to that of Martin's axiom (MA), a principle of set-forcing. There are many formulations of MA, i.e., MA$_{\aleph_{1}}$ asserts:
+	Whenever $V[G]$ is a generic extension of $V$ by a partial order $\mathbb{P}$ w/ the countable chain condition in $V$, and $\varphi(x)$ is a $\Sigma_{1}$-formula that is a subset of $\omega_{1}$ as parameters, if in $V[G]$ there is a $y$ such that $\varphi(y)$ holds, then there is also such a $y\in V$.
 ### Philosophical Views
 **Actualist View of The Universe:** The universe is fixed and cannot be extended (width and height). This view may not be incompatible with views such as $V$ being 'plastic' in that the actualist will claim that $V \subset V^*$ was never the 'true' universe of sets.
 	**Platonic view of The Universe:**
@@ -148,6 +169,8 @@ The universe of sets $V$ is not a complete static object, but rather a dynamic o
 
 - Other proper-classes (i.e., $HC, HOD$)?
 ## References
+[[Fundamentals of Set Theory]]
+[[Forcing]]
 [Russell's Paradox]([Russell's paradox - Wikipedia](https://en.wikipedia.org/wiki/Russell%27s_paradox))
 [Burali-Forti Paradox]([Burali-Forti paradox - Wikipedia](https://en.wikipedia.org/wiki/Burali-Forti_paradox))
 [Cantor's Paradox]([Cantor's paradox - Wikipedia](https://en.wikipedia.org/wiki/Cantor%27s_paradox))

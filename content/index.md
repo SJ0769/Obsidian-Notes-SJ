@@ -44,12 +44,12 @@ title: SJ's notes on model theory, set theory, and logic
 
 ## 📁 Set Theory
 - [[Set Theory/Axiomatic Set Theories]]
+- [[Set Theory/Consistency Hierarchy]]
 - [[Set Theory/Forcing]]
 - [[Set Theory/Fundamentals of Set Theory]]
 - [[Set Theory/Multiverse vs Universe View]]
 - [[Set Theory/Non-Well Founded Set Theories]]
 - [[Set Theory/Philosophy of Sets & Proper-Classes]]
-- [[Set Theory/Relative Consistency Results]]
 - [[Set Theory/The Hierarchy of Large Cardinals]]
 - [[Set Theory/Trees]]
 

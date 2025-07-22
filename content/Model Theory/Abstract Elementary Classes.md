@@ -45,6 +45,6 @@ Embedding reducts.
 
 [Abstract elementary class - Wikipedia](https://en.wikipedia.org/wiki/Abstract_elementary_class)]
 [[AEClec.pdf]]
-[[The Löwenheim number]]
+[[Model Theory/The Löwenheim Number]]
 [[Stability Theory]]
 [[Logics, Structures & Models]]

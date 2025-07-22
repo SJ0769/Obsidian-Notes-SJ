@@ -10,13 +10,14 @@ where $F(x)$ is intended to be a self-referential predicate.
 
 Thus, a self-verifying theory $\alpha$ cannot express self-referential statements such "this sentence is not provable" (from which Gödel's Incompleteness Theorem is derived) and "this sentences is false" (for which Tarski's Undefinability Theorem is derived)
 
-Canonical Reflection Principle
+**Canonical Reflection Principle:**
 
 
-Tangible Reflection Principle
+**Tangible Reflection Principle:**
 
 
 Can self-verifying theories define their own truth predicates? Placement in a Tarski hierarchy.
 
-
+## References
 [[Self-Verifying Theories.pdf]]
+[Self-Verifying Theories]([Self-verifying theories - Wikipedia](https://en.wikipedia.org/wiki/Self-verifying_theories))

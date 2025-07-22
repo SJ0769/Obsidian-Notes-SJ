@@ -127,7 +127,7 @@ $\to$ **Proposition:** Let $\mathscr{L}$ be a regular logic with dependance numb
 ## References
 
 [[The Hanf Number]]
-[[The Löwenheim number]]
+[[Model Theory/The Löwenheim Number]]
 [[Infinitary Logics]]
 [[Logics, Structures & Models]]
 [[Model Theoretic Logics.pdf]]

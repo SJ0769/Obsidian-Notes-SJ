@@ -14,7 +14,7 @@ For $M$ and $N$ are terms:
 
 Lambda calculus is Turing compete, meaning it can be used to simulate any Turing machine.
 
-E.g., mapping of an input $x$ to an output $y$ is denoted as follows: $x \mapsto y$, in lambda-calculus this may be denoted as $\lambda x.y$, where the '$.$' symbol separates the input from the output.
+E.g., mapping of an input $x$ to an output $y$ is denoted as follows: $x \mapsto y$, in lambda-calculus this may be denoted as $\lambda x.y$, where the '$.$' symbol separates the input from the output. Equivalently, this describes a function $f(x)=y$.
 
 E.g., of $\beta$-reduction
 $(\lambda x.x+1)3\to_{\beta} 3+1 = 4$
@@ -23,7 +23,7 @@ $(\lambda x.x+1)3\to_{\beta} 3+1 = 4$
 **Note:** For $\lambda x.M(x\mapsto M)$, such a function is higher-order (i.e., functions themselves can be inputs to other functions, more precisely, a function of order $n$ can be an input for a function of order order $k$ where $k>n$. Similarly, functions can also be returned as outputs of higher-order functions).
 
 Lambda calculus can achieve two inputs (or more) functions via the following:
-	Consider the function $\lambda x.\lambda y.x+y$
+	Consider the function $\lambda x.\lambda y.x+y$ i.e., We have a function which takes an input $x$ and outputs a function w/ input $y$, this outputted function in turn returns $x+y$.
 	$\to$ Substituting in $1$, we derive
 	$(\lambda x.\lambda y.x+y)1\to_{\beta}\lambda y.1+y$
 	$(\lambda y.1+y)2\to_{\beta}1+2=3$
@@ -79,9 +79,14 @@ The not function then can rewritten as $\lambda b^{\text{Bool}}.$ if $b$ then $\
 **Encoding:**
 Encoding Numbers:
 $3=\lambda f.\lambda x.f(f(fx))$
+$4=\lambda x.f(f(f(x)))$
+.
+.
+.
+
 
 Encoding Recursion:
-$Y=\lambda f.(\lambda x.f(x x))(\lambda x.f(x x))$
+$Y=\lambda f.(\lambda x.f(x x))(\lambda x.f(x x)).$
 
 Encoding Pairs:
 Pair $= \lambda x.\lambda y.\lambda p.pxy$

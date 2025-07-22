@@ -32,4 +32,5 @@ Before doing the proof of the Compactness Theorem, there is an important result 
 	A logic $\mathscr{L}$ is $(\kappa, \lambda)$-compact if for all vocabularies $\tau$ and $\Phi \subseteq \mathscr{L}[\tau]$ such that $|\Phi|<\kappa$, if each subset $\Psi\subseteq \Phi$ such that $|\Psi|<\lambda$ has a model, then $\Phi$ has a model
 ## References
 [[Model Theoretic Logics.pdf]]
+[Model Theory D.Marker](Set%20Theory%20+%20Model%20Theory/Model%20Theory%20D.Marker.pdf)
 [Soundness & Completeness](Model%20Theory/Soundness%20&%20Completeness.md)

@@ -11,7 +11,7 @@ It is obviously true that ${n+1}^{th}$-order logic has greater expressive power 
 	**Result:** The Hanf number and Löwenheim number of higher-order logic (HOL) is the same as the Hanf number and Löwenheim number of second-order logic (SOL) (which is the same as  those of a $\Pi_{1}^1 -$fragment).
 
 
-**Note:** $D$ is a constant formula of the second-order functional calculus and $\xi(D)$ is the translation of $\varphi$ into a formula of the second-order function calculus (this translation follows ==certain rules==).
+**Note:** $D$ is a constant formula of the second-order functional calculus and $\xi(D)$ is the translation of $D$ into a formula of the second-order function calculus (this translation follows ==certain rules==).
 
 
 Let $K$ be any formula of the theory of types. The formula $\chi(K)$ denotes the formula
@@ -19,13 +19,21 @@ Let $K$ be any formula of the theory of types. The formula $\chi(K)$ denotes the
 	of the second-order functional calculus, where $q_{1}^{\tau_{1}}\wedge\dots \wedge q_{\kappa}^{\tau_{\kappa}}$ are all constants of $K, \tau_{1},\dots \tau_{\kappa}$ are typed variables of levels $1$ to $\kappa$ (correspond to a domain in the type-theoretic hierarchy of universes).
 
 
-**Theorem III:** A formula $K$ of the theory of types is valid (that is, $\varphi$ is true in all models of the theory of types) if and only if $\psi \wedge \chi(K)\supset \xi(K)$
+**Theorem III:** A formula $K$ of the theory of types is valid (that is, $K$ is true in all models of the theory of types) if and only if $(D\wedge \chi(K))\implies \xi(K)$.
 
-**Theorem IV:** $\varphi$ is logically false (not true in any model of the theory of types) if and only if $D \wedge \chi(K)\supset \neg\xi(K)$ is valid.
+For a closed formula $K$, theorem III asserts that $K$ is valid (i.e., true in all models) if and only if $(D\implies \xi(K))$ is valid.
 
-These two formulas together imply that for $K$ is a closed formula, $K$ is valid if and only if $D\supset \xi(K)$ is valid and that $K$ is logically false if and only if $D \supset\neg\xi(K)$ is valid.
 
-**Theorem V:** A formula of the form $X(L)$ (where $X$ is a monadic predicate and $\varphi$ is a formula of the first-order functional calculus) is satisfiable in the standard sense if and only if it has a general model set $\mu$ with the following properties.
+**Theorem IV:** $K$ is logically false (not true in any model of the theory of types) if and only if $(D\wedge \chi(K))\implies \neg \xi(K)$ is valid.
+
+- Theorem IV asserts that $K$ is satisfiable if and only if  $\neg(\neg(D\wedge \chi(K))\vee \neg \xi(K))$ is logically false.
+- The latter formula, $\neg(\neg(D\wedge \chi(K))\vee \neg \xi(K))$, has a strong model set if and only if the formula $D\wedge \chi(K)\wedge \xi(K)$ has a strong model set.
+- If every $K$ is satisfiable if and only if $(D\wedge \chi(K)\wedge \neg \xi(K))$ is satisfiable, then $\neg K$ is satisfiable if and only if $(D\wedge \chi(\neg K)\wedge \xi(\neg K))$ is satisfiable. The satisfiability of the last formula is equivalent to the non-validity (logically false) of $(D\wedge \chi(K))\implies\neg\xi(K)$.
+
+
+These two formulas together imply that for $K$ is a closed formula, $K$ is valid if and only if $D\implies \xi(K)$ is valid and that $K$ is logically false if and only if $D\implies \neg\xi(K)$ is valid. This effectively depicts a type reduction from the Simple Theory of Types ($STT$) to SOL.
+
+**Theorem V:** A formula of the form $X(L)$ (where $X$ is a monadic predicate and $L$ is a formula of the first-order functional calculus) is satisfiable in the standard sense if and only if it has a general model set $\mu$ with the following properties.
 	i) Each member of $\mu$ satisfies one of the following conditions w/ respect to $\{X(L)\}$
 		- $L$ is a sub-formula of a formula satisfied by a standard model set v
 		- $L$ is a negation of a sub-formula of a formula satisfied by v
@@ -36,6 +44,8 @@ These two formulas together imply that for $K$ is a closed formula, $K$ is valid
 Theorem V shows that there is a reduction from the second-order functional calculus (for which there is a reduction from the theory of types via a translation preserving satisfiability and validity) to monadic second-order logic (recall that monadic second-order logic only for quantification over unary or 'monadic' predicates).
 
 **Note:** The notion of a 'general model set' closely resembles the notion of 'model' used in usual model theory since 'non-standard' models are allowed. The notion of 'standard model set' as described in the paper is more restrictive (and a further restrictive model is considered, called a 'strong model set').
+
+(This adapted notation, where in Hintikka's papers $p\supset q$ is equivalent to $p \implies q$ and $\sim$ is equivalent to $\neg$).
 
 
 **Relation between monadic second-order logic (MSOL) and the classes $\Pi_{1}^1$ and $\Sigma_{1}^1$:**
@@ -55,7 +65,7 @@ A consequence of this is that checking the validity of a second-order sentence $
 
 ## References
 [[The Hanf Number]]
-[[The Löwenheim number]]
+[[Model Theory/The Löwenheim Number]]
 [[Higher-Order Logics]][[Two_papers_on_symbolic_logic_Form_and_content_in_quantification_theory_and_Reductions_in_the_theory_of_types_K_Jaakko_J_Hintikka_01_01_1955.pdf]]
 [[Higher-order logic.pdf]]
 [[Proceedings of the 1963 International Symposium at Berkeley.pdf]] (pg., 251 - 264)

@@ -33,8 +33,7 @@ The issue with this conception is that it cannot extend beyond the ordinal $\ome
 **The Powerset:**
 For an arbitrary set $X$, the powerset of $X$, denoted as $\mathcal{P}(X)$, is defined as follows:
 	$\mathcal{P}(X):=${$S|S\subseteq X$}
-Cantors proved that the cardinality of $\mathcal{p}(X)$ is strictly large than cardinality of $X$. More precisely, for $|X|=\kappa,$ then $|\mathcal{P}(X)|=2^\kappa$
-
+Cantors proved that the cardinality of $\mathcal{p}(X)$ is strictly large than cardinality of $X$. More precisely, for $|X|=\kappa,$ then $|\mathcal{P}(X)|=2^\kappa$ (this can be proven by induction)
 
 The intuition being combinatorically, we consider the set of states, let 0 denote that a set if not a subset, and 1 if a set is a subset, $\{0,1\}$. Then $|\mathcal{P}(X))|= |\{f|f:X \to \{0,1\}\}|=|\{0,1\}|^{|X|}=2^\kappa$. If $\kappa$ is infinite, then $2^\kappa=\mu^\kappa$ for all $1<\mu<\kappa$.
 

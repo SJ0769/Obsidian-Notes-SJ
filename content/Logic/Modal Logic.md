@@ -72,8 +72,36 @@ The following are different systems of modal logic which have their own conditio
 - $S5:=R$ is reflexive and Euclidean
 **Note:** Euclidean + reflexive yields symmetry and transitivity
 
-These systems also have their own axioms...
+These systems also have their own axioms.
 
+i.e., the modal theory $S 4.2$ is obtained from the following axioms:
+
+| $K$  | $\square(\varphi\to \psi) \to (\square \varphi\to\square \psi)$ |
+| ---- | --------------------------------------------------------------- |
+| Dual | $\neg\Diamond\varphi\to\square\neg \varphi$                     |
+| $S$  | $\square \varphi\to \varphi$                                    |
+| $4$  | $\square \varphi\to\square\square \varphi$                      |
+| $.2$ | $\Diamond\square \varphi\to\square\Diamond\varphi$              |
+
+
+Additional axioms:
+
+| $5$        | $\Diamond \square \varphi\to \varphi$                                                                                                                |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $M$        | $\square\Diamond\varphi\to\Diamond\square \varphi$                                                                                                   |
+| $W 5$      | $\Diamond\square \varphi\to(\varphi\to \square \varphi)$                                                                                             |
+| $.3$       | $\Diamond\varphi \wedge\Diamond\psi\to(\Diamond(\varphi \wedge\Diamond\psi)\vee\Diamond(\varphi\wedge\psi)\vee\Diamond(\psi \wedge\Diamond\varphi))$ |
+| Dm         | $\square(\square(\varphi\to\square \varphi)\to \varphi)\to (\Diamond\square \varphi\to \varphi)$                                                     |
+| Grz        | $\square(\square(\varphi\to\square \varphi)\to \varphi)\to \varphi$                                                                                  |
+| Löb        | $\square(\square \varphi\to \varphi)\to \square \varphi$                                                                                             |
+| $\text{H}$ | $\varphi\to\square(\Diamond\varphi\to \varphi)$                                                                                                      |
+
+
+**Strength of Modal Theories:**
+
+<img src="/static/attachments/Modal-Logic.png" alt="Modal Theories" width="400">
+
+This depicts a hierarchy of strength for modal theories, where an a modal theory $T$ point to another modal theory $T'$ if every modal principle valid in $T'$ is valid in $T$ (i.e., $T$ is stronger than $T'$).
 ## Philosophy
 Relation to multiverse view of set theory
 
