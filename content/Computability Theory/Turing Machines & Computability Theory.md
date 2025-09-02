@@ -12,59 +12,7 @@ Formally, a Turing machine can be defined as a 7-tuple
 	- $F \subseteq Q$ is the set of final states or accepting states
 	- $\delta: (Q$\ $F) \times \Gamma \rightharpoonup Q \times \Gamma \times${$L, R$} is a partial function...
 
-## Arithmetic Hierarchy
-**Arithmetic Hierarchy:**
-The arithmetic hierarchy classifies formulae of Peano Arithmetic by their complexity
-- Limit stages are $\Sigma_{\omega}=\Pi_{\omega}=\Delta_{\omega}$ (= $\Sigma_{0}^1 = \Delta_{0}^1=\Pi_{0}^1$)
-- Note that for all $n< \omega$, $\Delta_{n+1} = \Sigma_{n} \cap \Pi_{n}$
-- $\Sigma_{0}=\Delta_{0}=\Pi_{0}$, if a formula $\phi$ is logically equivalent to some $\psi$ with bounded quantifiers (i.e., $\exists n<t$), then $\phi\in \Delta_{0}$.
-- $\Delta_{1}$ is the set of all recursive sets.
-- $\Sigma_{1}$ is the set of all recursively-enumerable sets, and $\Pi_{1}$ is the set of all co-recursively-enumerable sets
-
-<img src="/static/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
-
-[Arithmetical hierarchy]([Arithmetical hierarchy - Wikipedia](https://en.wikipedia.org/wiki/Arithmetical_hierarchy))
-
-- If a formula $\phi$ is logically equivalent to another formula of the form $\exists m_{1}\exists m_{2}\dots \exists m_{k} \psi$ where $\psi$ is a $\Pi_{n}^0$-formula, then $\phi$ is said to be $\Sigma_{n+1}^0$-formula (i.e., $\phi\in \Sigma_{n+1}^0$)
-- If a formula $\phi$ is logically equivalent to another formula of the form $\forall m_{1}\forall m_{2}\dots \forall m_{k}\psi$ where $\psi$ is a $\Sigma_{n}^0$-formula, then $\phi$ is said to be a $\Pi_{n+1}^0$-formula (i.e., $\phi\in\Pi_{n+1}^0$)
-
-That is, a $\Pi_{n}^0$-formula is equivalent to a formula that begins w/ a 'block' of universal quantifiers $\forall$ (i.e., $\forall m_{1}\dots \forall m_{k}$) and alternates $n-1$ times between series of $\exists$ and $\forall$ quantifiers. A $\Sigma_{n}^0$ is equivalent to a formula that begins w/ a block of existential quantifiers $\exists$ and alternates $n-1$ times between a series of $\exists$ and $\forall$ quantifiers.
-
-From the above, a formula $\phi$ is a $\Delta_{n+1}^0$-formula if it is both $\Sigma_{n}^0$ and $\Pi_{n}^0$.
-
-or each $n\in \mathbb{N}$:
-	-$\Pi_{n}^0 \subset\Sigma_{n+1}^0$
-	-$\Pi_{n}^0 \subset\Pi_{n+1}^0$
-	-$\Sigma_{n}^0 \subset \Sigma_{n+1}^0$
-	-$\Sigma_{n}^0 \subset \Pi_{n+1}^0$
-And so, $\Delta_{n}^0 \subset\Pi_{n}^0$ and $\Delta_{n}^0 \subset \Sigma_{n}^0$.
-
-**Note:** Because redundant quantifiers can be added once a formula is assigned the classification $\Sigma_{n}^0$ or $\Pi_{n}^0$ (or $\Delta_{n+1}^0$ if it is both), it will also be assigned the classification $\Sigma_{m}^0$ or $\Pi_{m}^0$ (or $\Delta_{m+1}^0$) for all $m>n$.
-
-**Notation:** For e.g., $\Sigma_{n}^0$, the $n$ denotes the number of alternations between series of $\exists$ and $\forall$ quantifiers and the '$0$' denotes the type of the objects being quantified over. Type $0$ objects are natural numbers, and objects of type $1$ are function intaking natural numbers and outputting natural numbers. A type $i+1$ object are functions that map the set of objects of type $i$ to the natural numbers. This is related to higher-order objects, an arithmetic hierarchy for second-order arithmetic called the analytical hierarchy can be considered for object of type $1$ (see [Extensions of Recursion Theory](Computability%20Theory/Extensions%20of%20Recursion%20Theory.md)).
-	$\Sigma_{n}^0$ is the same as $\Sigma_{n}\dots$,etc. it is only in extensions of the arithmetic hierarchy (i.e., the analytical hierarchy) that we use the notation $\Sigma_{n}^0$.
 ## Computability Theory
-**Recursive:**
-A language $\mathcal{L}$ is called recursive (or equivalently, decidable) if there is some algorithm (or program) is able to 'decide' if a sequence (or string) of symbol in $\mathcal{L}$ is a $\mathcal{L}$-formula. 'Decide' meaning the algorithm will return true or false (either way this algorithm will 'halt').
-	In terms of computable functions:
-	A language $A\subseteq \Sigma^*$ is called recursively enumerable if, $A=\emptyset$ or if there exist a total computable function $f:\mathbb{N}\to \Sigma^*$ with $A=\{f(0),f(1),\dots\}:= f(\mathbb{N})$. Then $f$ enumerate $A$.
-
-We say that a theory $T$ is recursive if there is an algorithm that when given an $\mathcal{L}$-sentence $\phi$ as an input, decides whether $\phi\in T$.
-
-
-**Recursively-enumerable:**
-A language is called recursively-enumerable (or equivalently, semi-decidable) if there is some program which when given a string in the language as an input, returns true, and if given a string not in the language, returns false **or** loops forever.
-	Trivially, it can be shown that every language that is recursive is also recursively-enumerable.
-
-We say that a theory $T$ is recursively-enumerable if there is an algorithm that will halt if $T\vdash\phi$ and not halt for $T\not\vdash\phi$
-
-
-**Proposition:** If $\mathcal{L}$ is a recursive language and $T$ is a recursive $\mathcal{L}$-theory, then $\{\phi|T\vdash \phi\}$ is recursively-enumerable.
-
-We say that a theory $T$ is decidable if there is an algorithm that when given an $\mathcal{L}$-sentence $\phi$ as an input decides whether $T\models\phi$ 
-	**Lemma:** Let $T$ be a recursive complete satisfiable theory in a recursive language $\mathcal{L}$. Then $T$ is decidable
-
--------------------------
 **The Halting Problem:** The Halting Problem is a decision problem showing the fundamental limitation of computation. Consider plugging in the following question into a Turing machine, "will an arbitrary computer program either halt or loop for any given input", it turns out a Turing machine will not halt given this decision problem. This means that the Halting Problem is undecidable (i.e., there is no algorithm which that solves the halting problem)
 
 **Oracle Machine:** An oracle machine is a kind of abstract machine which operates as 'black box', meaning it takes in an input (decision problem) and instantly solves, returning an output. An 'oracle' refers to an entity which can solve the decision problem (note this is not necessarily an algorithm).
@@ -130,8 +78,9 @@ The following holds for $(\mathcal{O}, <_{\mathcal{O}})$
 	- For $\{e\}$ is the $e^{th}$-partial computable function (a formalized analogue of the intuitive notion of algorithms). If $e$ is the total and range$(\{e\}) \subset \mathcal{O} \wedge\forall n(\{e\}(n)<_{\mathcal{O}}\{e\}(n+1))$, then $3\cdot 5^e\in\mathcal{O}\wedge\forall n, \{e\}(n)<_{\mathcal{O}}3 \cdot5^e \wedge|3 \cdot 5^e|=\underset{k}{lim}|\{e\}(k)|$
 	- $p<_{\mathcal{O}}q \wedge q<_{\mathcal{O}}r \to p<_{\mathcal{O}}r$ (transitive)
 
-**Computable Functions**
 
+**Computable Functions**
+A function is computable if there is an algorithm that returns and computes an output for any given input.
 
 
 **Constructive Ordinals**
@@ -146,14 +95,30 @@ The function $||:\mathcal{O}\to$ ordinals is defined by transfinite recursion on
 - Every ordinal constructive in a set $X$ is recursive in $X$, and every ordinal recursive in $X<$ some ordinal constructive in $X$
 - Kleene's $\mathcal{O}$ is a complete $\Pi_{1}^1$-set (i.e., $\mathcal{O}$ is $\Pi_{1}^1$ and every $\Pi_{1}^1$-set is Turing-reducible to $\mathcal{O}$).
 
+## Other
+**Time Complexity:** Measures how long it takes for an algorithm to compute an output given an input, represented in big O notation. Big O notation can simplify the growth rate of functions as $x\to \infty$. The rules of big O notation are as follows:
+- If a function $f(x)$ is the sum of multiple terms, then the largest growth rate is kept and all other terms are omitted
+- If $f(x)$ is the product of multiple terms, then any constants (which do not depend on the variable $x$) may be omitted.
+E.g., the big O of $6x^4+2x^3+3x^2+5x+3$ is $x^4$ as $6x^4$ grows faster than any other term, and the constant '$6$' may be omitted.
+
+$\to$ **Polynomial Time:** The time complexity of an algorithm or model of computation where its runtime is proportional to a polynomial function of the input size
+	E.g., If the input time is $n$, then the algorithms runtime is bounded by some polynomial function such as $n^2$ or $n^3$.
+
+**Deterministic Turing Machine (DTM)**: For any given state and input symbol there is only a single action the Turing machine can do, thus making its behavior predictable (i.e., standard tape model of Turing machines).
+
+**Nondeterministic Turing Machine (NTM):** For any a given state and input symbol there is a multitude of possible actions a Turing machine can do depending on governing laws.
+
+**P = NP Problem:** Can any decision problem decidable from a NTM in polynomial time can also be decidable from a DTM in polynomial time?
+
+**Complexity Classes:**
+
+**Rice's Theorem:** No Turing machine can decide whether an arbitrary program posses a non-trivial (i.e., 'trivial' true for all programs or false for all programs) semantic property such as "does this program halt?" or "does the program loop?"
 
 ## References
-[Extensions of Recursion Theory](Computability%20Theory/Extensions%20of%20Recursion%20Theory.md)
-[[Higher Recursion Theory.pdf]]
+[Recursion Theory](Computability%20Theory/Recursion%20Theory.md)
 [Turing Machine](https://en.wikipedia.org/wiki/Turing_machine)
 [Halting Problem](https://en.wikipedia.org/wiki/Halting_problem)
 [Turing Degrees](https://en.wikipedia.org/wiki/Turing_degree)
 [Kleene's O](https://en.wikipedia.org/wiki/Kleene%27s_O)
 [Many-One Reduction]([Many-one reduction - Wikipedia](https://en.wikipedia.org/wiki/Many-one_reduction))
-[Analytical Hierarchy]([Analytical hierarchy - Wikipedia](https://en.wikipedia.org/wiki/Analytical_hierarchy))
 [Model Theory D.Marker](Set%20Theory%20+%20Model%20Theory/Model%20Theory%20D.Marker.pdf)

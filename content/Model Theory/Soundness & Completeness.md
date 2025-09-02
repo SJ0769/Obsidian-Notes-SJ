@@ -62,7 +62,7 @@ This result shows that the Soundness Theorem, together w/ the Completeness Theor
 
 Proposition: If $\Gamma$ is consistent and $\Gamma \vdash p$, for some $\Gamma \subseteq \mathscr{L}[\tau]$ and $p\in\mathscr{L}[\tau]$
 
-- Soundness cannot be defined internally w/in a theory via Tarski's Undefinability Theorem ([[Tarski's Theory of Truth]]) since the Soundness Theorem regards the inference rules and truth in the system (this is the same for the Completeness Theorem), this also applies to relative soundness which regards truth in some intended model. This is in contrast to consistency and (syntactic) completeness which can be defined w/in the system as this does not regard truth but provability, although this cannot be proved w/in the theory (see [[Gödel's Incompleteness Theorems]]).
+- Soundness cannot be defined internally w/in a theory via Tarski's Undefinability Theorem ([[Tarski's Theory of Truth]]) since the Soundness Theorem regards the inference rules and truth in the system (this is the same for the Completeness Theorem), this also applies to relative soundness which regards truth in some intended model. This is in contrast to consistency and (syntactic) completeness which can be defined w/in the system as this does not regard truth but provability, although this cannot be proved w/in the theory (see [[Model Theory/Gödel's Incompleteness Theorems]]).
 
 Extensions of first-order logic contain logically valid or 'absolute' statements (i.e., $\phi$ is absolute if $T\models\phi),$ that is, $M\models T \iff M\models\phi$) which do not have proofs $\implies$ these statements are independent of T (although not undecidable since they are logically valid). This due to these logics lacking the completeness theorem.
 	E.g., Consider the theory ${PA}^2$ (Second-Order Peano Arithmetic, not to be confused with 'Second-Order Arithmetic' which is first-order in disguise, see [[Higher-Order Logics]]) and the statement $\Psi$= "There exists an infinitely large number." Models of $PA^2$ (which are isomorphic as $PA^2$ is categorical) satisfy $\neg \Psi$ as there are only finite numbers in $PA^2$, yet $\Psi$ is independent ($PA^2 \not\vdash \neg \Psi$ and $PA^2 \not\vdash \Psi$).
@@ -97,7 +97,7 @@ $\rightarrow$Using the equivalent definition of Unsoundness: Satisfiability$\not
 - [[Types of Theories]]
 - [[Tarski's Theory of Truth]]
 - [[Truth in Non-Classical Logics]]
-- [[Gödel's Incompleteness Theorems]]
+- [[Model Theory/Gödel's Incompleteness Theorems]]
 - [Prove that a theory is consistent if and only if it is satisfiable ](first order logic - Prove that a theory $\Gamma$ is consistent if and only if there is a structure $M$ so that $M$ $\models$ $\Gamma$. - Mathematics Stack Exchange](https://math.stackexchange.com/questions/2044775/prove-that-a-theory-gamma-is-consistent-if-and-only-if-there-is-a-structure)
 - [logic - What's an example of a theory that's consistent yet has no model?](https://math.stackexchange.com/questions/1005283/whats-an-example-of-a-theory-thats-consistent-yet-has-no-model)
 

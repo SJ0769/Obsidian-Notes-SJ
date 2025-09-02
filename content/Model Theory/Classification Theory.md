@@ -58,8 +58,15 @@ i.e., Given $T$ is a first-order theory $T$ in a countable language then it cann
 **Shelah's (nigh) Complete Solution:**
 For a complete first-order theory $T$ w/in a countable language, then either $I(T, 2^\kappa)$ for all uncountable cardinals $\kappa$, or $I(T, \aleph_{\xi})<\beth_{\omega_{1}}(|\xi|+\aleph_{0})$ for all ordinals $\xi$.
 
+---------------
+
+**Vaughtian Pairs:** For any two cardinals $\lambda>\mu>\omega$, a two cardinal $(\lambda, \mu)$-model of a theory $T$ is a model $\mathcal{M}\models T$ such that $|M|=\lambda$ and w/ a definable subset $\phi(\mathcal{M})$ of size $\mu$.
+
+**Two Cardinal Theorem:** If a theory has a $(\lambda, \mu)$-model, then it has a $(\omega_{1}, \omega)$-model
+
 
 *Talk about stability in Classification Theory*
+
 ## References
 [[Embeddings, Elementary Embeddings, and Isomorphisms]]
 [[Categoricity]]

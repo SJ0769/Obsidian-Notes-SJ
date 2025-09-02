@@ -12,7 +12,7 @@ This process can be seen as iterative but not cumulative due to types belonging 
 The hierarchy of properties relations is '$2$-dimensional' where properties and relations are distinguished first by their 'order' (level) and then by their type w/in each order.
 $\to$ i.e., Ramified type theory ($RTT$) allows for the 'mixing' of order and types as you can have statements such as $a_{n}\in b_{n}$, where $a$ and $b$ are of different type but are of the same order '$n$.' So not only do you have a hierarchy of types, but more precisely a hierarchy of types w/in each order.
 
-This is in contrast to Simply Type Theory ($STT$) which is '$1$-dimensional' in the sense that there is only a hierarchy of types and where properties are only distinguished by their level/type.
+This is in contrast to Simply Type Theory ($STT$) which is '$1$-dimensional' in the sense that there is only a hierarchy of types and where properties are only distinguished by their level.
 
 **Axiom of Reducibility:** Every function of order $n$ is functionally equivalent to a function of order $1$. More formally, if $\phi$ is of type $\tau$ and of order $n$, then there exists a function $\psi$ of type $\tau$ and order $1$ such that:
 	$\forall x(\phi(x)\leftrightarrow \psi(x))$

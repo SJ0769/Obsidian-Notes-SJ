@@ -74,9 +74,9 @@ The toy-model approach can be used to gain insight about the universe $V$
 **Mirage Axiom:** Every model of $ZF$ is seen as ill-founded (specifically, in there interpretation of the natural numbers, $\mathbb{N}$) by some other model.
 
 -------------------
-**Modal Realism:** All logically possible 'worlds' exist although are spatially and temporally isolated from each other.
+**Modal Realism:** All logically possible 'worlds' exist although are spatially and temporally isolated from each other (physical existence).
 
-**Extended Modal Realism:** An extension of modal realism which admits the existence of impossible worlds (i.e., some which are paraconsistent and contradictions such as $p$ and $\neg p$ are both true, as well as completely trivial worlds where anything is true).
+**Extended Modal Realism:** An extension of modal realism which admits the existence of impossible worlds (i.e., some which are paraconsistent and contradictions such as $p$ and $\neg p$ are both true, as well as completely trivial worlds where anything is true). Some may argue that impossible worlds do not even exists metaphysically (i.e., dictated on logic) rather than just physically.
 
 **Tegmark's Ultimate Ensemble:** There is a multiverse of universes, where each universe is described by (i.e., act as models for) an axiomatic mathematical theory (given that it is valid). Related to the notion of mathematics being 'discovered' not created. In this view, different systems of mathematics describe real physical universes which actually exists
 

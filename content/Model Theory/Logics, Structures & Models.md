@@ -14,7 +14,6 @@ $\tau$-terms:
 	ii) Variable $v_{1},\dots,v_{n}$ are $\tau$-terms
 	iii) If $v_{1},\dots,v_{n}$ are $\tau$-terms and $f\in \tau$ is a function symbol, then $f(v_{1},\dots,v_{n})$ are $\tau$-terms
 
-
 We say that $\phi$ is an atomic formula if $\phi$ is either of the form:
 	i) $t_{1}=t_{2}$ where $t_{1}$ and $t_{2}$ are terms
 	ii) $R(t_{1},\dots,t_{n_{R}})$, where $R \in \mathcal{R}$ and $t_{1},\dots,t_{n_{R}}$ are terms
@@ -23,7 +22,6 @@ We say that $\phi$ is a $\mathcal{L}$-formula if $\phi$ is atomic and
 	i) If $\phi$ is an $\mathcal{L}$-formula, then so it $\neg \phi$
 	ii) If $\phi$ and $\psi$ are atomic, then $(\phi \wedge \psi)$ and $(\phi \vee \psi)$ are $\mathcal{L}$-formulas
 	iii) $\exists v_{i} \phi$ and $\forall v_{i} \phi$ are $\mathcal{L}$-formulas, where $i\in I = \{1, 2,\dots \}$ (index)
-
 
 **Free variables:** A formula has free variables if and only if some variables in it are not bound by quantifiers.
 	$\to$ E.g., of a bound variable
@@ -69,7 +67,8 @@ i.e., every non-empty vocabulary describes sets with additional attached structu
 
 
 **Notation:** 
-- $\mathscr{L}[\tau]$ denotes the class of $\mathscr{L}$-sentences in the vocabulary $\tau$
+- $\mathscr{L}[\tau]$ or $\text{Sent}_{\mathscr{L}}(\tau)$ denotes the class of $\mathscr{L}$-sentences of vocabulary $\tau$
+- $\text{Form}_{\mathscr{L}}(\tau)$ denotes the class of $\mathscr{L}$-formulas of vocabulary $\tau$
 - $\mathscr{L}(\tau)$ denotes the logic $\mathscr{L}$ of the vocabulary $\tau$
 - Str$[\tau]$ denotes the class of $\tau$-structures (if you want to specify the logic, then let Str$_{\mathscr{L}(\tau)}$ denote the class of $\mathscr{L}(\tau)$-structures)
 - Mod$^{\tau}_{\mathscr{L}}(\varphi) = \{\mathfrak{A|\mathfrak{A} \models \varphi}\}$ for $\varphi$ is an $\mathscr{L}$-sentence (in the vocabulary $\tau$), this notation can be generalized to sets of sentences $T \subseteq \mathscr{L(\tau)}$, consider Mod$^\tau_{\mathscr{L}}(T)$.
@@ -172,6 +171,12 @@ To characterize a structure means to define the structure up to isomorphism (i.e
 
 
 For logics $\mathscr{L, L^*, L} \leq_{R(PC)} \mathscr{L^*}$ iff every class that is $R(PC)$ in $\mathscr{L}$, is $R(PC)$ in $\mathscr{L^*}$
+## Other
+**Beth's Definability Theorem:** For a first-order theory $T$ in the language $\mathscr{L}(\sigma)\supseteq \mathscr{L}(\tau)$ and a formula $\varphi\in \text{Form}_{\mathscr{L}}(\sigma)$, then the following are equivalent:
+	i) For any two model $\mathcal{M,N}\models T$ such that $\mathcal{M}\upharpoonright\tau=\mathcal{N}\upharpoonright\tau$, it is the case that $\mathcal{M}\models\varphi[\overline{a}]\iff\mathcal{N}\models\varphi[\overline{a}]$ for all $n$-tuples $\overline{a}\in M^n$.
+	ii) $\varphi$ is equivalent modulo $T$ to a formula $\psi\in \text{Form}_{\mathscr{L}}(\sigma)$
+i.e., a property is implicitly definable in a theory $T$ of the language $\mathscr{L}(\tau)$ via a formula $\varphi$ of the extended language $\mathscr{L}(\sigma)$ only if that property is explicitly definable in the theory $T$ by a formula $\psi$ in the original language $\mathscr{L}(\tau)$.
 ## References
 [[Model Theoretic Logics.pdf]]
 [[Model Theory D.Marker.pdf]]
+[Beth definability - Wikipedia](https://en.wikipedia.org/wiki/Beth_definability)

@@ -4,10 +4,10 @@ title: SJ's notes on model theory, set theory, and logic
 
 ## 📁 Computability Theory
 - [[Computability Theory/Extensions of Recursion Theory]]
-- [[Computability Theory/Turing Machines & Recursion Theory]]
+- [[Computability Theory/Recursion Theory]]
+- [[Computability Theory/Turing Machines & Computability Theory]]
 
 ## 📁 Logic
-- [[Logic/Gödel's Incompleteness Theorems]]
 - [[Logic/Higher-Order Logics]]
 - [[Logic/Infinitary Logics]]
 - [[Logic/Kripke's Theory of Truth]]
@@ -19,7 +19,9 @@ title: SJ's notes on model theory, set theory, and logic
 - [[Logic/Truth in Non-Classical Logics]]
 
 ## 📁 Miscellaneous
+- [[Miscellaneous/On Languages]]
 - [[Miscellaneous/Philosophy]]
+- [[Miscellaneous/Relativity of Truth]]
 - [[Miscellaneous/Self-Verifying theories]]
 - [[Miscellaneous/Trivialism]]
 
@@ -29,6 +31,7 @@ title: SJ's notes on model theory, set theory, and logic
 - [[Model Theory/Categoricity]]
 - [[Model Theory/Classification Theory]]
 - [[Model Theory/Embeddings, Elementary Embeddings, and Isomorphisms]]
+- [[Model Theory/Gödel's Incompleteness Theorems]]
 - [[Model Theory/Hintikka's Result]]
 - [[Model Theory/Logics, Structures & Models]]
 - [[Model Theory/Soundness & Completeness]]
@@ -48,10 +51,11 @@ title: SJ's notes on model theory, set theory, and logic
 - [[Set Theory/Forcing]]
 - [[Set Theory/Fundamentals of Set Theory]]
 - [[Set Theory/Multiverse vs Universe View]]
-- [[Set Theory/Non-Well Founded Set Theories]]
+- [[Set Theory/Non-Well-Founded Set Theories]]
 - [[Set Theory/Philosophy of Sets & Proper-Classes]]
 - [[Set Theory/The Hierarchy of Large Cardinals]]
 - [[Set Theory/Trees]]
+- [[Set Theory/Unrolling Construction]]
 
 ## 📁 Type Theory
 - [[Type Theory/Lambda-Calculus]]

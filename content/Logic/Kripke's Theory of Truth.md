@@ -37,6 +37,9 @@ E.g., The liar sentence L = "This sentence is false" is ungrounded, that is, it 
 See [[Truth in Non-Classical Logics]]
 
 ## Partial Models
+The following is from [Tarski and Kripke theory of truth](Set%20Theory%20+%20Model%20Theory/Tarski%20and%20Kripke%20theory%20of%20truth.pdf)
+
+
 We introduce the notion of 'extension' and 'anti-extension'
 
 **Extension:** The 'extension' is the set of all sentences that are true in a fixed point model (i.e., a model of Kripke's theory of truth, specifically in the level $\mathscr{L}_{\sigma}$)
@@ -61,15 +64,21 @@ A partial model is defined as follows:
 E.g., of models of Kripke's Theory of Truth
 A partial model must satisfy the following:
 i) The partial model $A(S_{1}, S_{2})$ is an expansion of $A$ to the fixed point $\mathscr{L}_{\sigma}$
-ii) $A(S_{1}, S_{2}) \models Tt[\alpha]$, if the value of t in $A$ under the assignment $\alpha$ is a sentence of $\mathscr{L}$ and an element $S_{1}$ (t is a true sentence?)
-iii)* $A(S_{1}, S_{2}) \models\neg Tt[\alpha]$, if the value of t in $A$ under the assignment $\alpha$ is not a sentence of $\mathscr{L}$ or an element of $S_{2}$ *
-iv) $A(S_{1}, S_{2}) \models \neg\neg\phi[\alpha]$, if $A(S_{1}, S_{2}) \models \phi[\alpha]$ (double negation holds)
-v) $A(S_{1}, S_{2}) \models \phi\wedge\psi[\alpha]$ if $A(S_{1}, S_{2})\models\phi[\alpha]$ and $A(S_{1}, S_{2})\models\psi[\alpha]$
-vi) $A(S_{1}, S_{2}) \models\neg (\phi \wedge \psi)[\alpha]$, if $A(S_{1}, S_{2}) \models\neg\phi[\alpha]$ or $A(S_{1}, S_{2}) \models\neg\psi[\alpha]$
-vii) $A(S_{1}, S_{2}) \models\exists x \phi$, if $A(S_{1}, S_{2}) \models\phi[\alpha']$ for an assignment $\alpha'$ differing from $\alpha$ at most in the variable $x$
-viii) $A(S_{1}, S_{2}) \models\neg\exists x \phi$, if $A(S_{1}, S_{2}) \models\neg\phi[\alpha']$ for all assignment $\alpha'$ differing from $\alpha$ at most in the value of $x$
+ii) $A(S_{1}, S_{2}) \models T(x[a])$, if the (truth) valuation of $x$ in $A$ under the assignment $a$ is a sentence of $\mathscr{L}$ and an element $S_{1}$ (i.e., $x$ is a true in $A$ under the assignment $a$)
+iii)* $A(S_{1}, S_{2}) \models\neg Txt[a])$, if the value of $x$ sentence in $A$ under the assignment $a$ is not a sentence of $\mathscr{L}$ or an element of $S_{2}$ (i.e., $x$ is a false sentence in $A$ under the assignment $a$)
+iv) $A(S_{1}, S_{2}) \models \neg\neg\phi[a]$, if $A(S_{1}, S_{2}) \models \phi[a]$ (double negation holds)
+v) $A(S_{1}, S_{2}) \models \phi\wedge\psi[a]$ if $A(S_{1}, S_{2})\models\phi[a]$ and $A(S_{1}, S_{2})\models\psi[a]$
+vi) $A(S_{1}, S_{2}) \models\neg (\phi \wedge \psi)[a]$, if $A(S_{1}, S_{2}) \models\neg\phi[a]$ or $A(S_{1}, S_{2}) \models\neg\psi[a]$
+vii) $A(S_{1}, S_{2}) \models\exists x \phi$, if $A(S_{1}, S_{2}) \models\phi[a']$ for an assignment $a'$ differing from $a$ at most in the variable $x$
+viii) $A(S_{1}, S_{2}) \models\neg\exists x \phi$, if $A(S_{1}, S_{2}) \models\neg\phi[a']$ for all assignment $a'$ differing from $a$ at most in the value of $x$
 
 
+It was proven by Kripke that the finite levels $\mathcal{L}_{n}$ in the Tarskian hierarchy can be embedded into a sublanguage of the fixed point $\mathcal{L}_{\sigma}$. That is, there is a translation from any sentence $\varphi\in\mathcal{L}_{n}$ to a sentence $\psi\in\mathcal{L}_{\sigma}$. Thus, the fixed point can express or 'simulate' the stratified Tarskian hierarchy (at least for finite levels). More specifically, there is a recursive function $f_{\alpha}$ for any $\alpha<\omega_{1}^{CK}$ such that:
+	$f(x) = \begin{cases}\neg f_{\alpha}(\phi)      & \text{if } n=(\neg \phi) \\f_{\alpha}(\phi)\wedge f_{\alpha}(\psi)    & \text{if} n = (\phi \wedge \psi) \\ \exists xf_{\alpha}(\phi)   & \text{if } n = (\exists x\phi) \\ Tf_{\alpha}(x)\wedge \text{Sent}_{\mathcal{L}(\beta)}(x) & \text{if } n = (T_{\beta_{\prec}}x) \text{ and } \beta>\alpha \\ n & \text{else} \end{cases}$
+$\text{Sent}_{\mathcal{L}(\beta)}(x)$ means that $x$ in the language $\mathcal{L}$ expanded by all truth predicates $T_{i}$ such that $i<\beta_{\prec}$. The predicate $\text{Sent}_{\mathcal{L}(\beta)}(x)$ also depends on $\alpha$ as the ordering of indices of the truth predicates of $\mathcal{L}_{\alpha}$ is recursive. Thus, it is a two place predicate (takes in two variables).
+
+
+There is also a translation from sentences in $\mathcal{L_{\sigma}}$ to $\mathcal{L}_{\omega_{1}^{CK}}$ using a similar recursion theorem.
 ## References
 [[Tarski's Theory of Truth]]
 [[Tarski and Kripke theory of truth.pdf]]

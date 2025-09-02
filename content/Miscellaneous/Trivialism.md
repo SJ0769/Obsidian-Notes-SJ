@@ -9,10 +9,17 @@ In symbolic logic it may be expressed as follows:
 
 Trivialism allows for paradoxes such as the liar's paradox to be allowed (if meta-statements are introduced into the language, i.e., semantically closed).
 
-**Invalid Trivialism:** A logically invalid trivialist system is one where every inference is true, but violates its own syntactic rules (these are internal to the logic). I.e., the trivialist system $PA +$ "0=1" in classical logic. Results in semantic collapse (i.e., cannot differentiate between truth or falsity)
+--------------------------------
+**Invalid Trivialism:** A logically invalid trivialist system is one where any statement (in the language) can be inferred, but violates its own semantic rules that are internal to the logic (i.e., LEM, LNC, the law of bivalence).
+E.g., the trivialist system $PA +$ "0=1" in classical logic is invalid as it presupposes a contradiction (the axiom 0=1), violating the law of non contradiction. Results in semantic collapse (i.e., cannot differentiate between truth or falsity).
 
-**Valid Trivialism:** A system where every inference is true and is also logically valid according to its own syntactic rules. Results in a semantic collapse
+**Valid Trivialism:** A system where any statement can be inferred and is also logically valid according to its own semantic laws. Also results in a semantic collapse but in a way where it is 'allowed.'
 
+Note that there is no such thing as a valid semantically closed language. This is because if it has range over its own semantics (in that it is its own metatheory), then it can state a contradiction to its own semantic laws.
+
+A semantically-closed system $\implies$ trivial/inconsistent system, while it is the case that a trivial/inconsistent system does not imply that it is semantically-closed. This can be observed that a trivial theory may not contain its own truth predicate in the language (and so does not have access to it in order to talk about its own semantics). Thus, we can have a 'valid' trivial theory given that it is not semantically-closed.
+
+---------------------
 **Types of trivialism:**
 - (T0) Minimal trivialism; every proposition has a designated truth value at some world $w \in W$
 - (T1) Pluralist trivialism; every proposition has a designated value in some worlds $w \subset W$
@@ -20,10 +27,8 @@ Trivialism allows for paradoxes such as the liar's paradox to be allowed (if met
 - (T3) Absolutist trivialism; every proposition has a designated value in all worlds
 $\to$ T3 supports logical monism (the view that there is only one logic), rather than logical pluralism. That 
 	is $\Diamond \varphi \iff \square \varphi \iff \varphi$
-
 ## Formalizing Trivialism
-A (valid) Trivialist system can be formalized through the lenses of modal logic.
-
+A modal logic can be used to show what a formalization of the notion of impossible/trivial worlds would look like (note that the following is not really a trivial theory, but rather an extension of modal logic which allows for trivial worlds, at which all statements w/in the language are true).
 
 We define a zero-order modal logic via the following tuple:
 
@@ -87,7 +92,7 @@ If $w \in W/O$ (the set of trivial worlds) then there may be further truth condi
 
 **Notes:** 
 - Negation ($\neg$) doesn't switch between distinct values , allowing $\top= \bot$
-- $\varnothing, \bot,${$\bot, \top$},$\top$ stands for 'neither true nor false', '(just)false', 'both true and false', '(just)true' respectively (equivalent to truth values $U, F, B, T$)
+- $\varnothing, \bot,${$\bot, \top$},$\top$ stands for 'neither true nor false', '(just) false', 'both true and false', '(just)true' respectively (equivalent to truth values $U, F, B, T$)
 
 Non-normal modal logics (semantics):
 
@@ -129,7 +134,7 @@ Thus, a modal-theoretic framework can be used to equate trivialism. A simple mod
 
 
 **Construction 1:** 
-Consider a model $\mathcal{M}$ where $W =${$w$} and $V =${$\top$}, then trivially (via proving R is reflexive) $v_{w}(\varphi)=\top$ for all $\varphi \implies$ $\mathcal{M} \Vdash \Diamond \varphi$, as well as $\mathcal{M} \Vdash \varphi$ and $\mathcal{M}\Vdash \square \varphi$ (enable absolute trivialism).
+Consider a model $\mathcal{M}$ where $W =${$w$} and $V =${$\top$}, then trivially (via proving R is reflexive) $v_{w}(\varphi)=\top$for all $\varphi \implies$ $\mathcal{M} \Vdash \Diamond \varphi$, as well as $\mathcal{M} \Vdash \varphi$ and $\mathcal{M}\Vdash \square \varphi$ (enable absolute trivialism).
 
 **Construction 2:**
 Model contains a world $t \in W/O$ and the valuation $v$ is defined so as to contain the clause "if $w = t,$ then $v(\varphi) \in D^+$ for every $\varphi$" (enables partial trivialism).
@@ -148,12 +153,12 @@ Consider the statement $\psi =$"$\varphi$ is undefined", since in trivialism all
 
 
 If we combine the possibilist axiom $\Diamond \varphi$ with another axiom
-i.e., $\Diamond \square \varphi \supset \varphi$ ($)
+i.e., $\Diamond \square \varphi \supset \varphi$ (@)
 Then there is a problem
 
 Consider the following proof:
 1. $\Diamond \varphi$ - possibilist axiom
-2. $\Diamond \square \varphi \supset \varphi$ - Axiom ($)
+2. $\Diamond \square \varphi \supset \varphi$ - Axiom (@)
 3. $\Diamond \square \varphi$ - From step 1 by uniform substitution
 4. $\varphi$ - From 2 and 3 by detachment
 **Notation:** $\psi \supset \varphi$ means that $\psi$ is a super-formula of $\varphi,$ or equivalently, $\varphi$ is a sub-formula of $\psi$
@@ -164,7 +169,7 @@ Let $\varphi$ be the proposition "every statement is true", then consider the fo
 
 We can then derive the following proof:
 1. $\Diamond \varphi$ - possibilist axiom
-2. $\Diamond \square \varphi \supset \varphi$ - Axiom ($)
+2. $\Diamond \square \varphi \supset \varphi$ - Axiom (@)
 3. $\square \varphi \supset \varphi$ - Axiom (T)
 4. $\Diamond \square \varphi$ - From step 1 by uniform substitution
 5. $\square \varphi$ - From step 2 and 4 by detachment
@@ -174,7 +179,7 @@ Absolute necessity (truth in every world, denoted as $\square ^+$) and relative 
 
 Suppose there is a truth $\square^+ \varphi$. Given that $\diamond ^+ \neg \varphi$ for every $\varphi,$ if $\square^+ \varphi \implies \neg \Diamond^+ \neg \varphi,$ then the collection of valid formulas would be inconsistent, a contradiction as it is not. Thus, $\square^+ \varphi \not\implies \neg \Diamond^+ \neg \varphi.$
 
-$\therefore$ the derivations above, in terms of absolute modalities, are invalid. Because ($) does not hold for absolute modalities in the model, $\Diamond^+ \square^+ \varphi$ is true as $\square^+ \varphi$ is true at least in $t$ (which is trivial, and so everything is true), but $\varphi$ might be false in a world other than $t$. Similar consideration apply as to the invalidity of (5). (T) in turn holds even for absolute modalities.
+$\therefore$ the derivations above, in terms of absolute modalities, are invalid. Because (@) does not hold for absolute modalities in the model, $\Diamond^+ \square^+ \varphi$ is true as $\square^+ \varphi$ is true at least in $t$ (which is trivial, and so everything is true), but $\varphi$ might be false in a world other than $t$. Similar consideration apply as to the invalidity of (5). (T) in turn holds even for absolute modalities.
 
 i.e., combining the possibilist axiom and axiom schema ($) leads to a derivation that collapses modal distinctions, forcing all statements to be true across all worlds, trivializing the logic (Absolutist Trivialism). Note that this is an invalid case of trivialism, not a (valid) trivialist logic.
 
@@ -227,38 +232,37 @@ The notion of depth refers to the notion of formulas being trees and refers to t
 ## Meta-Trivialist Logics
 The formalization of trivialism above is also a formalization of extended modal realism (in the construction where you have both trivial and non-trivial worlds)
 ### Semantically-Closed Trivialist Logic
-
 A full 'god logic' which can refer to anything is an infinite meta-hierarchy consisting of the trivial logic at all stages in the hierarchy.
 I.e., We allow a semantically closed trivialist logic.
 - The differentiation between the types of trivial logics (T0-3) is done in the meta-languages (which is non-trivial).
-$\to$ This trivialist system would be 'infinitely complex', in that it forms an infinite Tarski hierarchy due to being semantically closed (kind of).
 
 
-Trivialist logics are all 'absorbing', meaning if you introduce any new statements (even if it is contradictory, meta or self-referential, paradoxical), it will then be affirmed as true.
+Trivialist logics are all 'absorbing', meaning if you introduce any new statements (even if it is contradictory) it will then be affirmed as true (as well as false)
 
-**Objective:** Make trivialist logic semantically closed, if the logic is truly 'trivial', then adding any new 'meta-statements' will not result in logically invalid (i.e., by inference rules) contradictions as from above.
-$\to$ Introduce a truth predicate within the language so that it may have full reigns over it's own system and statements. Trivialist logics do not inherently contain their own truth predicate and so first needs added into the language in order to be expressed (and 'absorbed').
+**Note:** Trivialist logics do not inherently contain their own truth predicate and so first needs added into the language in order to be expressed (and 'absorbed').
 
 Thus, we have a limitation of constructing a 'god logic' (i.e., talking about and affirming anything), in that the language must still have the expressive power and necessary syntax, which has to be added externally from the meta-theory.
 
-Not only is trivialist logic 'all-absorbing', but it is also 'self-extending'. Assuming the trivialist logic is strong enough to express Gödel-encoding and diagonalization, and given it is semantically closed, then since it has range over it's own semantics, it would be able to encode new syntactic expressions into the language (i.e., internally adding new symbols in the language or internally simulating its own expansions). This newly defined syntax would be automatically be accepted as true due to trivialist logics being able to 'absorb' anything introduced. We would then require a separate notion of internal syntax (which can't exactly be pinned down due to trivialist logic proving anything about its own system, that is, we would have a syntactic collapse internally due to introduced contradictory syntax), and an external syntax defined w/in some outside meta-theory (which is assumably not trivial as to not cause a syntactic collapse externally as well).
+Not only is trivialist logic 'all-absorbing', but it is also 'self-extending'. Assuming the trivialist logic is strong enough to express Gödel encoding and diagonalization, and given it is semantically closed, then since it has range over it's own semantics, it would be able to encode new syntactic expressions into the language (i.e., internally adding new symbols in the language or internally simulating its own expansions). This newly defined syntax would be automatically be accepted as true due to trivialist logics being able to 'absorb' anything introduced. We would then require a separate notion of internal syntax (which can't exactly be pinned down due to trivialist logic proving anything about its own system, that is, we would have a syntactic collapse internally due to introduced contradictory syntax), and an external syntax defined w/in some outside meta-theory (which is assumably not trivial as to not cause a syntactic collapse externally as well).
 
-**Note:** We can have a notion of internal vs external syntax but not a notion of internal vs external semantics, as the semantics of language is inherently meta-theoretic.
+**Notes:** 
+- We can have a notion of internal vs external syntax but not a notion of internal vs external semantics, as the semantics of language is inherently meta-theoretic (i.e., the object language does not have access to its semantics unlike its syntax, instead the semantics is defined in the metatheory). In the case of a semantically closed language $\mathscr{L}$, as mentioned below, $\mathscr{L}$ also undergoes a syntactic collapse via a 'self-extending' process, but as seen from an external (non-trivial) metatheory $\mathscr{L^*}$, $\mathscr{L}$ does have a proper syntax which is defined in $\mathscr{L^*}$ (this is the 'actual' syntax of $\mathscr{L}$). While both $\mathscr{L}$ and $\mathscr{L^*}$ 'agree' that $\mathscr{L}$ is semantically collapsed.
+- A language is semantically closed if and only if it is syntactically closed, semantically-closed $\implies$ syntactically-closed is seen above w/ the notion of self-extending syntax and encoding new syntax via semantic statements (e.g., it could Gödel encode "it is true that there are infinitely-long statements" which so now allows for infinite conjunctions & disjunctions, meanwhile it is also true that "there are only finitely-long statements"). The case of syntactically-closed $\implies$ semantically-closed is trivial as it could then just add a truth predicate $T(x)$ into the syntax. Trivially, semantically-closed implies semantic collapse (Tarski's undefinability theorem) and also syntactically-closed implies a syntactic collapse.
 
 ### Uncountable Meta-hierarchy
-**Note:** You would still be able to study this semantically closed language at the level $\mathscr{L}_{\omega}$ which acts as the metalanguage for all $\mathscr{L}_{n}$ and where the framework of the Tarski hierarchy is formalized at the this level (you can always consider a further metalanguage). Thus, even though the language is semantically closed (and can consider essentially anything, including $n$-meta statements) and trivial, you can still study this language at an 'external' meta-language (usually, limit stages as given above), so it is not completely ineffable (assuming said metatheory is non-trivial).
-If it were completely ineffable, w/in the modal logic framework, you wouldn't be able to 'know' if the logic is any of the T0-3 (i.e., consider the meta-statement "This logic is not T3"). Furthermore, you wouldn't be able to tell if it is an invalid or valid trivialist logic (as these are semantic notions).
+**Note:** You would still be able to study this semantically closed language at the level $\mathscr{L}_{\omega}$ which acts as the metalanguage for all $\mathscr{L}_{n}$ and where the framework of the Tarski hierarchy is formalized at the this level (you can always consider a further metalanguage). Thus, even though the language is semantically closed (and can consider essentially anything, including $n$-meta statements) and trivial, you can still study this language from an 'external' meta-language (usually, limit stages as given above), so it is not completely ineffable (assuming said metatheory is non-trivial in order to determine any meaningful results).
+If it were completely ineffable, w/in the modal logic framework, you wouldn't be able to 'know' if the logic is any of the T0-3 (i.e., consider the meta-statement "This logic is not T3"). Furthermore, you wouldn't be able to tell if it is an invalid or valid trivialist logic internally (as these are semantic notions), although very obviously we can tell that it is in fact invalid.
 
 $\to$ Even if we consider an uncountable (and non-recursive) Tarski hierarchy construction, it is not totally ineffable.
-Recall:
+**Recall:**
 	A Tarski hierarchy with uncountably-many levels uses a non-recursive syntax (and so is undecidable, the index of the levels can no longer be effectively enumerated).
 	$\implies$ We cannot differentiate between different levels (i.e., cannot say if $\varphi \in \mathscr{L}_{\alpha}$). Although, we 'know' that such a hierarchy technically consists one language.
 
-This is really only an issue for Tarski hierarchy with uncountably-many 'distinct' languages, and not the case of semantically-closed language where we can collapse the Tarski hierarchy to finitely-many levels (two levels will suffice, where both $\mathscr{L}_{0}=\mathscr{L}_{1}$) since it is really just a single language with range over it's own truth predicate. 
-	i.e., just don't consider an uncountably long Tarski hierarchy
+So one would think that we require a recursive syntax in order to talk about Tarskian hierarchies formally. However, this is really only an issue for Tarski hierarchy with uncountably-many 'distinct' languages, and not the case of semantically-closed language where we can collapse the Tarski hierarchy to two levels where both $\mathscr{L}_{0}=\mathscr{L}_{1}$ since it is really just a single language (although modelled as two-levels) with range over it's own truth predicate. 
+	i.e., Uncountably long Tarskian hierarchies can effectively be collapsed to the number of distinct languages, which in this case is one.
+This also means we can index levels w/ a proper-class of ordinals since it is technically just two levels
 
  In this context, a semantically closed trivial logic is not 'ineffable.'
-
 ## References
 [[Philosophy]]
 [[Modal Logic]]

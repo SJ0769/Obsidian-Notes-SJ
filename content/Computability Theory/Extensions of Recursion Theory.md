@@ -27,7 +27,7 @@ $\to$ A meta-finite set is a hyperarithmetic collection of hyperarithmetic sets.
 **Notes:**
 - Meta-recursively enumerable means $\Pi_{1}^1$ on $HYP$ 
 - Meta-recursive means $\Delta_{1}^1$ on $HYP$
-- Meta-finite means hyperarithmetic
+- Meta-finite is the same as being hyperarithmetic
 
 **Meta-recursive:** Let $Q$ be a $\Pi_{1}^1$ set of unique notations of recursive ordinals. Let $n: \omega_{1}^{CK}\to Q$ take each recursive ordinal to its unique notation. Thus, $|n(\beta)|=\beta$.
 
@@ -36,7 +36,8 @@ The natural enumeration of a $\Pi_{1}^1$ set in $\omega_{1}^{CK}$ steps yields a
 **Note:** Non-hyperarithmetic $\Pi_{1}^1$-sets have the same hyperdegree as Kleene's $\mathcal{O}$.
 
 
-**Meta-computable function:** Let $\Phi \subseteq \omega_{1}^{CK}\times \omega_{1}^{CK}$ be a partial function. $\Phi$ is meta-computable if there exists a finite set $E$ of equations...
+**Meta-computable function:** Let $\Phi \subseteq \omega_{1}^{CK}\times \omega_{1}^{CK}$ be a partial function. $\Phi$ is meta-computable if there exists a finite set $E$ of equations w/ principal function letter $f$ such that for all $\alpha,\beta<\omega_{1}^{CK}:$
+	$\phi(\alpha)=\beta\leftrightarrow (f(\alpha)=\beta)\in C(E)$
 
 ## Analytical Hierarchy
 The analytical hierarchy is an extension of the arithmetic hierarchy which includes formulas of second-order arithmetic and which quantify over sets of natural numbers $S\subseteq \mathbb{N}$ and equivalently, over functions $f:\mathbb{N}\to \mathbb{N}$. We have stages $\Pi_{\alpha}^1$ and $\Sigma_{\alpha}^1$ for $\alpha<\omega_{1}^{CK}$, as well as the stages from the hyperarithmetical hierarchy.
@@ -84,6 +85,7 @@ $\alpha$-recursion theory also has its own analogue of $\alpha$-jumps and $\alph
 Partial functions
 
 ## References
-[[Turing Machines & Recursion Theory]]
+[Turing Machines & Computability Theory](Computability%20Theory/Turing%20Machines%20&%20Computability%20Theory.md)
+[Recursion Theory](Computability%20Theory/Recursion%20Theory.md)
 [[Higher Recursion Theory.pdf]]
 [Math.stackexchange post]([set theory - Is there any generalization of the hyperarithmetical hierarchy using the analytical hierarchy to formulas belonging to third-order logic and above? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/245121/is-there-any-generalization-of-the-hyperarithmetical-hierarchy-using-the-analyti))

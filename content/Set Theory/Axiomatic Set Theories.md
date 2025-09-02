@@ -4,7 +4,7 @@ axioms:
 
 - Axiom of Extensionality: If the sets X and Y have the same elements, then X =Y
 - Axiom of Pairing: For any set a, b, then there exists a set {a, b}
-- Axiom Schema of Separation: 
+- Axiom Schema of Separation: Given any set Y and property $\varphi$, there is a subset X $\subseteq$ Y which contains exactly the elements in Y which satisfy $\varphi$
 - Axiom of Union: For any set X, there exists a set Y = $\bigcup X$, the union of all elements of X (or the set of elements of the sets in X)
 - Axiom of Powerset: For any set X, there exists a set Y = P(X), which the set of all subsets of X
 - Axiom of Infinity: There exists an infinite set

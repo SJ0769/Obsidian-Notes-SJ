@@ -93,5 +93,5 @@ Pair $= \lambda x.\lambda y.\lambda p.pxy$
 
 ## References
 [[Type Theory]]
-[[Turing Machines & Recursion Theory]]
+[Turing Machines & Computability Theory](Computability%20Theory/Turing%20Machines%20&%20Computability%20Theory.md)
 [Programming with Math]([Programming with Math | The Lambda Calculus](https://www.youtube.com/watch?v=ViPNHMSUcog&list=WL&index=19&t=589s))

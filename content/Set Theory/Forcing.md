@@ -1,3 +1,4 @@
+## Background
 **Overview:** Forcing is an method to obtain a new model of a (set) theory from an old one.
 
 More precisely it is a method to expand a model $\mathcal{M}$ to a larger model $\mathcal{M}[G]$ via adding a new 'generic' object $G$ to $V$. In this case $\mathcal{M}$ is said to be the 'ground' model, and $\mathcal{M}[G]$ is the generic extension of $\mathcal{M}$. We can also apply this to the universe of sets $V$, where we obtain a larger universe $V[G]$, this poses some philosophical questions about the nature of the universe of sets (i.e., one may argue that $V$ was never the 'true' universe since it could be extended)
@@ -12,7 +13,7 @@ Forcing can be used to obtain different (truth) values for undecidable statement
 	E.g., Forcing can be obtain different values for the continuum hypothesis (CH) for different models of set theory (i.e., $2^{\aleph_{0}}=\aleph_{2}$). Via forcing, we can show that there are models $\mathcal{M, N}$ of set theory such that $\mathcal{M}$ believes CH is true ($2^{\aleph_{0}}=\aleph_{1}$) and where $\mathcal{N}$ believes CH does not hold. This results in the independence of CH (as well as w/ other techniques such as Gödel's constructible universe $L$).
 
 --------------
-
+## Filters
 **Filter:** A filter on a nonempty set $S$ is a collection $F\subset \mathcal{P}(S)$ such that
 	i) $S\in F$ and $\emptyset\not\in F$
 	ii) If $X\in F$ and $Y\in F$, then $X\cap Y\in F$ (i.e., closed under intersection)
@@ -40,13 +41,9 @@ i) If $\mathcal{F}$ is a nonempty family of filters on $S$, then $\bigcap\mathca
 ii) If $\mathcal{C}$ is a $\subset$-chain of filters on $S$, then $\bigcap\mathcal{C}$ is a filter on $S$
 iii) If $G\subset\mathcal{P}(S)$ has the ==finite intersection property==, then there is a filter $F$ on $S$ such that $G \subset F$
 
----------------
+-------------------
 
-We say that $p$ is stronger than $q$ if $p<q$. The intuition behind this is that more (forcing) restrictions are applied to an object and so more information is provided about the object we wish to add to the universe via the generic filter.
-
-If $p$ and $q$ are forcing conditions, and there exists an $r$ such that both $r\leq p$ and $r\leq q$, then $p$ and $q$ are compatible. Otherwise, they are not.
-
-The forcing language (which is defined in the generic or 'base' model, as well as the forcing relation $\Vdash$) contains 'name' for every object in $M[G]$, including a constant $\dot{G}$. It is common notation for $\dot{x}$ to refer to the 'name' of the object $x$. 'Names' act as placeholders for objects which exist in the generic extension and allows us to talk about these objects from w/in the ground model
+In the context of forcing, we define a filter and forcing condition as follows:
 
 For $(P,<)$ is a nonempty partially ordered set, we call this set a 'notion' of forcing and its elements are forcing conditions.
 
@@ -58,7 +55,12 @@ A set of conditions $G\subset P$ is generic over $\mathcal{M}$ if:
 	i) $G$ is a filter on $P$
 	ii) if a set $D$ is dense in $P$ and $D\in M$, then $G\cap D=\emptyset$
 
+We say that $p$ is stronger than $q$ if $p<q$. The intuition behind this is that more (forcing) restrictions are applied to an object and so more information is provided about the object we wish to add to the universe via the generic filter.
 
+If $p$ and $q$ are forcing conditions, and there exists an $r$ such that both $r\leq p$ and $r\leq q$, then $p$ and $q$ are compatible. Otherwise, they are not.
+
+The forcing language (which is defined in the generic or 'base' model, as well as the forcing relation $\Vdash$) contains 'name' for every object in $M[G]$, including a constant $\dot{G}$. It is common notation for $\dot{x}$ to refer to the 'name' of the object $x$. 'Names' act as placeholders for objects which exist in the generic extension and allows us to talk about these objects from w/in the ground model
+## Properties and Key Theorems
 **The Generic Model Theorem:** Let $\mathcal{M}$ be a transitive model of $ZFC$ and let $(P, <)$ be a notion of forcing in $\mathcal{M}$. If $G\subset P$ is generic over $P$, then there exists a transitive model $\mathcal{M}[G]$ such that:
 	i) $\mathcal{M}[G]\models ZFC$ (i.e., is a model of $ZFC$)
 	ii) $M\subset M[G]$ and $G\in M[G]$

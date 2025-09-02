@@ -32,7 +32,6 @@ $\rightarrow$ Since SOL,...,HOL only allows finitely-long formulae (note: second
 $\mathcal{L}_{\kappa, \kappa}^2$), the occurrence number is the same as FOL, $\aleph_{0}$.
 
 ## Effective no. of Sentences
-
 $\rightarrow$ **Note:** It can be seen that the infinitary definition of the number of formulae can be applied to FOL,
 	max{$|\tau|, \kappa_{L}$}$^{<\kappa_{L}} =$ max{$|\tau|, \aleph_{0}$}$^{< \aleph_{0}} =$ max{$|\tau|, \aleph_{0}$}$^n$ for $n\in\mathbb{N}$
 $\rightarrow |\tau|>\aleph_{0}$
@@ -44,7 +43,7 @@ You could also define the number of formulas up to validity (perhaps using the d
 
 For $occ{(\mathscr{L})} > |\tau|$ we get the following:
 i) $occ(\mathscr{L})\leq 2^{< occ(\mathscr{L})}$, then
-|$occ({\mathscr{L}})|=|2^{< occ(\mathscr{L})}$|
+$occ({\mathscr{L}})^{<occ(\mathscr{L})}=2^{< occ(\mathscr{L})}$ (this result in particular depends on the global continuum hypothesis
 ii)  $occ(\mathscr{L})> 2^{< occ(\mathscr{L})}$
 $occ(\mathscr{L})$
 
@@ -56,7 +55,7 @@ $|\tau|^{< occ(\mathscr{L})}=2^{<occ(\mathscr{L})}$
 For  $|\tau|\leq 2^{<occ(\mathscr{L})}$
 ii) $|\tau|>2^{occ(\mathscr{L})}$, then
 $|\tau|$
-$\therefore 2^{<occ(\mathscr{L})}$ or $|\tau|-$many distinct formulas
+$\therefore 2^{<occ(\mathscr{L})}$ or $|\tau|-$many distinct sentences
 
 - Since FOL, SOL,..., HOL are finitary logics (allow finitely-long formulae), then these logic have an occurrence number of $\aleph_{0}$ (sometime notated as $\omega$ instead)
 	$\implies$ That finite vocabularies are 'enough' to formulate any statement in these logics (up to logical equivalence)
@@ -80,7 +79,6 @@ The number of "semantically-distinct"	sentences may also be defined
 	$\mathcal{K} = \bigcup\limits_{\varphi \subseteq \mathscr{L}[\sigma]} \tau_{\varphi}$
 	Then $|\mathcal{K}|$ is the number of semantically distinct sentences of the logic $\mathscr{L}$
 
-
 **Result:** For $\mathscr{L}$ is 'small' and assume $occ(\mathscr{L})<\infty$, then for all $\kappa$, $h_{\kappa}(\mathscr{L})<\infty$
 proof:
 	Set $\mu = \kappa,$ and let $\tau$ be a 'universal' vocabulary of power $\mu$ (i.e., $\tau$ contains $\mu$-many relation and function symbols of each arity). In order to investigate $h_{\kappa}(\mathscr{L})$, we can confine ourselves to $\tau$-sentences of $\mathscr{L}$
@@ -92,6 +90,7 @@ Note: if $\mathscr{L}[\tau]$ is set-like and $occ(\mathscr{L}< \infty)$ then we 
 	$occ(\mathscr{L_{\omega, \omega}}) = \omega \implies l(\mathscr{L})=\omega$
 
 
+In general, for 'tame' languages ($\implies occ(\mathscr{L})<|\tau|$, for a sufficiently large $\tau$), the no. of sentences is at most $2^{|\tau|}$ (ignoring logical distinction and counting logically equivalent sentences as well).
 ## The Dependance Number:
 **Dependance Number:**
 	- The intuition behind the dependance number of a formula $\varphi\in\mathscr{L}[\tau]$ 'depends' only on a subset of the vocabulary $\sigma \subset \tau$

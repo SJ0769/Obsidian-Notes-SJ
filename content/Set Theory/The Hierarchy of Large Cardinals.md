@@ -70,4 +70,13 @@ Stronger cardinals are also incompatible with choice as by the notion of being '
 ### Limit of the Large Cardinal Hierarchy
 Consistency strength of a theory $T$ is determined by how many formulas of the language it can prove. Thus, inconsistent theories, which can prove any statement of the language, has maximal consistency strength.'
 
+**Identity Crisis:**
+The large cardinal hierarchy orders large cardinals by their consistency strength (relative to $ZFC$), but this ordering does not necessarily align with the 'size' of a large cardinal. The identity crisis is an instance of the mismatching of large cardinals between their strength and their size (cardinality)
+
+E.g., The consistency of a huge cardinal implies the consistency or a supercompact cardinal, even though the least huge cardinal is smaller then the least supercompact cardinal.
+
+E.g., it is consistent that the least strongly compact cardinal is the least measurable cardinal, and it is also consistent that the least strongly compact cardinal is the least supercompact cardinal. Even though, from the hierarchy above supercompact $\implies$ strongly compact $\implies$ measurable, as well as the fact that a supercompact cardinal has many measurable cardinals below it
+
 ## References
+[set theory - Ordering of large cardinals by cardinality - MathOverflow](https://mathoverflow.net/questions/219132/ordering-of-large-cardinals-by-cardinality?noredirect=1&lq=1)
+[set theory - Large cardinal consistency strength and size - MathOverflow](https://mathoverflow.net/questions/218414/large-cardinal-consistency-strength-and-size)

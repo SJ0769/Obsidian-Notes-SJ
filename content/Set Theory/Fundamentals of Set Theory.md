@@ -1,5 +1,4 @@
-**Defining Ordinals**
-
+## Ordinals, Cardinals & The Universe of Sets
 **Von-Neumann Definition:**
 The ordinals are defined recursively as follows
 $0:=\emptyset$
@@ -38,7 +37,7 @@ Cantors proved that the cardinality of $\mathcal{p}(X)$ is strictly large than c
 The intuition being combinatorically, we consider the set of states, let 0 denote that a set if not a subset, and 1 if a set is a subset, $\{0,1\}$. Then $|\mathcal{P}(X))|= |\{f|f:X \to \{0,1\}\}|=|\{0,1\}|^{|X|}=2^\kappa$. If $\kappa$ is infinite, then $2^\kappa=\mu^\kappa$ for all $1<\mu<\kappa$.
 
 
-**Ordinal and cardinal arithmetic**
+## Ordinal and cardinal arithmetic
 Ordinal arithmetic is non-commutative in general (only commutative for finite ordinals). i.e., $\omega+1 \not= 1+\omega = \omega$. It is however associative, i.e., $(\omega+n)+\omega = \omega+(\omega+n)$
 
 
@@ -66,7 +65,7 @@ $|X|^{|Y|}=|X^Y|$, where $X^Y$ is the set of all functions from $Y$ to $X$ (i.e.
 
 If $\kappa$ is infinite and $1<\mu<\kappa,$ then $\kappa^\mu=\kappa$
 
-
+## Functions & Relations
 Functions and relations definitions:
 
 An $n$-ary relations $R$ on a domain $\mathcal{D}$ is a subset $R \subseteq \mathcal{D}^n$ (or $R \subseteq \{(x_{0}, x_{1},\dots x_{n})|x_{0},x_{1},\dots,x_{n} \in \mathcal{D}\}$.
@@ -92,11 +91,19 @@ It can also be defined on an element $a \in X$ as follows:
 An $n$-ary function is an $(n+1)$-ary relation with the additional property that if $(y, x_{0}, x_{1},\dots)=(y, z_{0},z_{1},\dots)$, then $x_{0}=z_{0}, x_{1}=z_{1},\dots$etc.
 
 
-Every function is a relation (but not vice versa)
+Every function is a relation (but not vice versa),
 
-A constant is a 0-ary function.
+**Injective Functions:** A function $f:X\to Y$ is injective or "one-to-one" if all elements $x\in X$ in the domain is mapped to exactly one element $y\in Y$ in the codomain. The element which $x$ is mapped to is denoted $f(x)$ and called the 'image' of $x$ . This $\implies|X|\leq |Y|$
 
+**Surjective Function:** A function $f:X\to Y$ is surjective or "onto" if all elements $y\in Y$ are mapped to exactly one element $x\in X$ in the codomain. The image of $y$ is $g(y)=f^{-1}(y)$ .This $\implies |Y|\leq|X|$.
 
+**Bijective Function:** A function $f:X\to Y$ is bijective or a "one-to-one correspondence" if it is both injective and surjective. This $\implies|X|=|Y|$
+
+$|X|<|Y|$ if we can find an injection from $X$ to $Y$, but not a bijection. Note that we can find multiple different mappings from a domain $X$ to a codomain $Y$, some of which are injective, we can say $|X|=|Y|$ if we can find at least one bijection between them.
+	E.g., $f:2\mathbb{N}\to \mathbb{N}$, an injective mapping would be to map each member of $2\mathbb{N}$ to an even natural number, a bijection would be to map each member of $2\mathbb{N}$ to its successor in $\mathbb{N}$.
+
+A constant is a 0-ary function as it does not take any inputs and always returns the same value.
+## Key Hypothesis in Set Theory
 **Cantors Diagonal Argument:** (there exists larger infinities)
 
 **Continuum Hypothesis:** The Continuum Hypothesis ($CH$) asserts that there does not exist a cardinals $\kappa$ such that $\aleph_{0}<\kappa<2^{\aleph_{0}}$, that is $\aleph_{1}=2^{\aleph_{0}}$ (equivalent to $\aleph_{1}=\beth_{1}$).
@@ -104,5 +111,11 @@ $\to$ This statement is provably independent of $ZFC$ (and by extension $ZF$). T
 
 **Global Continuum Hypothesis:** The Global Continuum Hypothesis ($GCH$) asserts that $\aleph_{\alpha+1}=2^{\aleph_{0}}$. This statement is also independent of $ZFC$.
 $\implies$ All proper-classes are of the same 'size', that is, we can find a bijection between any two proper-classes (i.e., $f:ORD\to V$ for $f$ is a bijection).
+## Other
+**Transitive Closure:** The transitive closure of a set $X$ is the smallest transitive superset of $X$ (i.e., $X \subseteq TC(X)$ for $TC(X)$ denotes the transitive closure of $X$).
 
+$TC(X)=\bigcup\left\{ X, \bigcup X, \bigcup \bigcup \mathbf{X}\dots\right\}$ where $\bigcup X$ is the union of all elements $x\in X$ 
+(i.e., $\bigcup X = \{y|\exists x\in X \text{ such that } y\in x\}$), $\bigcup\bigcup X$ is an is the union of all elements $y\in x$ of elements $x\in X$ (i.e., $\bigcup\bigcup X=\{z|\exists x\in X \exists, y\in x \text{ such that }z\in y \}$).
+
+**Note:** $V=L\implies V=HOD$
 ## References

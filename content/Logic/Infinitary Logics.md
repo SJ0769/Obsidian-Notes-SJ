@@ -2,7 +2,7 @@ Infinitary logics are logics which allow for conjunction and disjunction symbols
 
 Infinitary logics also allow for infinitely-long proofs, that it, proofs with an infinite amount of steps (recall: a proof is a sequence logically-valid statements of a logic).
 
-i.e., Consider $\mathscr{L}_{\kappa, \lambda}$ for $\kappa, \lambda > \aleph_{0}$, $\mathscr{L}_{\kappa, \kappa}$ permits formulae of length $< \kappa$  and quantification over $\lambda$-many variables. Thus, $\kappa$ is the least upper bound of the length of $\mathscr{L}_{\kappa, \lambda}-$sentences
+i.e., Consider $\mathscr{L}_{\kappa, \lambda}$ for $\kappa, \lambda > \aleph_{0}$, $\mathscr{L}_{\kappa, \lambda}$ permits formulae of length $< \kappa$  and quantification over $\lambda$-many variables. Thus, $\kappa$ is the least upper bound of the length of $\mathscr{L}_{\kappa, \lambda}-$sentences. Proofs are of length $<\kappa$.
 
 First-order logic is $\mathscr{L}_{\omega, \omega}$ 
 

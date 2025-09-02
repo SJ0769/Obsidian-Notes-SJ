@@ -38,7 +38,7 @@ $\rightarrow$ Allows it to be stronger than $\alpha^{th}-$order logic for an arb
 
 The classes $\Delta_{n}$ (for $n < \omega$) of the Levy hierarchy of formulas can be considered as sub-logics (or more appropriately as sets of sentences of sort logic) of sort logic as it characterizes any $\Delta_{n}$ model class. The Hanf number and Löwenheim number of the logic $\Delta_{n}$ of is $\delta_{n}$ and $\sigma_{n}$ respectively. Thus, it can be observed that the canonical hierarchy of $\Delta_{n}$ climbs up the large cardinal hierarchy (in fact, up to Vopenka’s Principle) with reference to Hanf and Löwenheim numbers
 
-The decision problem (see [[Turing Machines & Recursion Theory]]) of the logic $\Delta_{n}$ is the complete $\Pi_{n}$ set of natural numbers.
+The decision problem (see [[Computability Theory/Turing Machines & Computability Theory]]) of the logic $\Delta_{n}$ is the complete $\Pi_{n}$ set of natural numbers.
 
 **Note:** Sort logic is a finitary logic (i.e., only allows finitely-long formulae) and thus has an occurrence number of $\aleph_{0}$. $\mathscr{L}$ is set-sized (i.e., $|\mathscr{L}[\tau]|< \lambda$ for $\lambda$ is some cardinal) due to having only two forms of quantification, first-order quantification and sort quantification. Thus, sort logic also has a Hanf and Löwenheim number ([[The Hanf Number]], [[Model Theory/The Löwenheim Number]]).
 
@@ -48,7 +48,7 @@ The decision problem (see [[Turing Machines & Recursion Theory]]) of the logic $
 	**Recall:** Expressive power deals with elementary-classes and defining model classes...,etc. (for other notions of expressive power, see [[Logics, Structures & Models]]) .Thus, the notion of 'expressive strength' is tied to characterizing model classes. We are using a different 'measuring stick' when measuring expressive power by the characterizability of (individual) models through Hanf numbers and Löwenheim numbers. So this 'extension' will not increase expressive power.
 
 
-Syntax: Sort Logic has the additional quantifiers $\overset{\sim}{\exists}$ and $\overset{\sim}{\forall}$, with '$\overset{\sim}{\exists} P \varphi$' meaning that there is a predicate $P$ of new sorts of elements of $\varphi$ such that (whatever)
+**Syntax:** Sort Logic has the additional quantifiers $\overset{\sim}{\exists}$ and $\overset{\sim}{\forall}$, with '$\overset{\sim}{\exists} P \varphi$' meaning that there is a predicate $P$ of new sorts of elements of $\varphi$ such that (whatever)
 	i.e., posits that there exists a new sort of objects not apart of the current model and a relation on such objects such that $\varphi$ holds. $\implies$ express the existence of a structure outside of the model, internally w/in the model you can formalize extensions of the universe.
 **Note:** logic with multiple sorts allow for quantification over objects across multiple sorts
 
@@ -60,6 +60,9 @@ What differentiates sort logic from set theory?
 Sort logic and set theory are similar but sort logic is a logic, and sort logic treats mathematical structures up to isomorphism only (structuralist view)
 
 ## Cardinality Quantifier Logics
-Added to the set of logical symbols
+An additional quantifier $Qx$ added to the set of logical symbols. $Qx$ can mean "there are countably-many $x$...", or "there are uncountably-many $x$..." Cardinality quantifiers can be further specified so you are ranging over an exact number of things, e.g., "there are $\aleph_{1}$-many $x$..."
+
+[Model Theoretic Logics](Set%20Theory%20+%20Model%20Theory/Model%20Theoretic%20Logics.pdf)
 ## References
 [[Sort Logic.pdf]]
+[Model Theoretic Logics](Set%20Theory%20+%20Model%20Theory/Model%20Theoretic%20Logics.pdf)

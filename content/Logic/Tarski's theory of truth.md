@@ -4,11 +4,15 @@ Similarly, False($\lceil \phi \rceil$), or F($\lceil \phi \rceil$), denotes that
 
 Tarski's theory of truth is bivalent, meaning the set of truth values are $S=\{T, F\}$. Every statement is assigned a single truth value in $S$ (true or false).
 
-
-- **Law of Noncontradiction (LNC):** $\phi$ and $\neg \phi$ cannot both be true, otherwise the theory is inconsistent
+## Semantic Laws
+- **Law of Noncontradiction (LNC):** $\phi$ and $\neg \phi$ cannot both be true, otherwise the theory is inconsistent.
 
 - **Law of Excluded Middle (LEM):** Either $\phi$ is true, or $\neg \phi$ is true.
 	**Note:** The law of excluded middle differs from the law of bivalence in the case of paraconsistent logic, where a sentence $\phi$ can be assigned multiple truth values (i.e., both true and false).
+
+- **Law of Bivalence:** Every statement $\phi$ has a single truth state, that being true or false.
+
+- **Law of Identity:** For all statements $\phi$, $\phi=\phi$ (i.e., something its itself).
 ## Convention T
 Inductively, it is defined as follows:
 	i) True($\lceil \phi  \rceil$) $\iff \phi$.
@@ -22,7 +26,7 @@ Inductively, it is defined as follows:
 
 **Note:**  $\lceil{\phi}  \rceil$ denotes the Gödel encoding of the sentence $\phi$.
 ## Tarski's Undefinability Theorem:
-**Theorem (Tarski):** A sufficiently powerful language (capturing basic arithmetic such as multiplication $\times$ and diagonalization, see [[Gödel's Incompleteness Theorems]]) cannot define it's own truth predicate (within itself).
+**Theorem (Tarski):** A sufficiently powerful language (capturing basic arithmetic such as multiplication $\times$ and diagonalization, see [[Model Theory/Gödel's Incompleteness Theorems]]) cannot define it's own truth predicate (within itself).
 
 **proof:**
 Assume for contradiction that there is a predicate 'True(x)' which determines if x is true or not in a sufficiently powerful language $\mathscr{L}$ (can show diagonalization). Then True($\lceil \phi \rceil$) holds in a model $\mathcal{M}$ if and only if $\phi$ holds, for some arbitrary $\mathscr{L}$-sentence $\phi$.
@@ -34,7 +38,7 @@ We derive the contradiction (via diagonalization) $L$ $\iff \neg$True$(\lceil {L
 
 **Lemma:**
 - This equivalent to $\neg ( \mathcal{M} \models T(\lceil \phi \rceil))$ for any model $\mathcal{M}$ (including the universe of sets, $V$) and for all $\phi$ in $\mathscr{L}$
-- Tarski's Undefinability Theorem is equivalent to asserting that a consistent theory cannot be it's own metatheory ('semantically closed').
+- Tarski's Undefinability Theorem is equivalent to asserting that a consistent theory cannot be it's own metatheory as it would then range over its own semantics, allowing it to define its own truth predicate, resulting in a contradiction ('semantically closed').
 - Not all instances of True($\lceil \phi \rceil$) $\iff \phi$ (convention T) are contained in $\mathscr{L}$.
 
 This inability for a language to not define or capture truth within itself leads to a object-language vs meta-language distinction.
@@ -43,7 +47,7 @@ The language $\mathscr{L}_{n+1}$ defines the truth predicate of the language $\m
 	$\rightarrow$ The meta-language is a language in which the syntax (symbols and rules) for manipulating the object language are formulated. The sentences of the object language are treated as objects which can be quantified over in the meta-language (i.e., $\forall \phi \in \mathscr{L}_{n}, \phi$ is provable in $\mathscr{L}_{n} \implies T_{n}(\phi)$), this can then be characterized as a sentence $\psi$ of $\mathscr{L}_{{n+1}}$.
 
 Consider $\mathscr{L}_{0} = ZFC$ (Zermelo-Frankel set theory w/ the axiom of choice), $\mathscr{L}_{1} = PRA$
-(Primitive Recursive Arithmetic). PRA is strong enough to define Gödel numbering so it is a suitable meta-theory. 
+(Primitive Recursive Arithmetic). $PRA$ is strong enough to define Gödel numbering so it is a suitable meta-theory (in order to internalize the metatheory w/in the object language so we can refer to to its own statements and the provability of them..., etc.)
 
 From the above example, we can also see that the syntax of the object language (i.e., formation rules for sentences, what constitutes a WFF, inference rules for proof and theorems ,..., etc. is defined in the meta-language) is also determined by the meta-theory (and so, would also affect the semantics from this).
 
@@ -77,7 +81,7 @@ $\mathscr{L}_{\lambda} = \mathscr{L}_{0}\cup$ {$T_{\alpha}(x)$}  (or equivalentl
 Since this process is recursive, the upward limit of this process is the language $\mathscr{L}_{\omega^{CK}_{1} }$. The reason the hierarchy must be recursive is so we have a decidable syntax ($\implies$ we know if a predicate is a truth predicate or not, that is, the number of truth predicates and levels are denumerable)
 
 **Note:** We cannot have a meaningful extension of the Tarski hierarchy into uncountably many 
-meta-levels as this would result in a semantic collapse between levels due to not being recursive. In order to differentiate between levels, they must be indexed by recursive ordinals
+meta-levels as this would result in a semantic collapse between levels due to the level indexing no longer being a recursive process, meaning we can no longer differentiate between truth (i.e., what level a truth predicate is defined). In order to differentiate between levels, they must be indexed by recursive ordinals.
 
 **Note:** These are considered different languages even though they are very similar (so semantic closure is avoided)... In this recursively defined hierarchy you do not have the freedom of choice of meta-language (i.e. cannot have $\mathscr{L}_{0} = ZFC$ and $\mathscr{L}_{1} = PRA$, instead $\mathscr{L}_{1} = ZFC \cup T_{0}^{ZFC}(x)$)
 $\rightarrow$ where $T_{0}^{ZFC}(x)$ means the truth predicate of the theory ZFC at level 0 of the Tarski hierarchy.
@@ -118,7 +122,7 @@ This hierarchy is similar to a recursive Tarskian hierarchy
 
 
 
-The metalanguage "presupposes" the object language in that in order to talk about the object language you must first assume the metalanguage which describes the syntax (WFF, inference rules) and the semantics of the object language. The metalanguage may also "inform" the choice of axioms of the object language, by the metalanguage determining what can be formulated (as an axiom), and what it 'should' look like (i.e., philosophically, your choice of axioms should reflect what the metalanguage consider as valid and consistent). Due to the limitations imposed [[Gödel's Incompleteness Theorems]], the metalanguage also justifies the choice of axioms (validity and meaning of the axioms) as the object language cannot.
+The metalanguage "presupposes" the object language in that in order to talk about the object language you must first assume the metalanguage which describes the syntax (WFF, inference rules) and the semantics of the object language. The metalanguage may also "inform" the choice of axioms of the object language, by the metalanguage determining what can be formulated (as an axiom), and what it 'should' look like (i.e., philosophically, your choice of axioms should reflect what the metalanguage consider as valid and consistent). Due to the limitations imposed [[Model Theory/Gödel's Incompleteness Theorems]], the metalanguage also justifies the choice of axioms (validity and meaning of the axioms) as the object language cannot.
 
 
 **Philosophical Implications:** Since 'truth' effectively cannot be captured, the notion of 'truth' becomes relative and based upon a shaky bottom.

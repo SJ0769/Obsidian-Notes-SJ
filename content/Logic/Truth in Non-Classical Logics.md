@@ -44,13 +44,16 @@ $\neg F(\lceil \phi \rceil) = T(\lceil \phi \rceil)$ or $U(\lceil \phi \rceil)$ 
 $\neg U(\lceil \phi \rceil) = T(\lceil \phi \rceil)$ or $F(\lceil \phi \rceil)$ (i.e., defined)
 
 **The Strengthened Liar/Revenge of The Liar:**
-Consider the statement Q = "This sentence is false or undefined"
+Consider the statement Q = "This sentence is false or undefined." Intuitively, if this statement is true then this results in a contradiction as it is not false or undefined. A longer evaluation can be seen below.
+
 $Q \equiv F(\lceil Q \rceil) \vee U(\lceil Q \rceil)$
 $T(\lceil Q \rceil) = T(\lceil F(\lceil Q \rceil) \vee U(\lceil Q \rceil) \rceil)$
 i.e., Q is true is if it is false or undefined
 $\implies (T(\lceil Q \rceil) \iff F(\lceil Q \rceil))$ or $(T(\lceil Q \rceil) \iff U(\lceil Q \rceil))$
 $\implies (T(\lceil Q \rceil) \iff \neg T(\lceil Q \rceil))$ or $(T(\lceil Q \rceil) \iff \neg T(\lceil Q \rceil))$
-...
+
+If the $F(Q)$, then the statement $Q$ is true, a contradiction. This is the same case for when $Q$ is undefined.
+
 We derive that $T(\lceil Q \rceil)\iff\neg T(\lceil Q \rceil)$ as $U(\lceil Q \rceil = \neg T(\lceil Q \rceil))$
 Thus, a purely paracomplete approach does not escape analogues of the liar paradox (and so Tarski's Undefinability Theorem applies, truth cannot be captured).
 
@@ -74,8 +77,8 @@ Consider the sentence "The liar sentence is undefined", this sentence is true in
 Consider the following statement in paraconsistent logic:
 "Every sentence is either 'only true', 'only false' or 'both true and false'"
 	Note: A statement $\varphi$ is 'only true' if it is true in L but not false in it (i.e., $\varphi \in S_{1}/S_{2}$) where $S_{1}=EXT$ and $S_{2}= ANT-EXT$
-	A statement $\varphi$ is 'only false' if it is false in L but not true in it (i.e., $\varphi \in {S_{2}}/{S_{1}})$
-The issue comes with the notion of 'only true' and 'only false' , we can effectively recreate the liar statement: "this statement is only false", taking it as true we derive that this statement is 'only false' if and only if it is 'only true', resulting in triviality.
+	A statement $\varphi$ is 'only false' if it is false in $\mathscr{L}$ but not true in it (i.e., $\varphi \in {S_{2}}/{S_{1}})$
+The issue comes with the notion of 'only true' and 'only false', we can effectively recreate the liar statement: "this statement is only false", taking it as true we derive that this statement is 'only false' if and only if it is 'only true', resulting in triviality.
 	Note: this statement cannot be both true and false as per the definition of being 'only true' and 'only false', we derive a contradiction which results in triviality (recall: paraconsistent logic only allows contradictions which don't result in triviality).
 Thus, even a paraconsistent logic cannot capture truth/define its own truth predicate, and so Tarski's Undefinability Theorem holds. 
 
@@ -85,11 +88,11 @@ Other views for the liar's paradox: it is just an error to say that it is well-d
 ## Application to Gödel's Incompleteness Theorem 
 Gödel's Incompleteness Theorem considers an analogue of the liar sentence about provability
 "This sentences is unprovable"
-(or equivalently, $G = \neg Prov(\lceil G \rceil)$). Within a 3-valued paracomplete logic system, the statement G would be assigned the 'undefined' truth state. However, this does not mean that paracomplete logic escapes the incompleteness theorem. Consider the following statement
+(or equivalently, $G = \neg \text{Prov}(\lceil G \rceil)$). Within a 3-valued paracomplete logic system, the statement G would be assigned the 'undefined' truth state. However, this does not mean that paracomplete logic escapes the incompleteness theorem. Consider the following statement
 
 "This sentence is not provable", note: 'not provable'= {unprovable, undefined}.
-$\rightarrow G = (\neg Prov(\lceil G \rceil)) \vee U(\lceil G \rceil)$ 
-$\implies T(\lceil G \rceil) \iff \neg Prov(\lceil G \rceil) \vee T(\lceil G \rceil) \iff U(\lceil G \rceil)$
+$\rightarrow G = (\neg \text{Prov}(\lceil G \rceil)) \vee U(\lceil G \rceil)$ 
+$\implies T(\lceil G \rceil) \iff \neg \text{Prov}(\lceil G \rceil) \vee T(\lceil G \rceil) \iff U(\lceil G \rceil)$
 Thus, we get that it is not provable if and only if it is provable or undefined.  In the case that it is undefined you would be proving 'nonsensical' statements (the intuition behind this is that you aren't really proving anything meaningful).
 Note: $T(\lceil G \rceil) \iff U(\lceil G \rceil)$ will result in a contradiction unless negation rules and the LNC is modified.
 Thus, it has been established that there are true statements which are unprovable. $\therefore$ the incompleteness theorem holds (we only require the existence of some true but unprovable statements for this).
@@ -110,10 +113,11 @@ Since it isn't consistent, the other 3 conditions can be met (at most).
 **The Löwenheim-Skolem Theorem:**
 The Löwenheim-Skolem Theorem states that a first-order theory (in a countable language) will have models of every infinite cardinality given that it has an infinite model and no finite models. W/in paraconsistent logic you may have a theory $T$ which has a model of every infinite cardinality and have finite models.
 
-[[Gödel's Incompleteness Theorems]]
+[[Model Theory/Gödel's Incompleteness Theorems]]
 
-
-## The Revision Theory of Truth (RTT)
+## Other
+There are further theories of truth and conceptions as mentioned below
+### The Revision Theory of Truth (RTT)
 Introduces the notion of 'stability', in this view paradoxical statements are not contradictory but rather unstable in that they oscillate between truth values.
 
 Consider the liar sentence $L$ = "This sentence is false"
@@ -122,9 +126,12 @@ $L$ dynamically oscillates between the truth values 'true' and 'false':
 - A sentence stabilizes if it is assigned a definite truth value at a given level
 - A sentence is unstable if it is not assigned a definite truth value at any stage
 
-
 Still suffers from analogues of the liar's paradox. Consider the following statement:
 "This sentence is not stably true."
+
+-------------------------------------
+**Non-prime Disjunction:** A statement w/ a non-prime disjunction may be true even though none of the individual disjuncts are true. This has applications to 'impossible worlds' in extensions of modal logic. This also does not prevent the liar's revenge.
+E.g., the sentence $\varphi \vee \psi$ may be true even if it is the case that $\neg \varphi$ and $\neg \psi$ (i.e., $\varphi$ and $\psi$ are false).
 ## References
 [[Tarski's Theory of Truth]]
 [[Kripke's Theory of Truth]]

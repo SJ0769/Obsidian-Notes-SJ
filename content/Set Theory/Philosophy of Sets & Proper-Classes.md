@@ -153,7 +153,7 @@ The case of IMH is analogous to that of Martin's axiom (MA), a principle of set-
 ### Philosophical Views
 **Actualist View of The Universe:** The universe is fixed and cannot be extended (width and height). This view may not be incompatible with views such as $V$ being 'plastic' in that the actualist will claim that $V \subset V^*$ was never the 'true' universe of sets.
 	**Platonic view of The Universe:**
-	Sets exist in actuality in some sort of 'platonic' (abstract objects) realm, rather than sets being just mathematical expressions? Implies we have a metamathematical $V$, which is the 'true' universe of sets. This view of the universe supports the actualist view of $V$, that the universe of sets $V$ is a complete object (related to 'actual infinity').
+	Sets exist in actuality in some sort of metaphysical realm/reality of abstract mathematical objects independent of physical reality,  rather than sets being just mathematical expressions (as seen below in **Formalism**). This means, that there is a 'true' universe of sets $V$ which does have a definite conception of set (i.e., what properties sets actually have), mathematical statements also have an objective truth value. This view of the universe supports the actualist view of $V$, that the universe of sets $V$ is a complete object (related to 'actual infinity'). According to this view, the purpose of set-theorists is axiomatize mathematics so that it best fits in accordance to this platonic conception
 
 
 **Potentialist View of The Universe:**
@@ -164,13 +164,26 @@ The universe of sets $V$ is not a complete static object, but rather a dynamic o
 
 **Formalism:** Mathematics is simply a game of manipulating mathematical symbols and expressions. According to formalism, mathematical truths are not about numbers, sets, or structures, but not about anything at all.
 
-**Structuralism:** Axiomatic theories describe mathematical structures...
+**Structuralism:** Axiomatic theories describe mathematical structures rather than merely objects.
+	E.g., according to the structuralist view the number '2' is defined as the second number in the natural numbers $\mathcal{N}=\{\mathbb{N},+, \times, S(x), 0 \}$. Thus, objects are defined in relation to mathematical structures.
+	E.g., sets are not objects with the property of being 'set-like' (whatever this means depends on the background philosophy and axioms chosen) but rather things related by the $\in$-relation to some set-theoretic model.
+Structuralists also maintain that mathematical statements have a definite truth value in actuality (rather than being an merely 'unknowable' or 'undecidable'). It is also maintained in the structuralist view that two structures are essentially the same if they are isomorphic. This intuition fits more w/ category theory which emphasizes morphisms and relations over mathematical objects.
 
+-----------------------------
+## Ordinal Definability
+Formally, a set $S$ is ordinal definable if there is some set of ordinals $\alpha_{1},\dots,\alpha _n$ and a first-order formula $\varphi$ which takes $\alpha_{2},\dots,\alpha_{n}$ as parameters such that $S$ is uniquely defined as an element of $V_{\alpha_{1}}$. That is, $S$ is the unique object validating $\varphi(S, \alpha_{1}, \alpha_{2})$.
 
-- Other proper-classes (i.e., $HC, HOD$)?
+The class of all ordinal definable sets is denoted as $OD$.
+
+A set if hereditarily ordinal definable if it is ordinal definable and all elements of its transitive closure is ordinal definable.
+
+The class of all hereditarily ordinal definable sets is denoted $HOD$
+
+$HOD$ is an inner model which can contain all known large cardinals (except for the ones inconsistent w/ choice in the context $ZFC$).
 ## References
 [[Fundamentals of Set Theory]]
 [[Forcing]]
 [Russell's Paradox]([Russell's paradox - Wikipedia](https://en.wikipedia.org/wiki/Russell%27s_paradox))
 [Burali-Forti Paradox]([Burali-Forti paradox - Wikipedia](https://en.wikipedia.org/wiki/Burali-Forti_paradox))
 [Cantor's Paradox]([Cantor's paradox - Wikipedia](https://en.wikipedia.org/wiki/Cantor%27s_paradox))
+([Ordinal Definable Set](https://en.wikipedia.org/wiki/Ordinal_definable_set))

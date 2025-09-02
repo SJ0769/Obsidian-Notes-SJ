@@ -45,7 +45,7 @@ Theorem V shows that there is a reduction from the second-order functional calcu
 
 **Note:** The notion of a 'general model set' closely resembles the notion of 'model' used in usual model theory since 'non-standard' models are allowed. The notion of 'standard model set' as described in the paper is more restrictive (and a further restrictive model is considered, called a 'strong model set').
 
-(This adapted notation, where in Hintikka's papers $p\supset q$ is equivalent to $p \implies q$ and $\sim$ is equivalent to $\neg$).
+(This adapted notation, where in Hintikka's papers $A\supset B$ is equivalent to $A \implies B$ and $\sim$ is equivalent to $\neg$).
 
 
 **Relation between monadic second-order logic (MSOL) and the classes $\Pi_{1}^1$ and $\Sigma_{1}^1$:**
