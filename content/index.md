@@ -11,7 +11,7 @@ title: SJ's notes on model theory, set theory, and logic
 - [[Logic/Higher-Order Logics]]
 - [[Logic/Infinitary Logics]]
 - [[Logic/Kripke's Theory of Truth]]
-- [[Logic/Many-valued Logic and Fuzzy Logic]]
+- [[Logic/Many-valued Logic]]
 - [[Logic/Modal Logic]]
 - [[Logic/Other Logics]]
 - [[Logic/Proof Theory]]
@@ -20,8 +20,9 @@ title: SJ's notes on model theory, set theory, and logic
 
 ## 📁 Miscellaneous
 - [[Miscellaneous/On Languages]]
+- [[Miscellaneous/On Truth]]
+- [[Miscellaneous/Philosophy 2]]
 - [[Miscellaneous/Philosophy]]
-- [[Miscellaneous/Relativity of Truth]]
 - [[Miscellaneous/Self-Verifying theories]]
 - [[Miscellaneous/Trivialism]]
 

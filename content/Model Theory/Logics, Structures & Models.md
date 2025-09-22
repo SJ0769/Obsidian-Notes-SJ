@@ -23,6 +23,10 @@ We say that $\phi$ is a $\mathcal{L}$-formula if $\phi$ is atomic and
 	ii) If $\phi$ and $\psi$ are atomic, then $(\phi \wedge \psi)$ and $(\phi \vee \psi)$ are $\mathcal{L}$-formulas
 	iii) $\exists v_{i} \phi$ and $\forall v_{i} \phi$ are $\mathcal{L}$-formulas, where $i\in I = \{1, 2,\dots \}$ (index)
 
+
+**Note:** 'Complex' formulas (ones where no logical connectives: $\wedge, \vee, \neg, \to, \leftrightarrow$ are involved) may be logically equivalent to atomic formulas.
+	E.g., Let $\phi$ be an atomic formula, then the complex formula $\neg\neg \phi$ (as the connective '$\neg$' is applied twice) is equivalent to $\phi$ as according to double negation elimination, this is denoted as $\phi\equiv\neg\neg \phi$.
+
 **Free variables:** A formula has free variables if and only if some variables in it are not bound by quantifiers.
 	$\to$ E.g., of a bound variable
 	$\forall x(x>2)$, the expression "$x>2$" has the quantifier '$\forall$' attached to it.
@@ -38,7 +42,7 @@ Let $\phi$ be a formula w/ free variables from $\overline{v} =(v_{i_{1}},\dots,v
 	vi) If $\phi$ is $\exists v_{j}\psi(\overline{v}, v_{j})$, then $\mathcal{M}\models\phi(\overline{a})$ if there is $b\in M$ such that $\mathcal{M}\models \psi(\overline{a}, b)$
 	vii) If $\phi$ is $\forall v_{j}\psi(\overline{v}, v_{j})$, then $\mathcal{M}\models \phi(\overline{a})$ if $\mathcal{M}\models\psi(\overline{a}, b)$ for all $b\in M$
 
-The vocabulary/signature $\tau$ is the set of non-logical symbols as defined above, the language $\mathcal{L}$ is the set of logical & non-logical symbols, and so $\tau \subset \mathcal{L}$. The set of logical symbols contains connectives, quantifiers and variables (i.e., $\{\wedge, \vee, \neg, \exists, \forall, v_{1},\dots\}$), these deal with the general syntax of the logic. There are a countably infinite number of logical symbols (unless one includes extensions to the logic w/ an uncountable amount of logical symbols). Thus, $|\mathcal{L}|\geq\aleph_{0}$, even when the vocabulary is finite, and hence, the $|\mathcal{L}|=\tau+\aleph_{0}$.
+The vocabulary/signature $\tau$ is the set of non-logical symbols as defined above, the language $\mathcal{L}$ is the set of logical & non-logical symbols, and so $\tau \subset \mathcal{L}$. The set of logical symbols contains connectives, quantifiers and variables (i.e., $\{\wedge, \vee, \neg,\to, \leftrightarrow, \exists, \forall, v_{1},\dots\}$), these deal with the general syntax of the logic. There are a countably infinite number of logical symbols (unless one includes extensions to the logic w/ an uncountable amount of logical symbols). Thus, $|\mathcal{L}|\geq\aleph_{0}$, even when the vocabulary is finite, and hence, the $|\mathcal{L}|=\tau+\aleph_{0}$.
 $\to$ 'Extensions' to first-order logic deal with the set of logical symbols and sentence formation rules, (i.e., in second-order logic we add infinitely-many second-order variables or predicates $P, Q, \dots,$etc. to the language).
 
 **Note:** Sometimes the $\mathcal{L}$-formulas are used interchangeably with $\tau$-formulas especially is the logic (and set of logical symbols) has been fixed. Even though this isn't precise.
@@ -48,7 +52,7 @@ $\to$ 'Extensions' to first-order logic deal with the set of logical symbols and
 	ii) A function $f^\mathcal{M}: M^{n_{f}}\to M$ for each $f\in\mathcal{F}$
 	iii) A set $R^M\subseteq M^{n_{R}}$ for each $R\in\mathcal{R}$
 	iv) A element $c^\mathcal{M}\in M$ for each $c\in\mathcal{C}$
-$f^\mathcal{M}, R^\mathcal{M}$ and $c^\mathcal{M}$ denote the interpretation of the symbols $f, R, c$ in the vocabulary w/in the structure. A structure is often denoted $\langle M, f^\mathcal{M}, R^\mathcal{M}, c^\mathcal{M}\rangle$
+$f^\mathcal{M}, R^\mathcal{M}$ and $c^\mathcal{M}$ denote the interpretation of the symbols $f, R, c$ in the vocabulary w/in the structure. A structure is often denoted $\langle M, f^\mathcal{M}, R^\mathcal{M}, c^\mathcal{M}\rangle$, the domain and interpretations of non-logical symbol (which are syntactic objects) are semantic objects as they live in the model.
 
 
 Let '$\tau$' denote the vocabulary of the logic (set of non-logical symbols). The following are examples:

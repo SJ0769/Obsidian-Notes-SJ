@@ -21,6 +21,13 @@ A branch of a tree is a maximal chain in the tree (i.e., any two elements of the
 
 
 **Antichains:** An antichain is a subset of a partially-ordered set such that any two distinct elements in the subset are incomparable (i.e., for a partially-ordered set $P$ such that $x, y \in P$, then $x$ and $y$ are incomparable if $x\not\leq y$ and $y\not\leq$ x).
+
+## Lattices
+**Lattice:** A lattice is a partially ordered set $(X, \leq)$ such that for any two elements $a, b\in X$, then
+	i) There exists a supremum (least upper bound), which is called 'join' and denoted $a\vee b$
+	ii) There exists an infinitum (greatest lower bound), which is called 'meet' and denoted $a\wedge b$
+
+A bounded lattice is a lattice w/ a maximal element $\top$ and minimal element $\bot$
 ## Other
 **Suslin Lines:** A Suslin line is a non-empty totally-order set $R$ which is not isomorphic to the real number line $\mathbb{R}$ w/ the following properties.
 	i) $R$ does not have a least nor a greatest elements (i.e., that is, w/out endpoints)

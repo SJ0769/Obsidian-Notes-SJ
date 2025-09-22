@@ -5,8 +5,6 @@
 	i.e., quantification is bounded by a level of the filtration
 E.g., Impacts
 $\mathcal{L}_{\kappa, \kappa}$ defined the well-order while in $\mathcal{L}^c_{\kappa, \kappa}$ you cannot.
-
-
 ## Infinitely Deep Logic
 - Formulas of the language are regarded as trees of symbols.
 	i.e., $\phi \in N_{\kappa, \mu}(\tau)$ is a triple $(T, <_{T}, f)$ where $(T, <_{T})$ is a tree-structure and $f: T \rightarrow At(\tau) \cup${$\bigwedge, \bigvee, \neg$} $\cup$ {$\forall,\exists$} $\times Var$ where $At(\tau)$ is the set of atomic formulas of with vocabulary $\tau$ and $Var$ is a set of 'enough' variables.
@@ -59,10 +57,43 @@ The decision problem (see [[Computability Theory/Turing Machines & Computability
 What differentiates sort logic from set theory?
 Sort logic and set theory are similar but sort logic is a logic, and sort logic treats mathematical structures up to isomorphism only (structuralist view)
 
+## Intuitionistic/Constructive Logic
+In intuitionistic logic, a sentence is true iff it is provable (thus collapsing the wall between syntax and semantics in a sense). Intuitionistic logics rejects the law of excluded middle and double negation elimination but are still bivalent (i.e., Truth states $=\{T, F\}$) unlike paracomplete logics. This implies that both $\phi$ and $\neg \phi$ can be false, but both cannot be true (law of noncontradiction is kept).
+
+For an existential sentence, you must know what exact elements satisfies the sentence in order to prove. Intuitionists do not believe in a inference from negative information to positive information, i.e., $\neg\neg \phi\not\to \phi$
+
+In intuitionistic logic, material implication, $p\to q$ is not necessarily equivalent to $\neg p\vee q$ (unless it can be shown to be).
+
+Intuitionistic logic can be modelled using modal logic
+
+--------------------
+
+Bi-intuitionistic logic is an extension of intuitionistic logic which adds co-implication or exclusion connective, denoted $\leftarrow$ or \ which is dual to implication. This connective expresses that there cannot be a proof (or 'construction') from a sentence to another, effectively telling us what we cannot prove.
+
+E.g., in intuitionistic logic $\phi\to \psi$ expresses "from any construction of $\phi$ we can obtain a construction of $\psi$", while $\phi$\ $\psi$ expresses "a construction of $\phi$ from which a construction of $\psi$ is not possible."
+
+(This is the same as $p\not\to q$ informally in propositional logic, however in this case there is a dedicated symbol expressing this in the syntax so it is formal).
 ## Cardinality Quantifier Logics
-An additional quantifier $Qx$ added to the set of logical symbols. $Qx$ can mean "there are countably-many $x$...", or "there are uncountably-many $x$..." Cardinality quantifiers can be further specified so you are ranging over an exact number of things, e.g., "there are $\aleph_{1}$-many $x$..."
+An additional quantifier $Q$ added to the set of logical symbols. $Q$ can mean "there are countably-many", or "there are uncountably-many $x$."
+Cardinality quantifiers can be further specified so you are ranging over an exact number of things, i.e., the quantifier $Q_{\alpha}$ means "there are $\aleph_{\alpha}$-many"
 
 [Model Theoretic Logics](Set%20Theory%20+%20Model%20Theory/Model%20Theoretic%20Logics.pdf)
+
+## Quantum Logic
+Developed to model quantum mechanics. In quantum logic the distributivity law fails (i.e., $p\wedge(q\vee r)\not\equiv(p\wedge q)\vee(p\wedge r)$). 
+E.g., consider the following sentences
+- $p=$ "the electron has x-spin up"
+- $q=$ "the electron has y-spin up"
+- $r=$ "the electron has y-spin down"
+Whenever spin is measured in the y-axis, then it is either up or down: i.e., $v(q\vee r)=T$ and so trivially, $v(p\wedge q)=v(p\wedge r)=F$.
+
+Suppose $p$ is true, then $v(p\wedge(q\vee r))=T$, while $v((p\wedge q)\vee(q\wedge r))=F$
+
+
+Quantum logic is modelled via lattices...
+
+Failure of the deduction theorem
+
 ## References
 [[Sort Logic.pdf]]
 [Model Theoretic Logics](Set%20Theory%20+%20Model%20Theory/Model%20Theoretic%20Logics.pdf)

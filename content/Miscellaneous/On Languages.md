@@ -3,14 +3,18 @@ Natural languages do not have a well-defined syntax like formal languages (i.e.,
 
 A formal system has a syntax (which is often referred to as a formal language) and semantics, as well as a deductive system to infer new theorems
 
-Natural languages cannot define truth as we can formulate the sentence "this sentence is false" as shown by Tarski's undefinability theorem, this is the reason for formal languages and the Tarskian framework where truth is able to be defined in the metatheory (although we run into the problem of infinite regress and truth not being 'grounded'). This does not result in a full semantic collapse as natural language does not have inference rules like formal languages in order to prove everything, rather there is ambiguity surrounding the meaning behind specific words and semantics become context-based.
+Natural languages cannot define truth (at least not in an unambiguous universal way) as we can formulate the sentence "this sentence is false" as shown by Tarski's undefinability theorem, this is the reason for formal languages and the Tarskian framework where truth is able to be defined in the metatheory (although we run into the problem of infinite regress and truth not being 'grounded'). This does not result in a full semantic collapse as natural language does not have inference rules like formal languages in order to prove everything, rather there is ambiguity surrounding the meaning behind specific words and semantics become context-based. Natural language expresses different views on truth (see [On Truth](Miscellaneous/On%20Truth.md)), hence for it not being well-defined.
 
 The reason why a trivial language can define truth by allowing the liar's paradox is because they are still a formal language (just ones w/ contradictory syntax and semantics) and so truth is formally defined via Tarski's T-schema ($T(\lceil \phi \rceil)\leftrightarrow \phi$), semantic collapse then follows from a language being able to define its own truth predicate. Meanwhile natural languages do not have an adequate definition of truth due to ambiguous and vague semantics (although it can still express the liar's sentence).
 
-**Note:** Metalanguages are not just used for formal languages, but also natural languages, although a full semantics for natural language cannot be fully defined due to containing contradictory and self-referential statements like the liar sentence.
+**Note:** Metalanguages are not just used for formal languages, but also natural languages, although a full semantics for natural language cannot be fully defined due to containing contradictory and self-referential statements like the liar sentence. We could then construction akin to a Tarskian hierarchy (although not exactly due to the fundamental difference between natural vs formal languages).
 E.g., consider studying the language Spanish, the object language is Spanish and the metalanguage is English as we are translating a Spanish word to English to obtain its meaning.
 
-There are partial reductions of natural language to formal languages (i.e., Montague grammar), although a full reduction can likely never be done due to the ambiguity in meaning of expressions (i.e., context dependent) and can express the liar's sentence (or analogues of it), while formal languages (which are not trivial) cannot by Tarski's undefinability theorem. Truth is partially captured Tarskian hierarchies although this is 'ungrounded' as its truth is always dependent on being defined by a metatheory (see [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)).
+Natural language (which contains things such as human intuition) acts as a sort of 'ultimate' metatheory for formal languages. This is evident through logic being ultimately reliant on human intuition, no matter the infinite regression of metatheories justifying the lower level language (this is why logicians will merely consider a metatheory of the object language and not further levels, except in the context of Tarskian hierarchies, as it is almost needless to do so if we can 'jump' to it being ultimately justified by natural language). It can also be argued that there is no formal definition of a 'formal language' as this is defined in natural language again via human intuition/thought. One could think of complex 'formal' logical where the syntax, semantics, and proof system are modified, or perhaps even more complex logical architecture beyond that, in order to constitute some formal system.
+
+A 'logic' is syntax + semantics, a full formal system is a logic with a proof theory (inference rules).
+
+There are partial reductions of natural language to formal languages (i.e., Montague grammar), although a full reduction can likely never be done due to the ambiguity in meaning of expressions (i.e., context dependent) and can express the liar's sentence (or analogues of it), while formal languages (which are not trivial) cannot by Tarski's undefinability theorem. Truth is partially captured Tarskian hierarchies although this is 'ungrounded' as its truth is always dependent on being defined by a metatheory (see [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)). Montague grammar can be viewed as an attempt to create a framework where the metatheory is a formal language (which is the Montague grammar itself) and the object theory is natural language.
 
 Natural languages have a 'self-extending' syntax as they often adopt new words, although this does not mean it is not syntactically-closed (i.e., cannot talk about its own formation rules and method of adding new words, especially since natural language syntax is not well defined) and doesn't undergo syntactic collapse.
 
@@ -20,8 +24,6 @@ It was shown by Noam Chomsky that formalized natural language grammars (based of
 
 -------------------------------
 Formal language (syntax) comprises of a set of symbols called an 'alphabet' (in the context of mathematics, specifically model theory, this is instead called a vocabulary), formation rules to forms WFF's, and a set of WFF's (which is a subset of all possible strings that can be formed).
-
-A 'logic' is syntax + semantics, a full formal system is a logic with a proof theory (inference rules).
 ## Classification of Formal Grammars
 ### Defining Formal Grammars
 Formally, a grammar is defined as the following:
@@ -57,6 +59,7 @@ Type 0: Recursively-enumerable; recognized by a Turing machine
 
 ## References
 [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)
+[On Truth](Miscellaneous/On%20Truth.md)
 [Trivialism](Miscellaneous/Trivialism.md)
 [Proof Theory](Logic/Proof%20Theory.md)
 [Logics, Structures & Models](Model%20Theory/Logics,%20Structures%20&%20Models.md)

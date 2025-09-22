@@ -9,7 +9,7 @@
 	
 - Nested/meta Paradoxes (we can index this by meta-levels, paradox of level 2 ranges over the paradox of level 1)
 	- $\rightarrow$ i.e., claiming the statement "truth is relative" as if it is an objective truth is paradoxical.
-	if this statement is an absolute truth, then not all truths are relative, contradicting the initial statement. If the statement is relative, then this also results in contradictions (depending on the scenario, see [Relativity of Truth](Miscellaneous/Relativity%20of%20Truth.md)). We can also consider statements such "it is absolutely true that all truths are relative" which will also result in contradiction.
+	if this statement is an absolute truth, then not all truths are relative, contradicting the initial statement. If the statement is relative, then this also results in contradictions (depending on the scenario, see [On Truth](Miscellaneous/On%20Truth.md)). We can also consider statements such "it is absolutely true that all truths are relative" which will also result in contradiction.
 	**Possible Solution:** "all truths are relative, except for statements about truth"
 	- Consider a similar statement that "the notion of truth is paradoxical", treating this as an objective statement results in a paradox, so we get a paradox of a paradox (this is if we interpret "truth is relative" as "truth is paradoxical", see the above argument which results in a paradox if consider "truth is relative" as true).
 	- Alternatively consider the statement "this statement is paradoxical" (adaptation of liar's paradox). All of these paradoxes rely on self-reference
@@ -54,7 +54,6 @@ $\to$ Can our reality be purely 'logical'? (in a logical framework, not necessar
 --------------
 Although truth cannot be grounded by a formal system (as any attempt to do so devolves into paradoxicality), we find solace in the notion that we have a stratified framework (i.e., Tarskian hierarchies) to analyze truth (at different levels). Any attempt on the validity of this can be answered from some higher meta-level which is external to the initial Tarski hierarchy (from which we define the Tarskian hierarchy).
 $\to$ i.e., "just keep going up a meta-level."
-
 
 ------------------
 **Determinism:** The view that all events (in particular, human actions like 'choices') are determined by past causes and certain laws of nature.
@@ -112,4 +111,4 @@ A priori knowledge is knowledge that can be understood w/out experience, a subse
 ## References
 [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)
 [Trivialism](Miscellaneous/Trivialism.md)
-[Relativity of Truth](Miscellaneous/Relativity%20of%20Truth.md)
+[On Truth](Miscellaneous/On%20Truth.md)

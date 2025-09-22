@@ -2,33 +2,37 @@ A truth predicate, denoted True($\lceil \phi \rceil$), or T($\lceil \phi \rceil$
 
 Similarly, False($\lceil \phi \rceil$), or F($\lceil \phi \rceil$), denotes that a statement $\phi \in \mathscr{L}[\tau]$ is false.
 
-Tarski's theory of truth is bivalent, meaning the set of truth values are $S=\{T, F\}$. Every statement is assigned a single truth value in $S$ (true or false).
-
+Tarski's theory of truth is bivalent, meaning the set of truth values are $S=\{T, F\}$ (the truth states 'true' and 'false' are semantic objects), this set is defined in the metatheory of the object language (see below). Every statement is assigned a single truth value in $S$ (true or false).
 ## Semantic Laws
-- **Law of Noncontradiction (LNC):** $\phi$ and $\neg \phi$ cannot both be true, otherwise the theory is inconsistent.
+### Laws of Thought
+**Law of Noncontradiction (LNC):** $\phi$ and $\neg \phi$ cannot both be true, otherwise the theory is inconsistent.
 
-- **Law of Excluded Middle (LEM):** Either $\phi$ is true, or $\neg \phi$ is true.
+**Law of Excluded Middle (LEM):** Either $\phi$ is true, or $\neg \phi$ is true.
 	**Note:** The law of excluded middle differs from the law of bivalence in the case of paraconsistent logic, where a sentence $\phi$ can be assigned multiple truth values (i.e., both true and false).
 
-- **Law of Bivalence:** Every statement $\phi$ has a single truth state, that being true or false.
+**Law of Identity:** For all statements $\phi$, $\phi=\phi$ (i.e., something its itself).
 
-- **Law of Identity:** For all statements $\phi$, $\phi=\phi$ (i.e., something its itself).
+----------------
+
+**Principle of Bivalence:** Every statement $\phi$ has a single truth state, that being true or false.
+	It can be observed that the principle of bivalence implies the LEM as well as DNE (double negation elimination, see [Proof Theory](Logic/Proof%20Theory.md)), and in classical logic they coincide. However, the LEM does not imply the principle of bivalence, nor does DNE imply bivalence.
+
 ## Convention T
 Inductively, it is defined as follows:
-	i) True($\lceil \phi  \rceil$) $\iff \phi$.
+	i) True($\lceil \phi  \rceil$) $\leftrightarrow \phi$.
 	i.e., let $\phi =$ "the snow is white", it is true that "the snow is white" if the snow is white.
-	ii) True($\lceil \phi \wedge \psi \rceil$) $\iff$ True($\lceil \phi \rceil$) $\wedge$ True($\lceil \psi \rceil$)
-	iii) True($\lceil \phi \vee \psi \rceil$) $\iff$ True($\lceil \phi \rceil$) $\vee$ True($\lceil \psi \rceil$)
-	v) True($\lceil \neg \phi \rceil$) $\iff$ False($\lceil \phi \rceil$)
-	v) True($\lceil \phi \implies \psi \rceil$) $\iff$ True($\lceil \neg \phi \rceil$) $\vee$ True($\lceil \psi \rceil$)
-	vi) True($\lceil \forall x \phi \rceil$) $\iff \forall x$ True($\lceil \phi \rceil$)
-	vii) True($\lceil \exists x \phi \rceil$) $\iff \exists x$ True($\lceil \phi \rceil$)
+	ii) True($\lceil \phi \wedge \psi \rceil$) $\leftrightarrow$ True($\lceil \phi \rceil$) $\wedge$ True($\lceil \psi \rceil$)
+	iii) True($\lceil \phi \vee \psi \rceil$) $\leftrightarrow$ True($\lceil \phi \rceil$) $\vee$ True($\lceil \psi \rceil$)
+	v) True($\lceil \neg \phi \rceil$) $\leftrightarrow$ False($\lceil \phi \rceil$)
+	v) True($\lceil \phi \to \psi \rceil$) $\leftrightarrow$ True($\lceil \neg \phi \rceil$) $\vee$ True($\lceil \psi \rceil$)
+	vi) True($\lceil \forall x \phi \rceil$) $\leftrightarrow \forall x$ True($\lceil \phi \rceil$)
+	vii) True($\lceil \exists x \phi \rceil$) $\leftrightarrow \exists x$ True($\lceil \phi \rceil$)
 
 **Note:**  $\lceil{\phi}  \rceil$ denotes the Gödel encoding of the sentence $\phi$.
 ## Tarski's Undefinability Theorem:
 **Theorem (Tarski):** A sufficiently powerful language (capturing basic arithmetic such as multiplication $\times$ and diagonalization, see [[Model Theory/Gödel's Incompleteness Theorems]]) cannot define it's own truth predicate (within itself).
 
-**proof:**
+**Proof:**
 Assume for contradiction that there is a predicate 'True(x)' which determines if x is true or not in a sufficiently powerful language $\mathscr{L}$ (can show diagonalization). Then True($\lceil \phi \rceil$) holds in a model $\mathcal{M}$ if and only if $\phi$ holds, for some arbitrary $\mathscr{L}$-sentence $\phi$.
 (i.e., $\mathcal{M} \models$True($\lceil \phi \rceil) \iff \mathcal{M} \models \phi$)
 
@@ -63,7 +67,6 @@ $\mathscr{L}_{n} =$ meta$^{n-1}$ -language, defines $T_{n-1}(x)$
 .
 .
 .
-
 This descends into infinite regress. The index is any $n \in \mathbb{N}$, hence the upward limit of this process is the language $\mathscr{L}_{\omega}$. Although this may be extended.
 
 
@@ -74,18 +77,31 @@ $\mathscr{L}_{2} = \mathscr{L}_{1} \cup$ {$T_1(x)$}
 .
 .
 .
+$\mathscr{L}_{\omega}=\bigcup\limits_{n<\omega}\mathscr{L}_{n}$
+$\mathscr{L}_{\omega+1}=\mathscr{L}_{\omega}\cup\{T_{\omega}\}$
+.
+.
+.
+$\mathscr{L}_{\omega_{1}^{CK}}=\bigcup\limits_{\alpha<\omega_{1}^{CK}}\mathscr{L}_{\alpha}$ (i.e., the union of all levels indexed by recursive ordinals). Limit stage
+
 In general the process is as follows
 $\mathscr{L}_{\alpha+1} = \mathscr{L}_{\alpha} \cup$ {$T_{\alpha}(x)$}
 $\mathscr{L}_{\lambda} = \mathscr{L}_{0}\cup$ {$T_{\alpha}(x)$}  (or equivalently $\mathscr{L}_{\lambda} = \bigcup\limits_{\alpha<\lambda} \mathscr{L}_{\alpha}$); $\lambda$ is a limit ordinal
 
-Since this process is recursive, the upward limit of this process is the language $\mathscr{L}_{\omega^{CK}_{1} }$. The reason the hierarchy must be recursive is so we have a decidable syntax ($\implies$ we know if a predicate is a truth predicate or not, that is, the number of truth predicates and levels are denumerable)
-
-**Note:** We cannot have a meaningful extension of the Tarski hierarchy into uncountably many 
-meta-levels as this would result in a semantic collapse between levels due to the level indexing no longer being a recursive process, meaning we can no longer differentiate between truth (i.e., what level a truth predicate is defined). In order to differentiate between levels, they must be indexed by recursive ordinals.
-
 **Note:** These are considered different languages even though they are very similar (so semantic closure is avoided)... In this recursively defined hierarchy you do not have the freedom of choice of meta-language (i.e. cannot have $\mathscr{L}_{0} = ZFC$ and $\mathscr{L}_{1} = PRA$, instead $\mathscr{L}_{1} = ZFC \cup T_{0}^{ZFC}(x)$)
 $\rightarrow$ where $T_{0}^{ZFC}(x)$ means the truth predicate of the theory ZFC at level 0 of the Tarski hierarchy.
 
+
+We cannot have a meaningful extension of the Tarski hierarchy into uncountably-many meta-levels as this would result in the syntax of the external metalanguage — where the Tarskian hierarchy is defined — to be non-recursive. This means that we can no longer differentiate between the truth predicates $T_{\alpha}$ (i.e., on what level is the truth of a language defined) or to determine what metalanguage $\mathscr{L}_{\alpha}$ a sentence belongs to as a consequence of not being able to enumerate/index metalevels. Truth predicates intake a Gödel encoded sentence as an agreement, however the process of Gödel encoding (and so also diagonalization, see [Gödel's Incompleteness Theorems](Model%20Theory/Gödel's%20Incompleteness%20Theorems.md)) is a recursive one. 
+
+We can still consider a metalanguage of the level $\mathscr{L}_{\omega_{1}^{CK}}$ but it would have a non-recursive syntax 
+([Tarski Hierarchy](Set%20Theory%20+%20Model%20Theory/Tarski%20Hierarchy.pdf), pg., 12), at least in the particular case for the hierarchy given above where each stage was given by a recursive procedure. This is because $\mathscr{L}_{\omega_{1}^{CK}}$ is the limit stage of this process and defining further levels would have to be done by a non-recursive process. Thus, so you can't define a level $\mathscr{L}_{\omega_{1}^{CK}+1}=\mathscr{L}_{\omega_{1}^{CK}}\cup\{T_{\omega_{1}^{CK}}\}$ as this is a recursively given definition. However, this does not mean in the general case of a Tarskian hierarchy (not recursively defined and including previous levels in its definition) that such a metalanguage defining it is non-recursive as seen in the example below (but indexing the stages will not be done by a recursive process), rather taking the Tarskian hierarchy (of length ${\omega_{1}^{CK}}^{+}$) as a whole as a language, via union of its stages as done in limit stages such as the level $\mathscr{L}_{\omega_{1}^{CK}}$, would mean that such a language has a non-recursive syntax. 
+	$\to$ E.g., a Tarskian hierarchy of length $\alpha$ (for $\alpha\in ORD$) could be defined in set theories such as ZFC by transfinite recursion (specifically by a class function $\alpha\to\mathscr{L}_{\alpha}$), however this is not a recursive procedure. Hence why ZFC is often called equivalent to $\alpha^{th}$-order logic.
+**Summary:** The metalanguage to a Tarski hierarchy may still have a recursive syntax, however suitably 'checking' if a sentence or truth predicate belongs to a certain level $\mathscr{L}_{{\alpha}}$ is recursive and so still cannot be carried in such a language (although it would be able to define such truth predicates $T_{\alpha}$ and level $\mathscr{L}_{\alpha}$). Thus a non-recursive meta hierarchy can sill be studied and is not ineffable, but we still miss out on an important feature of being able to verify and differentiate effectively (recursiveness).
+
+**Note:** An uncountable Tarski hierarchy (or rather one where we can no longer enumerate meta-levels due to being non-recursive) does not cause a semantic collapse even though we cannot differentiate between the level at which truth predicates are defined. Rather a language being non-recursive means that a truth predicate cannot be defined via the usual method of Gödel encoding (as well as encoding in the liar sentence). Thus, semantic collapse depends on if a language can internalize the metatheory's semantics.
+
+## Further Notes on Metalanguages
 **Metavariable:** A metavariable is a symbol which belongs to the metalanguage and represents some elements of the object language
 	$\to$ I.e., Consider
 	 "Let $\phi$ and $\psi$ be sentences of the language $\mathscr{L}$",
@@ -121,7 +137,6 @@ This hierarchy is similar to a recursive Tarskian hierarchy
 **Note:** We cannot have a Tarski hierarchy where $n+1^{th}$-order logic is the object language and the $n^{th}$-order logic is the metalanguage, as then $n^{th}$-order logic would be able to define its own truth predicate and capture its own semantics (recall that $n+1^{th}$-order logic defines the semantics of $n^{th}$-order logic), resulting in semantic collapse.
 
 
-
 The metalanguage "presupposes" the object language in that in order to talk about the object language you must first assume the metalanguage which describes the syntax (WFF, inference rules) and the semantics of the object language. The metalanguage may also "inform" the choice of axioms of the object language, by the metalanguage determining what can be formulated (as an axiom), and what it 'should' look like (i.e., philosophically, your choice of axioms should reflect what the metalanguage consider as valid and consistent). Due to the limitations imposed [[Model Theory/Gödel's Incompleteness Theorems]], the metalanguage also justifies the choice of axioms (validity and meaning of the axioms) as the object language cannot.
 
 
@@ -129,6 +144,9 @@ The metalanguage "presupposes" the object language in that in order to talk abou
 Logical foundations (i.e., set theory, category theory, topoi theory, propositional calculus) may interpret each other, although in the framework of a Tarski hierarchy does not allow this circularity.
 $\to$ The meta-language presupposes the object language, that is, it is assumed to exist, the Tarski hierarchy framework itself is 'linear', although in reality, mathematics (as defined by mathematicians) is often defined circularly (we define other foundational theories from each other).
 Rather than a circular bottom, it is more like we cannot pin down mathematics on a solid foundation, we presuppose the metatheory to justify the object language, but to justify the metatheory we must first presuppose and justify the meta-metatheory. It can be seen that this devolves into an infinite process (due to an infinite Tarski hierarchy) with no proper starting point.
+
+## Other
+**Curry's Paradox:** A semantic paradox which arises when considering a conditional statement of the form $\varphi=\varphi\to \psi$  ("if it is the case that , then ") for  and $\psi$ are sentences in the language. This paradox doesn't directly rely on a self-contradictory statement, but rather claiming that the truth of an arbitrary sentence. This paradox is also blocked by Tarski's framework since the statement still requires a truth predicate (which the object language cannot define) as the sentence $\varphi$ = "if it is the case that $\varphi$, then $\psi$" is equivalent to "if this sentence is true, then $\psi$."
 ## References:
 - [[Tarski and kripke theory of truth.pdf]]
 - [[Tarski Hierarchy.pdf]]
@@ -137,3 +155,4 @@ Rather than a circular bottom, it is more like we cannot pin down mathematics on
 - [Tarski's Undefinability Theorem - Wikipedia](https://en.wikipedia.org/wiki/Tarski%27s_undefinability_theorem)
 - [Metavariable]([Metavariable - Wikipedia](https://en.wikipedia.org/wiki/Metavariable))
 - [Metalanguage](https://en.wikipedia.org/wiki/Metalanguage)
+- [Proof Theory](Logic/Proof%20Theory.md)

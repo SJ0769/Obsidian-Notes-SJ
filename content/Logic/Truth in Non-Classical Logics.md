@@ -17,23 +17,6 @@ $\mathcal{L}_{\alpha_+1}:=$ The language $\mathcal{L}_{\alpha}$ with the truth p
 $\mathscr{L}_{\lambda}=\bigcup\limits_{\alpha<\lambda}\mathscr{L}_{\alpha}$ for $\lambda$ is a limit ordinal
 Similar to Kripke's hierarchy of languages, the paraconsistent hierarchy of languages has a fixed point $\mathcal{L}_{\sigma}$ (the point in the hierarchy where $\mathcal{L}_{\alpha} = \mathcal{L}_{\alpha+1}$). Unlike in Kripke's theory of truth, statements which have not been assigned the truth value $T=$'True' or $F=$ 'False' at any $\mathcal{L}_{\beta}$ 
 (for $\beta < \sigma$) will be assigned the truth value  $B=$'Both True and False', instead of $U=$"neither true or false."
-
-
-Paraconsistent logic also has an adapted definition of structures
-
-**Categoricity in paraconsistent logics:**
-
-**Theorem:** For any language $\mathscr{L}$, every set of $\mathscr{L}$-sentences has an $LP, RM_{3}$ and $FDE$-model (as they are paraconsistent, inconsistent set of $\mathscr{L}$-sentences have a model)
-
-**Theorem:** For a language $\mathscr{L}$, let $\mathfrak{A}^{\mathscr{L}}$ denote the unique model of $\mathscr{L}$ up to isomorphism
-	$Th^{LP}(\mathfrak{A}^{\sim}) \supseteq Th^{CL}(\mathfrak{A})$
-$\to$ DLO is not $\aleph_{0}$-categorical w/ respect to the class of $LP$-structures
-
-**Theorem:** If some theory $T$ is categorical in some cardinal $\kappa$ in classical logic and has no finite models, then it is $\kappa$-categorical w/in $K_{3}$ and $L_{3}$
-$\to$ DLO is $\aleph_{0}$-categorical w/ respect to the class of $K_{3}$ and $L_{3}$-structures
-The paracomplete logics $K_{3}$ and $L_{3}$ preserve categoricity (namely, Morley's categoricity theorem is preserved)
-
-
 ## The Strengthened Liar
 Let $T(\lceil \phi \rceil)$ means "$\phi$ is true"
 $F(\lceil \phi \rceil) = T(\lceil \neg \phi \rceil)$ means "$\phi$ is false"
@@ -61,6 +44,8 @@ The gap-theorist argues that this is allowed, and it is only incorrect when $T(\
 	$\rightarrow$This has some philosophical implications ($\implies$) regarding the intent of such an approach (i.e., the original intent of a paracomplete solution is to escape analogues of the liar's paradox whilst preserving as much classical rules, so a paraconsistent result may be thought of as 'self-defeating')
 	**Note:** With this paraconsistent response to the strengthened liar, you would be utilizing a paraconsistent (and paracomplete one) with the truth values $S=${${F,U,T}$} (rather than
 	 $S=${$F,B,T$}).
+Thus, the contradiction $T(\lceil \varphi \rceil)\iff \neg T(\lceil \varphi \rceil)$ is an invalid one.
+
 
 Any (other) solution/response to the strengthened liar would also be non-classical (i.e., requiring additional or modified rules of logic, beyond the exclusion of the LEM).
 
@@ -78,9 +63,11 @@ Consider the following statement in paraconsistent logic:
 "Every sentence is either 'only true', 'only false' or 'both true and false'"
 	Note: A statement $\varphi$ is 'only true' if it is true in L but not false in it (i.e., $\varphi \in S_{1}/S_{2}$) where $S_{1}=EXT$ and $S_{2}= ANT-EXT$
 	A statement $\varphi$ is 'only false' if it is false in $\mathscr{L}$ but not true in it (i.e., $\varphi \in {S_{2}}/{S_{1}})$
+
 The issue comes with the notion of 'only true' and 'only false', we can effectively recreate the liar statement: "this statement is only false", taking it as true we derive that this statement is 'only false' if and only if it is 'only true', resulting in triviality.
-	Note: this statement cannot be both true and false as per the definition of being 'only true' and 'only false', we derive a contradiction which results in triviality (recall: paraconsistent logic only allows contradictions which don't result in triviality).
-Thus, even a paraconsistent logic cannot capture truth/define its own truth predicate, and so Tarski's Undefinability Theorem holds. 
+	Note: this statement cannot be both true and false as per the definition of being 'only true' and 'only false', we derive a contradiction which results in triviality (**recall:** paraconsistent logic only allows contradictions which don't result in triviality). Triviality is ensured (even though the proof system has been modified to avoid the principle explosion) from a meta-contradiction about how the truth predicate behaves in paraconsistent logic. This can still 'spread' (via the inference of new sentences) by analogues of Curry's paradox (a conditional statement) which only requires modus ponens.
+
+Thus, even a paraconsistent logic cannot capture truth/define its own truth predicate, and so Tarski's Undefinability Theorem holds. To prevent this you would have to remove very important inference rules (specifically, modus ponens) which our notion of logic relies upon, and thus weakening the proof system extensively to the point where you cannot effectively derive anything. Even then you would still have 'isolated' sentences which do not stabilize at a single truth value (hence showing our idea of a truth predicate still fails just w/out the triviality).
 
 **Note:** The statement $\phi=$ "every sentence is either only true or only false or both true and false" is true in the fixed point $\mathcal{L}_{\sigma}$ of the paraconsistent hierarchy, although $\phi$ is not a sentence definable in the hierarchy. As in the case of the Kripkean hierarchy of languages, we have exhausted all sentences, we cannot add any more sentences after $\mathcal{L}_{\sigma}$.
 
@@ -89,19 +76,19 @@ Other views for the liar's paradox: it is just an error to say that it is well-d
 Gödel's Incompleteness Theorem considers an analogue of the liar sentence about provability
 "This sentences is unprovable"
 (or equivalently, $G = \neg \text{Prov}(\lceil G \rceil)$). Within a 3-valued paracomplete logic system, the statement G would be assigned the 'undefined' truth state. However, this does not mean that paracomplete logic escapes the incompleteness theorem. Consider the following statement
-
-"This sentence is not provable", note: 'not provable'= {unprovable, undefined}.
-$\rightarrow G = (\neg \text{Prov}(\lceil G \rceil)) \vee U(\lceil G \rceil)$ 
-$\implies T(\lceil G \rceil) \iff \neg \text{Prov}(\lceil G \rceil) \vee T(\lceil G \rceil) \iff U(\lceil G \rceil)$
-Thus, we get that it is not provable if and only if it is provable or undefined.  In the case that it is undefined you would be proving 'nonsensical' statements (the intuition behind this is that you aren't really proving anything meaningful).
-Note: $T(\lceil G \rceil) \iff U(\lceil G \rceil)$ will result in a contradiction unless negation rules and the LNC is modified.
+	$G$ = "This sentence is not provable" 
+	**Note:** 'not provable'= {unprovable, undefined}. The intuition behind this is that if $G$ is undefined then it is neither true nor false that $G$ is not provable and so $G$ isn't provable. In order for $G$ to be provable it must be false which results in a contradiction and so assigning $G$ the 'undefined' truth state still leads to incompleteness.
+	$\rightarrow G \equiv (\neg \text{Prov}(\lceil G \rceil)) \vee U(\lceil G \rceil)$ 
+	$\implies T(\lceil G \rceil) \iff \neg \text{Prov}(\lceil G \rceil) \vee T(\lceil G \rceil) \iff U(\lceil G \rceil)$
+Thus, we get that it is not provable if and only if it is provable or undefined.
+**Note:** $T(\lceil G \rceil) \iff U(\lceil G \rceil)$ will result in a contradiction unless negation rules and the LNC is modified.
 Thus, it has been established that there are true statements which are unprovable. $\therefore$ the incompleteness theorem holds (we only require the existence of some true but unprovable statements for this).
 
 **The Incompleteness Theorem in Paraconsistent Logic**
 A paraconsistent system is inconsistent by definition (allowing a contradiction $p$ and $\neg p$ to both be true). Whether there are unprovable statements depends on if the system is complete or not (and also on the exact paraconsistent logic).
 $\to$ Since the theory is inconsistent (but not trivial) it can prove the Gödel sentence
 
-Recall: Gödel's first incompleteness theorem asserts that a theory cannot have all of the following:
+**Recall:** Gödel's first incompleteness theorem asserts that a theory cannot have all of the following:
 
 i) Prove a sufficient amount of arithmetic (i.e., multiplication $\times$)
 ii) Consistent
@@ -135,7 +122,7 @@ E.g., the sentence $\varphi \vee \psi$ may be true even if it is the case that $
 ## References
 [[Tarski's Theory of Truth]]
 [[Kripke's Theory of Truth]]
-[[Many-valued Logic and Fuzzy Logic]]
+[[Logic/Many-valued Logic]]
 [[Model theory of DeMorgan Logics.pdf]]
 [[karacic_review_article.pdf]]
 [The Strengthened Liar and Paradoxes of Incompleteness](https://www.youtube.com/watch?v=5LWQPGjAs3M&list=WL&index=5&t=744s)

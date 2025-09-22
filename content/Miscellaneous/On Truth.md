@@ -1,3 +1,4 @@
+## Relativity of Truth
 It can be observed that the statement "all truths are relative" is an analogue of the liar's paradox
 
 Let the predicate $R(\varphi)$ mean "the statement $\varphi$ relatively true", and the predicate $A(\varphi)$ to mean "$\varphi$ is absolutely true." Note that:
@@ -27,3 +28,18 @@ i.e., The intuitive notion of 'relative' and linguistic use of it was used to in
 
 We can further specify relative truth via defining a two-place predicate $R(\varphi, C)$ meaning $\varphi$ is true relative to some context $C$. Absolute truth can then be defined as follows: $A(\varphi)=\forall C.R(\varphi, C)$, however this does not mean that absolute truth is also relative (as this would not require the linguistic definition and use of the word), rather for a truth to be relative, we require it to be not true in all context $C$.
 	$\to$ Formalizing the internal view, we could take $R(\varphi, C)$ to mean "$\varphi$ is relative to some context." Considering $\neg \forall C. R(\varphi,C)\equiv \exists C. \neg R(\varphi, C)\to \exists C.A(\varphi, C)\vee \exists C(\neg \varphi, C)$, meaning there is some context where $\varphi$ is absolutely true or absolutely false, thus, we have absolute truth relative to some context.
+
+## Theories of Truth (Philosophy)
+**Correspondence Theory of Truth:** Something is true if it corresponds to (matter of) fact/reality.
+
+**Deflationary Theory of Truth:** Truth is linguistic tool rather than some metaphysical or ontological property
+E.g., The statement "snow is white" is true if and only if snow is white
+Tarski's T-schema: $T(\lceil \varphi \rceil)\leftrightarrow \varphi$ is an example of the deflationary theory of truth (also can be used for the correspondence theory of truth). This view is adopted in much of mathematical logic.
+
+**Coherence Theory of Truth:** A set of propositions true if they fit together w/out any contradictions between them. Truth is characterized by a whole system of propositions rather than just a single one.
+
+**Pragmatic Theory of Truth:** Truth is determined by its practical utility. This view of truth is dynamic since it can vary depending on the person and situation.
+
+**Supervaluationism:**
+
+## References

@@ -7,6 +7,7 @@ Proof theory studies proofs as mathematical objects as defined below.
 **Syntactic Consequence:** $\Gamma\vdash \varphi$ asserts that "$\varphi$ is provable from the set of assertions (axioms) $\Gamma$." Syntactic consequences of $\Gamma$ are also called theorems of $\Gamma$.
 
 **Semantic Consequence:** $\Gamma\models \varphi$ asserts that "$\varphi$ is true in all models of the set of assertions $\Gamma$"
+	The semantic relation '$\models$' deals w/ models and what is true w/in those models (i.e., $\Gamma\models\phi$ is $\phi$ correspond to the models where  holds). Thus, the semantic relation is based off of and w/ respect to models.
 
 This can also be extended for individual sentences (i.e., let $\Gamma$ be a singleton set containing a single sentence).
 
@@ -46,25 +47,28 @@ proving anything from a contradiction as in the principle of explosion.
 ### Inference Rules
 **Propositional Calculus:**
 	- **Modus Ponens:** If it is the case that $p\to q$ is true (or alternatively, $p \vdash q$), and $\varphi$ is true, then $q$ is true.
-	- **Modus Tollens:** If it is the case that $p\to q$ is true and $\neg q$ is true, then $\neg p$ is true.
+	- **Modus Tollens:** If it is the case that $p\to q$ and $\neg q$, then $\neg p$.
 	- **Hypothetical Syllogism:** If is the case $p\to q$ and $q\to r$, then it is the case $p\to r$.
-	- **Disjunctive Syllogism:** If it is the case $p\vee q$ and $\neg p$ is true, then $q$ is true.
-	- **Double Negation Elimination:** $\neg\neg p\equiv p$.
+	- **Disjunctive Syllogism:** If it is the case $p\vee q$ and $\neg p$, then $q$.
+	- **Double Negation Elimination (DNE):** $\neg\neg p\equiv p$.
 
 **First-order Logic:**
 All the above as propositional calculus, as well as the following:
-	- If it is the case that $\varphi$ is true, then $\forall x\varphi$ is true
-	- If it is the case that $\varphi$ is true, then $\exists x\varphi$ is true
+	- $\forall x \phi(x)\to \phi(a)$, i.e., if it is the case for all $x$ that $\phi(x)$, then it is the case that $\phi(a)$ for some instance $a$
+	- $\phi(a)\to \exists x \phi(x)$, i.e., if it is the case that $\phi(a)$ (where $a$ is a witness of $\phi$), then there exists some $x$ such that $\phi(x)$ (most notably $a$)
+(This is assuming natural-deduction style proof systems, in Hilbert-style proof systems there are axioms defining the quantifiers). Hilbert-style proof systems only contain modus ponens as an inference rule and instead contain 'logical axioms', as opposed to natural-deductive proof systems, (which only has inference rules). Thus, when dealing w/ a logical system we have two different sets of axioms, a set of logical axioms which are located w/in the (Hilbert-style) proof system, and a set of non-logical axioms (e.g., axioms of ZFC). In such a case ZFC runs on the Hilbert style proof system (even though both live in the object language) as some sort of logical machinery in order to determine its theorems.
 
 **Notes:**
 - Inference rules, syntactic rules, semantic rules are all defined in the metalanguage/metatheory.
-- Other logics may have a different set of inference rules, especially the case for non-classical logics (these inference rules are detailed in those respective pages, i.e., [Many-valued Logic and Fuzzy Logic](Logic/Many-valued%20Logic%20and%20Fuzzy%20Logic.md)]). These alternative logics also have their own proof theory by extension.
+- Other logics may have a different set of inference rules, especially the case for non-classical logics (these inference rules are detailed in those respective pages, i.e., [Many-valued Logic](Logic/Many-valued%20Logic.md)]). These alternative logics also have their own proof theory by extension.
 
 -------------------
 ## Other
 **Equivalent Logical Statements:**
 - Material Implication: $p\to q\equiv\neg p\vee q$
-- $\neg(p\to q)\equiv p\not\to q\equiv\neg p \wedge q$
+- $\neg(p\to q)\equiv\neg p \wedge q$ which is informally equivalent to $p\not\to q$
+	The intuition behind this is that $p\to q$ is only false when the premise $p$ is true and $q$ is false (hence $\neg q$ is true).
+- Biconditional: $p\leftrightarrow q\equiv(p\to q)\wedge(q\to p)$
 
 **Note:** Material equivalence $p\leftrightarrow q$ is where both $p$ and $q$ have the same truth value, this is a weaker form of logical equivalence which is tautological ($p$ will always have the same truth value as $q$ across all models. The confusion arises specifically because both are written the same.
 
@@ -88,6 +92,6 @@ You first start w/ some premises and then the negation of the conclusion (root).
 
 ## References
 [Proof Theory]([Proof theory - Wikipedia](https://en.wikipedia.org/wiki/Proof_theory))
-[Many-valued Logic and Fuzzy Logic](Logic/Many-valued%20Logic%20and%20Fuzzy%20Logic.md)
+[Many-valued Logic](Logic/Many-valued%20Logic.md)
 [Rules of Inference](https://en.wikipedia.org/wiki/Rule_of_inference)
 [Craig's Interpolation Theorem](https://en.wikipedia.org/wiki/Craig_interpolation)

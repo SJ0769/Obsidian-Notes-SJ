@@ -1,5 +1,6 @@
-*Find a document on Modal logic which further clarifies notation and definitions*
 ## Background + Syntax
+Modal logic itself is an extension of propositional logic and doesn't have quantifiers.
+
 **Worlds:**
 Possible 'worlds' refer to possible state of affairs/scenarios.
 i.e., if an event $x$ could have happened, then it occurred in some possible world.
@@ -8,8 +9,8 @@ The 'actual' world, denoted as $w_{0}$, refers to the world which has been desig
 i.e., with $wRu$ we designate $u$ as the actual world from which we discuss other possible worlds from (through the accessibility relation $R$)
 
 Modal logic adds the modal operators '$\Diamond$' and '$\square$'; where
-- $\Diamond \varphi$ means "$\varphi$ is possible", i.e., there exists a world $w_{0} \in W$ where $\varphi$ is true ($\Vdash_{w_{0}}\varphi$)
-- $\square \varphi$ means "$\varphi$ is necessary", i.e., for all worlds $w \in W$, $\varphi$ is true $\Vdash_{w}\varphi$
+- $\Diamond \varphi$ means "$\varphi$ is possible", i.e., there exists a world $w_{0} \in W$ where $\varphi$ is true ($\Vdash_{w_{0}}\varphi$). This is equivalent to $\neg \square\neg \varphi$ (i.e., not necessary not $\varphi$)
+- $\square \varphi$ means "$\varphi$ is necessary", i.e., for all worlds $w \in W$, $\varphi$ is true $\Vdash_{w}\varphi$. This is equivalent to $\neg\Diamond\neg \varphi$ (i.e., it is not possible that not $\varphi$)
 
 **Syntax:** The language $\mathcal{L}$, an extension of propositional logic with modal operators, can be defined recursively as follows:
 	- If $\phi$ is an atomic formula, then $\phi$ is a formula of $\mathcal{L}$
@@ -45,7 +46,7 @@ The difference between $\mathcal{M}\Vdash \varphi$ and $\mathcal{M}, w \Vdash \v
 **Notation:** '$\Vdash$' refers to semantic entailment ($\models$) specific to modal logic within the context of possible worlds, '$\models$' is also used.
 
 **Frames:**
-A (Kripke) frame is an ordered pair $\langle W, R\rangle$ where $W$ and $R$ is as defined above.
+A (Kripke) frame is an ordered pair $\langle W, R\rangle$ where $W$ and $R$ is as defined above. The accessibility relation $R$ and set of possible worlds $W$ are semantic objects since they are apart of the model.
 
 **Frame conditions:**
 Frame conditions are conditions of the accessibility relation $R$ regarding how it should behave
@@ -148,9 +149,10 @@ Other 'modal-like' logics:
 - Epistemic modality which is based off of knowability and so introduces the 'knows' operator $\mathcal{K}$. i.e., $\mathcal{K}\varphi$ means that "the agent knows $\varphi$ is true."
 All of these alternative modalities have a conception of a 'possible world', but rather than modelling possibility and necessity, they are modelling other modal operators.
 
-
-Multi-modal logics (i.e., degrees of possibility and necessity)
-Infinitary modal logic (modal logic + infinitary logic), allows for infinitely (even uncountably) many worlds
+- First-order modal logic (modal logic w/ quantifiers)
+- Multi-modal logics (i.e., degrees of possibility and necessity)
+- Hybrid logics
+- Infinitary modal logic (modal logic + infinitary logic), allows for infinitely (even uncountably) many worlds
 
 
 ## References

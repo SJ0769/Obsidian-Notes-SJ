@@ -4,7 +4,7 @@
 Kripke's theory of truth operates on Kleene's strong 3-valued logic system (truth values = {T, U, F}) where U = 'undefined' or 'neither true or false' (a truth gap). Thus, the logic under the scope of the truth predicate is non-classical.
 $\rightarrow$ Kleene's strong 3-valued logic is 'paracomplete' as it rejects the law of excluded middle (either $p$ or $\neg p$ is true)
 
-See [[Many-valued Logic and Fuzzy Logic]]
+See [[Logic/Many-valued Logic]]
 ## Kripkean Hierarchy of Languages
 We obtain 'partially defined' (truth) predicates in that the predicate cannot range over all sentences of a language and so there some statements which are 'undefined' (have truth value U). This is in contrast to truth predicates in Tarski's theory of truth which predicates over all sentences of the (lower level) language.
 

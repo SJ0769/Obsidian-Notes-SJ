@@ -54,7 +54,7 @@ Thus, there is a type for every possible equality proposition. Although not all 
 	This type contains no members and thus is unprovable (see below)
 
 ## Curry-Howard Correspondence
-The Curry-Howard Correspondence (or alternatively, Curry-Howard isomorphism) is a relation between mathematical proofs and computer programs
+The Curry-Howard Correspondence (or alternatively, Curry-Howard isomorphism) is a relation between mathematical proofs and computer programs.
 
 Types can be seen as logical propositions and members of these types are proofs of these propositions.
 	i.e., $a:A\iff$proposition
