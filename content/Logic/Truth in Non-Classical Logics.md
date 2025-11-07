@@ -65,9 +65,12 @@ Consider the following statement in paraconsistent logic:
 	A statement $\varphi$ is 'only false' if it is false in $\mathscr{L}$ but not true in it (i.e., $\varphi \in {S_{2}}/{S_{1}})$
 
 The issue comes with the notion of 'only true' and 'only false', we can effectively recreate the liar statement: "this statement is only false", taking it as true we derive that this statement is 'only false' if and only if it is 'only true', resulting in triviality.
-	Note: this statement cannot be both true and false as per the definition of being 'only true' and 'only false', we derive a contradiction which results in triviality (**recall:** paraconsistent logic only allows contradictions which don't result in triviality). Triviality is ensured (even though the proof system has been modified to avoid the principle explosion) from a meta-contradiction about how the truth predicate behaves in paraconsistent logic. This can still 'spread' (via the inference of new sentences) by analogues of Curry's paradox (a conditional statement) which only requires modus ponens.
+	**Note:** this statement cannot be both true and false as per the definition of being 'only true' and 'only false', we derive a contradiction which results in triviality (**recall:** paraconsistent logic only allows contradictions which don't result in triviality). Triviality is ensured (even though the proof system has been modified to avoid the principle explosion) from a meta-contradiction about how the truth predicate behaves in paraconsistent logic. This can still 'spread' (via the inference of new sentences) by analogues of Curry's paradox (a conditional statement) which only requires modus ponens and contraction.
 
-Thus, even a paraconsistent logic cannot capture truth/define its own truth predicate, and so Tarski's Undefinability Theorem holds. To prevent this you would have to remove very important inference rules (specifically, modus ponens) which our notion of logic relies upon, and thus weakening the proof system extensively to the point where you cannot effectively derive anything. Even then you would still have 'isolated' sentences which do not stabilize at a single truth value (hence showing our idea of a truth predicate still fails just w/out the triviality).
+The paracomplete and paraconsistent logic $FDE$ fails under the liar analogue "this sentence is not (only) true."
+
+Thus, even a paraconsistent logic cannot capture truth/define its own truth predicate, and so Tarski's Undefinability Theorem holds. To prevent this you would have to remove very important inference rules — specifically, modus ponens ([Proof Theory](Logic/Proof%20Theory.md)) — which our notion of logic relies upon, and thus weakening the proof system extensively to the point where you cannot effectively derive anything. Even then you would still have 'isolated' sentences which do not stabilize at a single truth value (hence showing our idea of a truth predicate still fails just w/out the triviality).
+$\to$ You can remove contraction instead and retain modus ponens, still significantly weakening the proof system but still usable, this will prevent usual Curry paradoxes. However, there are types of Curry paradoxes called 'v-Curry's' where validity is expressed w/in the system itself which are not avoided by proof systems where contraction is weakened
 
 **Note:** The statement $\phi=$ "every sentence is either only true or only false or both true and false" is true in the fixed point $\mathcal{L}_{\sigma}$ of the paraconsistent hierarchy, although $\phi$ is not a sentence definable in the hierarchy. As in the case of the Kripkean hierarchy of languages, we have exhausted all sentences, we cannot add any more sentences after $\mathcal{L}_{\sigma}$.
 
@@ -123,6 +126,7 @@ E.g., the sentence $\varphi \vee \psi$ may be true even if it is the case that $
 [[Tarski's Theory of Truth]]
 [[Kripke's Theory of Truth]]
 [[Logic/Many-valued Logic]]
+[Proof Theory](Logic/Proof%20Theory.md)
 [[Model theory of DeMorgan Logics.pdf]]
 [[karacic_review_article.pdf]]
 [The Strengthened Liar and Paradoxes of Incompleteness](https://www.youtube.com/watch?v=5LWQPGjAs3M&list=WL&index=5&t=744s)

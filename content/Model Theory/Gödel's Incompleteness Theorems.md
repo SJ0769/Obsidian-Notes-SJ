@@ -109,10 +109,12 @@ But since $\neg G$ is true then the theory $T$ proves $G$(note:$\neg G=$"$G$ is 
 **Case 2:** 
 If $G$ is true, then $G$ is not provable ($T\not\vdash G$)
 
+-------------
 
-**The Diagonal Lemma**
-$\forall F(x) \exists A (A \leftrightarrow F(\lceil A \rceil)$
-For $A$ is the fixed point of the function $F(x)$
+**The Diagonal Lemma:**
+	$\forall F(x) \exists A (A \leftrightarrow F(\lceil A \rceil)$
+	For $A$ is the fixed point of the function $F(x)$
+This asserts the existence of self-referential statements in sufficiently powerful first-order axiomatic systems that have a recursive syntax (and must also obviously express Gödel encoding as seen above).
 
 Gödel's First Incompleteness Theorem is the instance where $A = G$, where $G$ is defined as above
 ($G=\neg \text{Prov}(\lceil G \rceil)$) and $F$ is the function that asserts that it's argument $x$ is unprovable, 
@@ -180,13 +182,13 @@ $'\bigwedge'=13$
 
 A Gödel encoding requires an ordered system (i.e., based off of prime factorization) so the procedure can be reserved to obtain the original formula (which has been encoded).
 
-**Note:** Although a consistent theory $T$ cannot prove its own consistency, it can define/formulate the consistency of itself w/in $T$ (i.e., $Con(T) = \neg Prov(\bot)$). This is in contrast to asserting the soundness of $T, Sound(T)$, not only cannot be proven w/in $T$, but also cannot be defined w/in it. As soundness is dealing w/ truth rather than consistency via Tarski's Undefinability Theorem.
+**Note:** Although a consistent theory $T$ cannot prove its own consistency, it can define/formulate the consistency of itself w/in $T$ (i.e., $\text{Con}(T) = \neg \text{Prov}(\bot)$). This is in contrast to asserting the soundness of $T, \text{Sound}(T)$, not only cannot be proven w/in $T$, but also cannot be defined w/in it. As soundness is dealing w/ truth rather than consistency via Tarski's Undefinability Theorem.
 $\to$ Soundness is asserted as follows:
-	$\forall \varphi(Prov_{T}(\varphi)\to True(\varphi))$
-	For $'Prov_{T}(\varphi)'$ meaning "$\varphi$ is a theorem of $T$"
-$\to Con(T)$ is a syntactic notion can be formulated
-$\to Sound(T)$ is a semantic notion cannot be formulated
-$\to Com(T)$ is a syntactic notion can be formulated
+	$\forall \varphi(\text{Prov}_{T}(\varphi)\to \text{True}(\varphi))$
+	For $'\text{Prov}_{T}(\varphi)'$ meaning "$\varphi$ is a theorem of $T$"
+$\to \text{Con}(T)$ is a syntactic notion can be formulated
+$\to \text{Sound}(T)$ is a semantic notion cannot be formulated
+$\to \text{Com}(T)$ is a syntactic notion can be formulated
 
 Note: There are obviously theories which are consistent and complete, they just sacrifice either the property of expressing a sufficient amount of arithmetic or being recursively enumerable.
 

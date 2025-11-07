@@ -8,7 +8,7 @@ The above is an implication of the Löwenheim-Skolem theorem which asserts that 
 - If $\kappa < |M|,$ then $N$ is an elementary substructure of $M$ (Downwards Löwenheim-Skolem Theorem)
 - If $\kappa \geq |M|,$ then $N$ is an elementary extension of $M$ (Upwards Löwenheim-Skolem Theorem)
 
-![](/static/attachments/LS-T.png)
+![](/attachments/LS-T.png)
 [Löwenheim–Skolem theorem]([Löwenheim–Skolem theorem - Wikipedia](https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem))
 
 **Downwards  Löwenheim-Skolem Theorem (Proof):**

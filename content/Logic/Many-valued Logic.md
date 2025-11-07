@@ -79,11 +79,16 @@ For $v(\varphi)=x$ and $v(\psi)=y$ for some $x,y\in[0,1]$, then truth states are
 	- For $\rho=(\varphi \wedge \psi)$, then $v(\rho)=\text{min}\{x, y\}$
 	- For $\rho=(\varphi \vee \psi)$, then $v(\rho)=\text{max}\{x, y\}$
 	(This is the same as how it is defined in paracomplete and paraconsistent logics).
+In fuzzy logic '$\wedge$' is referred to as the t-norm operator, '$\vee$' is referred to as the t-conorm operator. These are adaptations of the conjunction and disjunction to fuzzy logic where they are continuous truth functions. The t-norm and t-conorm evaluations can be different than those given above in a different fuzzy logic system where they are interpreted differently.
 
 
 Fuzzy logic is used to measure 'vagueness' and to model things like probability.
 
-The liar's paradox is assigned the value $0.5$...
+The liar's sentence $L$ is assigned the value $0.5$.
+	$v(L)=|1-v(L)|=1-v(L)$ (can reject negative case as that results in a contradiction intuitively).
+	$\implies 2v(L)=1$ or 
+	$\therefore v(L)=0.5$
+The general strategy for how fuzzy logic avoids analogues of the liar sentence is too assign another truth value to them. It has been shown that for a finite set of liar sentences, there is a solution where they all stabilize. However it is unknown for an infinite set of liar sentences (which can be constructed even from a countable vocabulary). Fuzzy logic is propositional (i.e., no quantifiers) and hence cannot define Gödel encoding and so a truth predicate cannot be defined.
 
 --------------------
 Maximum amount of possible truth states a logic can have?

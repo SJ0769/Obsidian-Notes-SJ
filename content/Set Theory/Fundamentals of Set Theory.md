@@ -31,7 +31,7 @@ The issue with this conception is that it cannot extend beyond the ordinal $\ome
 
 
 **Defining Cardinals:**
-The cardinality of a set $X$ is the least ordinal number $\alpha$ such that there is a bijection $f:X\to \alpha$, this definition assumes the axiom of choice. In class theory, the cardinality of a set $X$ may be defined as the class $[X]$ of all sets that are equinumerous to $X$ (i.e., an equivalence class of all sets such that there is a bijection to the set $X$).
+The cardinality of a set $X$ is the least ordinal number $\alpha$ such that there is a bijection $f:X\to \alpha$, this definition assumes the axiom of choice. In class theory, the cardinality of a set $X$ may be defined as the class $[X]$ of all sets that are equinumerous to $X$ (i.e., an equivalence class of all sets such that there is a bijection to the set $X$), but as it is the case for ordinals, this cannot be done within set theory.
 
 
 **The Powerset:**
@@ -98,11 +98,11 @@ It can also be defined on an element $a \in X$ as follows:
 	An $n$-ary function is an $(n+1)$-ary relation with the additional property that if $(y, x_{0}, x_{1},\dots)=(y, z_{0},z_{1},\dots)$, then $x_{0}=z_{0}, x_{1}=z_{1},\dots$etc. i.e., each input is mapped to exactly one output
 
 
-Every function is a relation (but not vice versa),
+**Note:** Every function is a relation (but not vice versa),
 
 **Injective Functions:** A function $f:X\to Y$ is injective or "one-to-one" if all elements $x\in X$ in the domain is mapped to exactly one element $y\in Y$ in the codomain. The element which $x$ is mapped to is denoted $f(x)$ and called the 'image' of $x$ . This $\implies|X|\leq |Y|$
 
-**Surjective Function:** A function $f:X\to Y$ is surjective or "onto" if all elements $y\in Y$ are mapped to exactly one element $x\in X$ in the codomain. The image of $y$ is $g(y)=f^{-1}(y)$ .This $\implies |Y|\leq|X|$.
+**Surjective Function:** A function $f:X\to Y$ is surjective or "onto" if all elements $y\in Y$ are mapped to exactly one element $x\in X$ in the codomain. The image of $y$ is $g(y)=f^{-1}(y)$ .This $\implies |Y|\leq|X|.$
 
 **Bijective Function:** A function $f:X\to Y$ is bijective or a "one-to-one correspondence" if it is both injective and surjective. This $\implies|X|=|Y|$
 	Functions are bijective if and only if they are invertible. A function  is invertible if there is an inverse function such that their composition produces an identity function, i.e., $g\circ f(x)=g(f(x))=x$ and $f\circ g(y)=f(g(y))=y$. In the case that a function is invertible, the inverse is denoted $f^{-1}$ (so $g=f^{-1}$).

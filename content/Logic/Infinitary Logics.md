@@ -11,3 +11,8 @@ Infinitary logic are missing [[The Compactness Theorem]] and by extension the [[
 Some infinitary logics are also not complete ([[Soundness & Completeness]]).
 
 $\mathscr{L}_{\infty, \omega}$  (furthermore, $\mathscr{L_{\infty, \kappa}}$ for all infinite cardinal $\kappa$, and $\mathscr{L}_{\infty, \infty}$) can characterize any model up to isomorphism.
+
+- Since infinitary logics can have infinitely-long formulae (and has a non-recursive syntax), Gödel encoding and diagonalization cannot be expressed. Thus, a provability or truth-predicate cannot be defined (however this may be done in a fragment of the logic but not the full logic).
+## References
+[Model Theoretic Logics](Set%20Theory%20+%20Model%20Theory/Model%20Theoretic%20Logics.pdf)
+[Infinitary Logic]([Infinitary logic - Wikipedia](https://en.wikipedia.org/wiki/Infinitary_logic))

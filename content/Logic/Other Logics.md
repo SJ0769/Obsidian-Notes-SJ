@@ -58,13 +58,30 @@ What differentiates sort logic from set theory?
 Sort logic and set theory are similar but sort logic is a logic, and sort logic treats mathematical structures up to isomorphism only (structuralist view)
 
 ## Intuitionistic/Constructive Logic
-In intuitionistic logic, a sentence is true iff it is provable (thus collapsing the wall between syntax and semantics in a sense). Intuitionistic logics rejects the law of excluded middle and double negation elimination but are still bivalent (i.e., Truth states $=\{T, F\}$) unlike paracomplete logics. This implies that both $\phi$ and $\neg \phi$ can be false, but both cannot be true (law of noncontradiction is kept).
+In intuitionistic logic, a sentence is true iff it is provable (thus collapsing the wall between syntax and semantics in a sense). Intuitionistic logics rejects the law of excluded middle and double negation elimination but are still bivalent (i.e., Truth states $=\{T, F\}$) unlike paracomplete logics. This implies that both $\phi$ and $\neg \phi$ can both have not proofs.
+	E.g., since double negation elimination is rejected, $\neg\forall\neg \varphi(x)\equiv \exists\neg\neg \varphi(x)$ not $\exists \varphi(x)$
 
-For an existential sentence, you must know what exact elements satisfies the sentence in order to prove. Intuitionists do not believe in a inference from negative information to positive information, i.e., $\neg\neg \phi\not\to \phi$
+Philosophically, it can be seen that intuitionistic logic conflates syntax and semantics in that semantics is directly informed by syntax (whether or not a statement has proof). Thus, rejecting Tarski's theory of truth (the T-schema).
+
+For an existential sentence, you must know what exact elements satisfies the sentence in order to prove. Intuitionists do not believe in a inference from negative information to positive information, (i.e., $\neg\neg \phi\not\to \phi$).
 
 In intuitionistic logic, material implication, $p\to q$ is not necessarily equivalent to $\neg p\vee q$ (unless it can be shown to be).
 
+Pierce's law: $((p\to q)\to p)\to p$, does not hold in intuitionistic logic
+
 Intuitionistic logic can be modelled using modal logic
+
+### BHK Interpretation
+The connectives can be interpreted in the following way:
+	- $A\wedge B$ if there is a proof of $A$ and a proof of $B$
+	- $A\vee B$ if there is a proof of $A$ or a proof of $B$
+	- $A\to B$ is a proof construction that transforms any proof of $A$ into a proof of $B$
+	- $\neg A$ is the same as $A\to\bot$
+
+If something doesn't have a proof nor a disproof then the sentence is independent, this is interpreted in intuitionistic logic as it being neither true nor false (w/out the actual third truth state).
+
+**Glivenko's Translation:** For $\phi$ is a propositional formula, then $\phi$ is a tautology in classical logic 
+(i.e., $\vdash_{\text{c}}\phi$) if and only if $\neg\neg \phi$ is a tautology in intuitionistic logic (i.e., $\vdash_{\text{I}}\phi$).
 
 --------------------
 

@@ -6,5 +6,5 @@ A set is $0$-class, a proper-class is $1$-class that is also not a set, an objec
 
 
 **Intuition:** Unrolling construction allows for second-order structures (i.e., class structures of theories $MK$ and $NGB$) to be translated into first-order structures via 'unpacking' them.
-
 ## References
+[Philosophy of Sets & Proper-Classes](Set%20Theory/Philosophy%20of%20Sets%20&%20Proper-Classes.md)

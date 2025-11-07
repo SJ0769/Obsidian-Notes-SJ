@@ -1,6 +1,6 @@
-A truth predicate, denoted True($\lceil \phi \rceil$), or T($\lceil \phi \rceil$), denotes that a statement $\phi$ $\in$ $\mathscr{L}[\tau]$ (a class of $\mathscr{L}$-sentences of vocabulary $\tau$) is true.
+A truth predicate, denoted True($\lceil \phi \rceil$), or $T(\lceil \phi \rceil)$, denotes that a statement $\phi$ $\in$ $\mathscr{L}[\tau]$ (a class of $\mathscr{L}$-sentences of vocabulary $\tau$) is true.
 
-Similarly, False($\lceil \phi \rceil$), or F($\lceil \phi \rceil$), denotes that a statement $\phi \in \mathscr{L}[\tau]$ is false.
+Similarly, False($\lceil \phi \rceil$), or $F(\lceil \phi \rceil)$, denotes that a statement $\phi \in \mathscr{L}[\tau]$ is false.
 
 Tarski's theory of truth is bivalent, meaning the set of truth values are $S=\{T, F\}$ (the truth states 'true' and 'false' are semantic objects), this set is defined in the metatheory of the object language (see below). Every statement is assigned a single truth value in $S$ (true or false).
 ## Semantic Laws
@@ -10,7 +10,7 @@ Tarski's theory of truth is bivalent, meaning the set of truth values are $S=\{T
 **Law of Excluded Middle (LEM):** Either $\phi$ is true, or $\neg \phi$ is true.
 	**Note:** The law of excluded middle differs from the law of bivalence in the case of paraconsistent logic, where a sentence $\phi$ can be assigned multiple truth values (i.e., both true and false).
 
-**Law of Identity:** For all statements $\phi$, $\phi=\phi$ (i.e., something its itself).
+**Law of Identity:** For all statements $\phi$ in the language, $\phi=\phi$ (i.e., something its itself).
 
 ----------------
 
@@ -51,7 +51,9 @@ The language $\mathscr{L}_{n+1}$ defines the truth predicate of the language $\m
 	$\rightarrow$ The meta-language is a language in which the syntax (symbols and rules) for manipulating the object language are formulated. The sentences of the object language are treated as objects which can be quantified over in the meta-language (i.e., $\forall \phi \in \mathscr{L}_{n}, \phi$ is provable in $\mathscr{L}_{n} \implies T_{n}(\phi)$), this can then be characterized as a sentence $\psi$ of $\mathscr{L}_{{n+1}}$.
 
 Consider $\mathscr{L}_{0} = ZFC$ (Zermelo-Frankel set theory w/ the axiom of choice), $\mathscr{L}_{1} = PRA$
-(Primitive Recursive Arithmetic). $PRA$ is strong enough to define Gödel numbering so it is a suitable meta-theory (in order to internalize the metatheory w/in the object language so we can refer to to its own statements and the provability of them..., etc.)
+(Primitive Recursive Arithmetic). $PRA$ is strong enough to define Gödel numbering so it is a suitable meta-theory for purely syntactic manipulation (this allows for partial internalization of the metatheory w/in the object language). However, it is not suitable to be a full metatheory that defines and justifies the semantics of $ZFC$ due to its weak expressive power (cannot define all level of the cumulative hierarchy as there is a $V_{\alpha}$ for an arbitrary ordinal $\alpha$, [Philosophy of Sets & Proper-Classes](Set%20Theory/Philosophy%20of%20Sets%20&%20Proper-Classes.md)).
+
+**Note:** The metatheory must be of equal strength or greater than that of the object theory in order to define its semantics. Weaker theories are assumed in specific instances (i.e., encoding syntax and recursive proofs).
 
 From the above example, we can also see that the syntax of the object language (i.e., formation rules for sentences, what constitutes a WFF, inference rules for proof and theorems ,..., etc. is defined in the meta-language) is also determined by the meta-theory (and so, would also affect the semantics from this).
 
@@ -96,7 +98,7 @@ We cannot have a meaningful extension of the Tarski hierarchy into uncountably-m
 
 We can still consider a metalanguage of the level $\mathscr{L}_{\omega_{1}^{CK}}$ but it would have a non-recursive syntax 
 ([Tarski Hierarchy](Set%20Theory%20+%20Model%20Theory/Tarski%20Hierarchy.pdf), pg., 12), at least in the particular case for the hierarchy given above where each stage was given by a recursive procedure. This is because $\mathscr{L}_{\omega_{1}^{CK}}$ is the limit stage of this process and defining further levels would have to be done by a non-recursive process. Thus, so you can't define a level $\mathscr{L}_{\omega_{1}^{CK}+1}=\mathscr{L}_{\omega_{1}^{CK}}\cup\{T_{\omega_{1}^{CK}}\}$ as this is a recursively given definition. However, this does not mean in the general case of a Tarskian hierarchy (not recursively defined and including previous levels in its definition) that such a metalanguage defining it is non-recursive as seen in the example below (but indexing the stages will not be done by a recursive process), rather taking the Tarskian hierarchy (of length ${\omega_{1}^{CK}}^{+}$) as a whole as a language, via union of its stages as done in limit stages such as the level $\mathscr{L}_{\omega_{1}^{CK}}$, would mean that such a language has a non-recursive syntax. 
-	$\to$ E.g., a Tarskian hierarchy of length $\alpha$ (for $\alpha\in ORD$) could be defined in set theories such as ZFC by transfinite recursion (specifically by a class function $\alpha\to\mathscr{L}_{\alpha}$), however this is not a recursive procedure. Hence why ZFC is often called equivalent to $\alpha^{th}$-order logic.
+	$\to$ E.g., a Tarskian hierarchy of length $\alpha$ (for $\alpha\in ORD$) could be defined in set theories such as ZFC by transfinite recursion (specifically by a class function $\alpha\to\mathscr{L}_{\alpha}$), hence why ZFC is often said to be equivalent to $\alpha^{th}$-order logic. However this is not a recursive procedure and so a truth-predicate would not be able to be defined for every level so the notion of an extended Tarskian hierarchy is almost like a 'black box' but can still be defined and reasoned about.
 **Summary:** The metalanguage to a Tarski hierarchy may still have a recursive syntax, however suitably 'checking' if a sentence or truth predicate belongs to a certain level $\mathscr{L}_{{\alpha}}$ is recursive and so still cannot be carried in such a language (although it would be able to define such truth predicates $T_{\alpha}$ and level $\mathscr{L}_{\alpha}$). Thus a non-recursive meta hierarchy can sill be studied and is not ineffable, but we still miss out on an important feature of being able to verify and differentiate effectively (recursiveness).
 
 **Note:** An uncountable Tarski hierarchy (or rather one where we can no longer enumerate meta-levels due to being non-recursive) does not cause a semantic collapse even though we cannot differentiate between the level at which truth predicates are defined. Rather a language being non-recursive means that a truth predicate cannot be defined via the usual method of Gödel encoding (as well as encoding in the liar sentence). Thus, semantic collapse depends on if a language can internalize the metatheory's semantics.
@@ -134,7 +136,8 @@ $\mathscr{L}_{n+1} =$ $n^{th}$-order Logic
 .
 This hierarchy is similar to a recursive Tarskian hierarchy
 
-**Note:** We cannot have a Tarski hierarchy where $n+1^{th}$-order logic is the object language and the $n^{th}$-order logic is the metalanguage, as then $n^{th}$-order logic would be able to define its own truth predicate and capture its own semantics (recall that $n+1^{th}$-order logic defines the semantics of $n^{th}$-order logic), resulting in semantic collapse.
+
+**Note:** It is possible that we can a Tarskian hierarchy where $(n+1)^{th}$-order is the object language and $n^{th}$-order logic is the metalanguage. However this would not be an effective construction as $n^{th}$-order logic does not have the semantic machinery in order to define semantics for $(n+1)^{th}$ (i.e., defining the quantifiers as ranging over domains $D, \mathcal{P}(D),\dots$ in order for satisfaction $\models$ to be defined) and hence defeating the purpose of being a metatheory in order to justify the object language. This does mean though that circularity and semantic collapse is avoided since such a truth predicate for $(n+1)^{th}$-order logic cannot be defined. This is assuming the languages have the same vocabulary, first-order set theory can define the semantics for pure higher-order logic (i.e., empty vocabulary, only contains logical symbol) due to being a more expressive language ($\alpha^{th}$-order quantification can be re-interpreted w/in set theory and there is an embedding of $\alpha^{th}$-order sentences to set theory, see [Higher-Order Logics](Logic/Higher-Order%20Logics.md)).
 
 
 The metalanguage "presupposes" the object language in that in order to talk about the object language you must first assume the metalanguage which describes the syntax (WFF, inference rules) and the semantics of the object language. The metalanguage may also "inform" the choice of axioms of the object language, by the metalanguage determining what can be formulated (as an axiom), and what it 'should' look like (i.e., philosophically, your choice of axioms should reflect what the metalanguage consider as valid and consistent). Due to the limitations imposed [[Model Theory/Gödel's Incompleteness Theorems]], the metalanguage also justifies the choice of axioms (validity and meaning of the axioms) as the object language cannot.
@@ -156,3 +159,4 @@ Rather than a circular bottom, it is more like we cannot pin down mathematics on
 - [Metavariable]([Metavariable - Wikipedia](https://en.wikipedia.org/wiki/Metavariable))
 - [Metalanguage](https://en.wikipedia.org/wiki/Metalanguage)
 - [Proof Theory](Logic/Proof%20Theory.md)
+- [Philosophy of Sets & Proper-Classes](Set%20Theory/Philosophy%20of%20Sets%20&%20Proper-Classes.md)

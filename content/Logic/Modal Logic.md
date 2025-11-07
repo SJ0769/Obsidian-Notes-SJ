@@ -109,7 +109,7 @@ The modal theory $S 4.2$ is obtained from the following axioms:
 
 **Strength of Modal Theories:**
 
-<img src="/static/attachments/Modal-Logic.png" alt="Modal Theories" width="400">
+<img src="/attachments/Modal-Logic.png" alt="Modal Theories" width="400">
 
 [the-set-theoretic-multiverse](Set%20Theory%20+%20Model%20Theory/the-set-theoretic-multiverse.pdf)]
 

@@ -1,6 +1,6 @@
 ## The Occurrence Number
 
-$\mathscr{L}[\tau]=\bigcup\limits_{\substack{\tau_{0}\subset\tau \\ |\tau_{0}|\leq \kappa}}$
+$\mathscr{L}[\tau]=\bigcup\limits_{\substack{\tau_{0}\subset\tau \\ |\tau_{0}|\leq \kappa}}\mathscr{L}[\tau_{0}]$
 Then $\kappa$ is the occurrence number of the logic $\mathscr{L}$
 
 I.e., The class of $\mathscr{L}-$formulas, $\mathscr{L}[\tau]$ is the union of the formula-classes in some vocabulary $\tau_{0}$ such that $|\tau_{0}| < \kappa$.
@@ -95,7 +95,7 @@ In general, for 'tame' languages ($\implies occ(\mathscr{L})<|\tau|$, for a suff
 **Dependance Number:**
 	- The intuition behind the dependance number of a formula $\varphi\in\mathscr{L}[\tau]$ 'depends' only on a subset of the vocabulary $\sigma \subset \tau$
 	- **Proposition:** Let $\mathscr{L}$ be a logic and $\varphi \in \mathscr{L}[\tau]$
-		i) $\varphi$ depends only on the symbols in $\sigma\subset\tau$ if for all $\tau-$structures $\mathfrak{A},\mathfrak{B}$ such that $\mathfrak{A}\upharpoonright \sigma \cong \mathfrak{B} \upharpoonright \sigma$ we have $\mathfrak{A}\models\varphi\iff\mathfrak{B}\models\varphi$. (i.e., The validity of $\varphi$ depends only on $\sigma$ and in terms of semantics, the full vocabulary $\tau$ is redundant, that is, the truth value of $\varphi$ does not change going from $\sigma$ to $\tau$
+		i) $\varphi$ depends only on the symbols in $\sigma\subset\tau$ if for all $\tau$-structures $\mathfrak{A},\mathfrak{B}$ such that $\mathfrak{A}\upharpoonright \sigma \cong \mathfrak{B} \upharpoonright \sigma$ we have $\mathfrak{A}\models\varphi\iff\mathfrak{B}\models\varphi$. (i.e., The validity of $\varphi$ depends only on $\sigma$ and in terms of semantics, the full vocabulary $\tau$ is redundant, that is, the truth value of $\varphi$ does not change going from $\sigma$ to $\tau$
 		ii) A logic is weakly regular if $\mathscr{L}$ satisfies the basic closure properties and relativization property (see [[Logics, Structures & Models]])
 The cardinal $\kappa > |\sigma|$ for which this occurs is the dependance number and is denoted as $o(\mathscr{L})$
 

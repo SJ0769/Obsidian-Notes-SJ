@@ -66,7 +66,7 @@ We can further extend the analytical hierarchy to stages $\Sigma_{\alpha}^i$ and
 i.e., a hierarchy of third-order arithmetic formulas would have stages $\Sigma_{\alpha}^2$ and $\Pi_{\alpha}^2$.
 There have been papers talking about $\Delta_{1}^2$ well-orderings of the reals.
 ## Alpha-Recursion Theory
-$\alpha$-recursion theory is an extension of recursion theory to subsets of admissible ordinals $\alpha$.
+$\alpha$-recursion theory is an extension of recursion theory to subsets of admissible ordinals $\alpha$. What is usually considered as recursion theory is recursion on $\mathbb{N}$ or $\omega$.
 
 **Admissible Ordinals:**
 - An ordinal $\alpha$ is admissible if $L_{\alpha}\models KP$ (Kripke-Platek set theory).
@@ -84,8 +84,16 @@ $\alpha$-recursion theory also has its own analogue of $\alpha$-jumps and $\alph
 
 Partial functions
 
+----------
+There are even further extensions of recursion theory beyond $\alpha$-recursion theory
+## Applications
+- $\alpha$-recursion theory can be used to extend Gödel encoding ([Gödel's Incompleteness Theorems](Model%20Theory/Gödel's%20Incompleteness%20Theorems.md)), where instead of logical symbols being assigned to a natural number (an element of $\omega$), it is instead assigned to an element of $\alpha$ for $\alpha$ is an admissible ordinal.
+$\to$ This has further application in defining provability and truth predicates. In a Tarski hierarchy (see [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)) we can effectively allow for an $\alpha$-many meta-levels and still be able to differentiate between truth predicates at each level. As mentioned though that even while employing $\alpha$-recursion theory, we would still only be able to differentiate between countably-many meta-levels (recall that all admissible ordinals are countable).
+
 ## References
 [Turing Machines & Computability Theory](Computability%20Theory/Turing%20Machines%20&%20Computability%20Theory.md)
 [Recursion Theory](Computability%20Theory/Recursion%20Theory.md)
+[Gödel's Incompleteness Theorems](Model%20Theory/Gödel's%20Incompleteness%20Theorems.md)
+[Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)
 [[Higher Recursion Theory.pdf]]
 [Math.stackexchange post]([set theory - Is there any generalization of the hyperarithmetical hierarchy using the analytical hierarchy to formulas belonging to third-order logic and above? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/245121/is-there-any-generalization-of-the-hyperarithmetical-hierarchy-using-the-analyti))

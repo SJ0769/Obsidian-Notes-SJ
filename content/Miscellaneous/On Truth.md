@@ -29,8 +29,9 @@ i.e., The intuitive notion of 'relative' and linguistic use of it was used to in
 We can further specify relative truth via defining a two-place predicate $R(\varphi, C)$ meaning $\varphi$ is true relative to some context $C$. Absolute truth can then be defined as follows: $A(\varphi)=\forall C.R(\varphi, C)$, however this does not mean that absolute truth is also relative (as this would not require the linguistic definition and use of the word), rather for a truth to be relative, we require it to be not true in all context $C$.
 	$\to$ Formalizing the internal view, we could take $R(\varphi, C)$ to mean "$\varphi$ is relative to some context." Considering $\neg \forall C. R(\varphi,C)\equiv \exists C. \neg R(\varphi, C)\to \exists C.A(\varphi, C)\vee \exists C(\neg \varphi, C)$, meaning there is some context where $\varphi$ is absolutely true or absolutely false, thus, we have absolute truth relative to some context.
 
+We can have relativized truths about absolute objects as well as absolute truth about relative objects, but not absolute truths about absolute objects (universal truth).
 ## Theories of Truth (Philosophy)
-**Correspondence Theory of Truth:** Something is true if it corresponds to (matter of) fact/reality.
+**Correspondence Theory of Truth:** Something is true if it corresponds to (matter of) fact/reality (states of affairs).
 
 **Deflationary Theory of Truth:** Truth is linguistic tool rather than some metaphysical or ontological property
 E.g., The statement "snow is white" is true if and only if snow is white
@@ -43,3 +44,4 @@ Tarski's T-schema: $T(\lceil \varphi \rceil)\leftrightarrow \varphi$ is an examp
 **Supervaluationism:**
 
 ## References
+[Philosophy](Miscellaneous/Philosophy.md)

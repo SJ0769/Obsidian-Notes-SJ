@@ -26,6 +26,7 @@ We say that $\phi$ is a $\mathcal{L}$-formula if $\phi$ is atomic and
 
 **Note:** 'Complex' formulas (ones where no logical connectives: $\wedge, \vee, \neg, \to, \leftrightarrow$ are involved) may be logically equivalent to atomic formulas.
 	E.g., Let $\phi$ be an atomic formula, then the complex formula $\neg\neg \phi$ (as the connective '$\neg$' is applied twice) is equivalent to $\phi$ as according to double negation elimination, this is denoted as $\phi\equiv\neg\neg \phi$.
+$\to$ Logical connectives themselves are 'truth function' as they may be represented via truth tables (intakes truth values of atomic formulas and outputs the truth state of the entire complex formula)
 
 **Free variables:** A formula has free variables if and only if some variables in it are not bound by quantifiers.
 	$\to$ E.g., of a bound variable
@@ -42,7 +43,7 @@ Let $\phi$ be a formula w/ free variables from $\overline{v} =(v_{i_{1}},\dots,v
 	vi) If $\phi$ is $\exists v_{j}\psi(\overline{v}, v_{j})$, then $\mathcal{M}\models\phi(\overline{a})$ if there is $b\in M$ such that $\mathcal{M}\models \psi(\overline{a}, b)$
 	vii) If $\phi$ is $\forall v_{j}\psi(\overline{v}, v_{j})$, then $\mathcal{M}\models \phi(\overline{a})$ if $\mathcal{M}\models\psi(\overline{a}, b)$ for all $b\in M$
 
-The vocabulary/signature $\tau$ is the set of non-logical symbols as defined above, the language $\mathcal{L}$ is the set of logical & non-logical symbols, and so $\tau \subset \mathcal{L}$. The set of logical symbols contains connectives, quantifiers and variables (i.e., $\{\wedge, \vee, \neg,\to, \leftrightarrow, \exists, \forall, v_{1},\dots\}$), these deal with the general syntax of the logic. There are a countably infinite number of logical symbols (unless one includes extensions to the logic w/ an uncountable amount of logical symbols). Thus, $|\mathcal{L}|\geq\aleph_{0}$, even when the vocabulary is finite, and hence, the $|\mathcal{L}|=\tau+\aleph_{0}$.
+The vocabulary/signature $\tau$ is the set of non-logical symbols as defined above, the language $\mathcal{L}$ is the set of logical & non-logical symbols, and so $\tau \subset \mathcal{L}$. The set of logical symbols (for first-order logic) contains connectives, logical constants, parentheses, equality relation ,quantifiers and variables (i.e., $\{\wedge, \vee, \neg,\to, \leftrightarrow,(, ), = ,\exists, \forall, v_{1},\dots\}$), these deal with the general syntax of the logic. There are a countably infinite number of logical symbols (unless one includes extensions to the logic w/ an uncountable amount of logical symbols) as there are an countably infinite number of variables. Thus, $|\mathcal{L}|\geq\aleph_{0}$, even when the vocabulary is finite, and hence, $|\mathcal{L}|=\tau+\aleph_{0}$.
 $\to$ 'Extensions' to first-order logic deal with the set of logical symbols and sentence formation rules, (i.e., in second-order logic we add infinitely-many second-order variables or predicates $P, Q, \dots,$etc. to the language).
 
 **Note:** Sometimes the $\mathcal{L}$-formulas are used interchangeably with $\tau$-formulas especially is the logic (and set of logical symbols) has been fixed. Even though this isn't precise.
@@ -79,7 +80,7 @@ i.e., every non-empty vocabulary describes sets with additional attached structu
 
 ## Logics
 **Definition of a Logic:**
-A logic $\mathscr{L}$ can be defined as a pair $(\mathscr{L}, \models_{\mathscr{L}})$ where $\mathscr{L}$ is a mapping defined on vocabularies $\tau$ such that $\mathscr{L}[\tau]$ is the class of $\mathscr{L}$-sentences of vocabulary $\tau$, and $\models_{\mathscr{L}}$, the satisfaction relation ,is a relation between structures and $\mathscr{L}$-sentences.
+A logic $\mathscr{L}$ can be defined as a pair $(\mathscr{L}, \models_{\mathscr{L}})$ where $\mathscr{L}$ is a mapping defined on vocabularies $\tau$ such that $\mathscr{L}[\tau]$ is the class of $\mathscr{L}$-sentences of vocabulary $\tau$, and $\models_{\mathscr{L}}$, the satisfaction relation, is a (satisfaction) relation between structures and $\mathscr{L}$-sentences.
 	i.e.,
 	i) $\mathscr{L}: \tau \to \mathscr{L}[\tau];$ and
 	ii) $\models_{\mathscr{L}}$ is a relation on ($Str_{\mathscr{L}(\tau)} \times \mathscr{L}[\tau]$)
@@ -91,6 +92,7 @@ Moreover, the following hold:
 		$\mathfrak{A} \models_{\mathfrak{A}}\varphi \iff \mathfrak{A} \upharpoonright \tau \models_{\mathscr{L}} \varphi$
 	v) **Renaming Property:** Let $\rho: \tau \to \sigma$ be a renaming. Then for each $\varphi \in \mathscr{L}[\tau]$ there is a sentence, $\varphi^\rho \in \mathscr{L}[\sigma]$ such that for all $\tau$-structures $\mathfrak{A}$, then
 		$\mathfrak{A} \models_\mathscr{L} \varphi \iff \mathfrak{A^\rho} \models_{\mathscr{L}} \varphi^\rho$
+		(i.e., allows for variables to be replaced to produce logically equivalent formulas, e.g., some simple examples are if $P\equiv R$ then $P\wedge Q\equiv P\wedge R$ or $\forall xP(x)\equiv \forall yP(y)$).
 
 **Reducts:** Consider two $\sigma, \tau$ such that vocabularies $\sigma \supseteq \tau$ and a $\sigma$-structure $\mathfrak{A}$, the $\tau$-reduct of $\mathfrak{A}$, denoted $\mathfrak{A} \upharpoonright \tau$ , is the structure obtained by the domain\underlying set $A$ interpreting the symbols in $\tau$, a subset of the full vocabulary $\sigma$.
 	i.e., You are removing the symbol in $\sigma$\ $\tau$ and retaining the domain and the interpretation of symbols in $\tau$

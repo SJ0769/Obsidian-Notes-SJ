@@ -39,7 +39,7 @@ Theories with the same proof-theoretic ordinals are equiconsistent.
 **Note:** By necessity, the ordinal notations must be recursive, and so the supremum of proof-theoretic ordinals is the Church-Kleene ordinal $\omega_{1}^{CK}$. If a theory has a proof-theoretic ordinal equal or greater than $\omega_{1}^{CK}$, then it is inconsistent.
 
 ## Transfinite Recursions of Consistency
-(Turing paper)
+(Turing PhD Thesis)
 
 Defined recursively as follows:
 - $T_{0}^{Con}:=T$

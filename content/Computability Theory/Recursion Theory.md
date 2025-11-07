@@ -7,7 +7,7 @@ The arithmetic hierarchy classifies formulae of Peano Arithmetic by their comple
 - $\Delta_{1}$ is the set of all recursive sets.
 - $\Sigma_{1}$ is the set of all recursively-enumerable sets, and $\Pi_{1}$ is the set of all co-recursively-enumerable sets
 
-<img src="/static/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
+<img src="/attachments/Arithmetic-Hierarchy.png" alt="Arithmetic Hierarchy" width="300">
 
 [Arithmetical hierarchy]([Arithmetical hierarchy - Wikipedia](https://en.wikipedia.org/wiki/Arithmetical_hierarchy))
 

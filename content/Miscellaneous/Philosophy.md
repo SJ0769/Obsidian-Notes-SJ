@@ -29,6 +29,9 @@
 	- **Logical Monism:** The view that there is only a single logic, which holds in all circumstances. Philosophers of this view would argue that classical logic is inherent to his world (i.e., there are no contradictory observation in reality) and other logics cannot exist in reality
 	- **Logical Nihilism:** The view that there is no 'logic' in any form and there are no laws of logics as all fail universally. This appears to delve into trivialism (on the other hand, this could be seen as an extreme form of logical pluralism or nihilism where there are trivialist logic, as trivialism can be formulated as a logic, see [[Trivialism]])
 
+The Tarskian hierarchy framework supports the notion of logical pluralism via requiring different logics (metalanguages) to justify the semantics of a logic as well as being a flexible framework where we can choose different object languages and metalanguages to formalize. Hence, resulting in a variety of logics across different meta-levels. However, it does not say anything about multiple logics on a given meta-level (which logical pluralism may be re-interpreted as). This does not disregard logical monism as in a similar way this could still work via requiring at most one logic at different meta-levels or that there is unique correct 'logic' (this involves invoking a Platonic metaphysical notion of truth) and that other logics are just useful frameworks that ultimately do not fully capture 'truth'. What can be said is that the Tarskian framework requires talking about different logics.
+	$\to$ **Other ideas:** Multiplicity of logics may be reduced to a single one upon logical analysis
+
 - **Modal realism** is the view that possible worlds as formalized in modal logic, actually exist and are equally 'real' as the 'actual' world (within this context our actual world as that is what possibility is being referred to relative to us).
 	- These possible worlds are existentially (spatiotemporal) isolated and so you cannot interact or travel to another possible world (if you could then they would be the same possible world). Different from a multiverse or other cosmological structures.
 
@@ -53,7 +56,7 @@ $\to$ Can our reality be purely 'logical'? (in a logical framework, not necessar
 
 --------------
 Although truth cannot be grounded by a formal system (as any attempt to do so devolves into paradoxicality), we find solace in the notion that we have a stratified framework (i.e., Tarskian hierarchies) to analyze truth (at different levels). Any attempt on the validity of this can be answered from some higher meta-level which is external to the initial Tarski hierarchy (from which we define the Tarskian hierarchy).
-$\to$ i.e., "just keep going up a meta-level."
+$\to$ i.e., We infinitely defer the issue to the next meta-level, this avoids the issue although does not fully solve it (a full solution is impossible).
 
 ------------------
 **Determinism:** The view that all events (in particular, human actions like 'choices') are determined by past causes and certain laws of nature.

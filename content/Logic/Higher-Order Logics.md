@@ -61,7 +61,7 @@ we could have $N = Def(M)\subseteq \mathcal{P}(M)$ and $S = \mathcal{P}(N)/\{\em
 **Relation to set theory:** 
 Set theory allows us to translate any sentence of higher-order logic into a first-order one in the language of sets ($\tau=\{\in\}$) due to the following:
 
-- Set theory can be interpreted as $\alpha^{\text{{th}}}$-order logic for $\alpha$ is an ordinal, where sentences can quantify over sets of all rank.
+- Set theory can be interpreted as $\alpha^{\text{{th}}}$-order logic for $\alpha$ is an ordinal, where sentences can quantify over sets of all rank. This allows for an embedding from sentences of $\alpha^{th}$-order logic into set theory
 	$\to$ That is, for any formula $\varphi$ of $\alpha^{\text{th}}$-order logic, there is a formula $\psi(x)$ in $ZFC$ such that $\mathcal{M}\models \varphi \iff \psi(\mathcal{M})$, for $\mathcal{M}$ is some structure.
 
 - Each initial rank segment of the universe $V_{\alpha}$ can be interpreted as a domain of $\alpha^{\text{th}}$-order objects.
@@ -89,8 +89,9 @@ Consider where the object theory is Quine's New Foundation ($NF$) and the metath
 	$\to$ The notion of a 'set' will have to be a metatheoretic one, otherwise there is merely a syntactic translation between the theories.
 It is impossible for the set $U:=\{x|x=x\}$ in $NF$ to be a set in $ZFC$ w/ the same members since $U\in U$ in $NF$, which is contrary to the foundation of $ZFC$, there is a 'conflict' between the object ($NF$) theory and metatheory ($ZFC$) about the notion of 'set'. This causes the metatheory to view the object theory as inconsistent ($NF$ is not consistent relative to $ZFC$).
 
+- The incompleteness theorems also holds for higher-order theory (even though diagonalization requires that the theory is first-order to construct a self-referential sentence) as they can internalize a first-order fragment (since they already contain first-order logic) and so can simulate the machinery of $PA$ (including processes like Gödel encoding). This is of course assuming that the higher-order system is also recursive. This is in contrast to something like [Infinitary Logics](Logic/Infinitary%20Logics.md) which allow uncountably-long formulae (and so syntax is non-recursive)
 ## Extensions
-We may also consider extension of HOL (equivalent to $\omega^{th}$-order logic) such as $\omega+1^{th}$-order logic, $\omega+2^{th}$-order logic, as mentioned in [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md), this process is recursive, so the upward limit is ${\omega_{1}^{CK}}^{th}$-order logic. Further extensions will require a syntax which is not recursive (this will result in difficulties in the semantics such as not being able to tell what level or 'order' a truth predicate belongs to, and perhaps even complete semantic collapse). This is also the case for transfinite type theory.
+We may also consider extension of HOL (equivalent to $\omega^{th}$-order logic) such as $\omega+1^{th}$-order logic, $\omega+2^{th}$-order logic, as mentioned in [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md), this process is recursive, so the upward limit is ${\omega_{1}^{CK}}^{th}$-order logic. Further extensions will require a syntax which is not recursive (this will result in difficulties in the semantics such as not being able to tell what level or 'order' a truth predicate belongs to, and perhaps even complete semantic collapse). This is also the case for transfinite type theory. However, further extensions can be re-interpreted into set theory 
 
 ## References
 [[The Compactness Theorem]]
@@ -100,3 +101,4 @@ We may also consider extension of HOL (equivalent to $\omega^{th}$-order logic) 
 [[Type Theory]]
 [[Transfinite Type Theory]]
 [Tarski's theory of truth](Logic/Tarski's%20theory%20of%20truth.md)
+[Infinitary Logics](Logic/Infinitary%20Logics.md)
