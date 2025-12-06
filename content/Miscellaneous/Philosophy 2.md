@@ -45,9 +45,18 @@ $\to$ What a picture represents is its sense (2.12). This is also how a picture 
 
 **Concept Script:** An ideal formal language that depicts logical form (logical syntax/notation). Inspired the development of formal languages.
 
+The Tractatus is ultimately self-defeating as by its own admission the propositions presented in it are nonsensical. The reason for this is that these propositions are about logic and language itself w/in language itself (such propositions are called 'nonsensical' w/in the Tractatus) which must be done from some metalanguage instead.
+
+"Whereof one cannot speak thereof one must be silent" meaning that we must simply be silent about the ineffable as it cannot be expressed w/in language.
+
 -------
 The logical form is a relation between language (both formal & natural) and reality (which includes state of affairs), **not** the relation between the underlying logic and reality as it is something inherently shown through reality.
 $\to$ Logical form only applies to a subset of reality (the part that can be 'expressed'), but not all of it as the underlying logic is ineffable. This results in state of affairs that are neither obtained nor not obtained, this is the same case for talking about fictitious or non-real things. The logical form is a feature/expression of the underlying logic as something that maps language onto reality and that also invokes an underlying logic. This is why it can only be shown as it is also external to language as well as presupposes it, and hence it is ineffable.
 
+
+The metaphysical notion of truth in reality (which the underlying logic relates to things) is much more complex than the simple obtaining or non-obtaining of states of affairs (i.e., also ranges over context, ambiguous statements, abstracted meta-statements, many truth-values). It is due to this complexity reflected in reality that the underlying logic is ineffable as this cannot be done w/in language. Hence, the underlying logic is a metaphysical structure that underlies reality and 'grounding' truth is more akin to achieving conceptual coherence (underlying structure that relates things through 'truth').
+	$\to$ e.g., the underlying logic may allow dialetheic attitude towards things like the liar's paradox.
+
+The underlying logic is 'shown' through reality/existence (like a picture) however it cannot be described.
 ## References
 [On Truth](Miscellaneous/On%20Truth.md)

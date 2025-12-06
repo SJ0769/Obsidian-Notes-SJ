@@ -89,7 +89,11 @@ i.e., existence may be defined as the set of all things that can be 'located' w/
 Laws cannot be defined w/out 'loopholes'
 	**Note:** This is not because of the incompleteness theorem as laws and the legal system are not a formal language (so it would be improper to use it), Instead this naturally arises from ambiguity w/in language.
 
+Apophatic theology responds to the ineffability paradox (i.e., saying "God is ineffable" is a description and hence is effable) by instead saying "God is not effable", assigning a negative description to 'God' rather than a positive one. An apophatic theologist argues that 'negative descriptions' are not actually descriptions in that nothing exactly is being ascribed to God's nature. Instead negative descriptions such as "God is not effable" are meta-linguistic statements about the limits of our language not being able to capture the notion of 'God.'
+
 -----------------
+
+## Idealism
 There may be differing perspectives or sense data (i.e., color, texture,...,etc.) of a physical object (the material) depending on the person.
 	$\to$ i.e., the shape of a table may appear square or diamond shape or some other shape depending on the position of the observer relative to the table.
 
